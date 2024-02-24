@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__r_e_a_d_m_e" xml:lang="es">
+
+<para>TESTS: Empleador - pronto CatalogoOfertas - pronto CatalogoContrataciones - pronto CatalogoCategorias - pronto Calificacion - <link linkend="_class_calcular_ubicacion">CalcularUbicacion</link> - pronto</para>
+
+<para>//</para>
+
+<para>Tareas para hacer:<itemizedlist>
+<listitem>
+<para>Poner fecha de contratacion. Erik</para>
+</listitem><listitem>
+<para>Clase de busqueda. Erik y Emi</para>
+</listitem><listitem>
+<para>Clase de diálogos. Erik y Emi</para>
+</listitem><listitem>
+<para>Comprobar si se cumplen las historias de usuario. Flor y Renzo</para>
+</listitem><listitem>
+<para><link linkend="_namespace_tests">Tests</link> de clases y de <link linkend="_class_user">User</link> Stories. Flor y Renzo.</para>
+</listitem><listitem>
+<para>Modificar UML y CRC. Flor y Renzo</para>
+</listitem><listitem>
+<para>Corrección y completar clase CatalogoOferta. Flor y Renzo.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Preguntas para mañana: 1- Opiniones de la clase <link linkend="_class_registrarse">Registrarse</link> 2- Admin y catalogo categorias (quien crea las categorias) 3- Lo mismo que arriba pero con el trabajador y las ofertas 4- Hay que hacer un metodo registrarse?</para>
+
+<para><itemizedlist>
+<listitem>
+<para><link linkend="_class_user">User</link> Stories:</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Cómo administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas de servicios para que de esa forma, los trabajadoras puedan clasificarlos. [CUMPLE]</para>
+
+<para>Como administrador, quiero poder dar de baja ofertas de servicios, {avisando al oferente para que de esa forma, pueda evitar ofertas inadecudas}. [CUMPLE*]</para>
+
+<para>Como trabajador, quiero registrarme en la plataforma, indicando mis datos personales e información de contacto para que de esa forma, pueda proveer información de contacto a quienes quieran contratar mis servicios. [CUMPLE]</para>
+
+<para>Como trabajador, quiero poder hacer ofertas de servicios; mi oferta indicará en qué categoría quiero publicar, tendrá una descripción del servicio ofertado, y un precio para que de esa forma, mis ofertas sean ofrecidas a quienes quieren contratar servicios. [CUMPLE]</para>
+
+<para>Como empleador, quiero registrarme en la plataforma, indicando mis datos personales e información de contacto para que de esa forma, pueda proveer información de contacto a los trabajadores que quiero contratar. [CUMPLE]</para>
+
+<para>Como empleador, quiero buscar ofertas de trabajo, opcionalmente filtrando por categoría para que de esa forma, pueda contratar un servicio. [CUMPLE]</para>
+
+<para>Como empleador, quiero ver el resultado de las búsquedas de ofertas de trabajo ordenado en forma <emphasis>ascendente</emphasis> de <emphasis>distancia a mi ubicación</emphasis>, es decir, las más cercanas primero para que de esa forma, pueda poder contratar un servicio. [CUMPLE]</para>
+
+<para>Como empleador, quiero ver el resultado de las búsquedas de ofertas de trabajo ordenado en forma <emphasis>descendente</emphasis> por reputación, es decir, las <emphasis>de mejor reputación primero</emphasis> para que de esa forma, pueda contratar un servicio. [CUMPLE]</para>
+
+<para>Como empleador, quiero poder contactar a un trabajador para que de esa forma pueda, contratar una oferta de servicios determinada. [FALTA]</para>
+
+<para>Como <emphasis>trabajador</emphasis>, quiero poder calificar a un empleador; el empleador me tiene que calificar a mi también, {si no me califica en un mes, la calificación será neutral, para que de esa forma pueda definir la reputación de mi empleador.} [CUMPLE*]</para>
+
+<para>Como <emphasis>empleador</emphasis>, quiero poder calificar a un trabajador; el trabajador me tiene que calificar a mi también, {si no me califica en un mes, la calificación será neutral, para que de esa forma, pueda definir la reputaión del trabajador.} [CUMPLE*]</para>
+
+<para>Como trabajador, quiero poder saber la reputación de un empleador que me contacte para que de esa forma, poder decidir sobre su solicitud de contratación. [FALTA] </para>
+</section>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_singleton" xml:lang="es">
+<title>Referencia de la plantilla de la Clase Proyecto_Chatbot.Singleton&lt; T &gt;</title>
+<indexterm><primary>Proyecto_Chatbot.Singleton&lt; T &gt;</primary></indexterm>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_singleton_1aabb66ed8f66d5e4f55e03ebe9bf29485"/>static T <emphasis role="strong">Instance</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Singleton.cs</section>

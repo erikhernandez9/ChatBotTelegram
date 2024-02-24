@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::Usuarios::Trabajador</compoundname>
+    <basecompoundref refid="class_user" prot="public" virt="non-virtual">User</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1aea041bee46c71a873f6ff248233f8bf0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Proyecto_Chatbot.Usuarios.Trabajador.Reputacion</definition>
+        <argsstring></argsstring>
+        <name>Reputacion</name>
+        <qualifiedname>Proyecto_Chatbot.Usuarios.Trabajador.Reputacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Usuarios/Trabajador.cs" line="18" column="23" bodyfile="src/Library/Usuarios/Trabajador.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a77aaeb273ef3a5963887c0253309c4e0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Proyecto_Chatbot.Usuarios.Trabajador.Latitud</definition>
+        <argsstring></argsstring>
+        <name>Latitud</name>
+        <qualifiedname>Proyecto_Chatbot.Usuarios.Trabajador.Latitud</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Usuarios/Trabajador.cs" line="19" column="23" bodyfile="src/Library/Usuarios/Trabajador.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1af7c815a25f13ca2f06dbdc5d26750d64" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Proyecto_Chatbot.Usuarios.Trabajador.Longitud</definition>
+        <argsstring></argsstring>
+        <name>Longitud</name>
+        <qualifiedname>Proyecto_Chatbot.Usuarios.Trabajador.Longitud</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Usuarios/Trabajador.cs" line="20" column="23" bodyfile="src/Library/Usuarios/Trabajador.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a919ea418ceaf6acd89cbe11d3424813b" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref> &gt;</type>
+        <definition>List&lt;OfertaLaboral&gt; Proyecto_Chatbot.Usuarios.Trabajador.Ofertas</definition>
+        <argsstring></argsstring>
+        <name>Ofertas</name>
+        <qualifiedname>Proyecto_Chatbot.Usuarios.Trabajador.Ofertas</qualifiedname>
+        <initializer>= new List&lt;<ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Usuarios/Trabajador.cs" line="21" column="21" bodyfile="src/Library/Usuarios/Trabajador.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a638db49477c9556aae007304953a78a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Proyecto_Chatbot.Usuarios.Trabajador.Trabajador</definition>
+        <argsstring>(string nombre, string email, double latitud, string telefono, double longitud, string id)</argsstring>
+        <name>Trabajador</name>
+        <qualifiedname>Proyecto_Chatbot.Usuarios.Trabajador.Trabajador</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>latitud</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>telefono</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>longitud</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Usuarios/Trabajador.cs" line="9" column="16" bodyfile="src/Library/Usuarios/Trabajador.cs" bodystart="9" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IUser</label>
+      </node>
+      <node id="1">
+        <label>Proyecto_Chatbot.Usuarios.Trabajador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>User</label>
+        <link refid="class_user"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IUser</label>
+      </node>
+      <node id="1">
+        <label>Proyecto_Chatbot.Usuarios.Trabajador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>User</label>
+        <link refid="class_user"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Library/Usuarios/Trabajador.cs" line="7" column="11" bodyfile="src/Library/Usuarios/Trabajador.cs" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_user_1a7ed159e4b886cffcf51dd675b9e4793b" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Email</name></member>
+      <member refid="class_user_1abc5f5286bda8fca089c7af1c0fab3b57" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Id</name></member>
+      <member refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a77aaeb273ef3a5963887c0253309c4e0" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Latitud</name></member>
+      <member refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1af7c815a25f13ca2f06dbdc5d26750d64" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Longitud</name></member>
+      <member refid="class_user_1a298f9292e1b8be801f1a471b0e1d2899" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Nombre</name></member>
+      <member refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a919ea418ceaf6acd89cbe11d3424813b" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Ofertas</name></member>
+      <member refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1aea041bee46c71a873f6ff248233f8bf0" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Reputacion</name></member>
+      <member refid="class_user_1a57c57308bef71b88b40979e1f2791d39" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Telefono</name></member>
+      <member refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a638db49477c9556aae007304953a78a3" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>Trabajador</name></member>
+      <member refid="class_user_1a7660daf25606ed5e444d4aa64319d993" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Trabajador</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

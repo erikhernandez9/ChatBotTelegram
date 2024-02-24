@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_calificacion" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Calificacion</title>
+<indexterm><primary>Proyecto_Chatbot.Calificacion</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_calificacion_1ae49f20c5acdc6d3e1092252d37192ea9"/><emphasis role="strong">Calificacion</emphasis> (string descripcion, double puntaje)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_calificacion_1acde3f9c630e91896f423cb4efdf091d7"/>string <emphasis role="strong">Descripcion</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_calificacion_1a2cadf01b8b83ecb8aff8bcea9224b46b"/>double <emphasis role="strong">Puntaje</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Calificacion.cs</section>

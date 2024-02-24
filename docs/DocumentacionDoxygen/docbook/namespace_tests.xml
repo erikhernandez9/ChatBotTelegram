@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_tests" xml:lang="es">
+<title>Referencia del Namespace Tests</title>
+<indexterm><primary>Tests</primary></indexterm>
+<simplesect>
+    <title>Clases    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_tests_1_1_calcular_ubicacion_tests">CalcularUbicacionTests</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tests_1_1_catalogo_categorias_tests">CatalogoCategoriasTests</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tests_1_1_catalogo_contrataciones_tests">CatalogoContratacionesTests</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tests_1_1_catalogo_ofertas_tests">CatalogoOfertasTests</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tests_1_1_contratacion_tests">ContratacionTests</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tests_1_1_employer_tests">EmployerTests</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

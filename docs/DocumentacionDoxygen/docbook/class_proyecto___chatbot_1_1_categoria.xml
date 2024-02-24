@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_categoria" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Categoria</title>
+<indexterm><primary>Proyecto_Chatbot.Categoria</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_categoria_1a1c0e53cb1315e9b5df15d695edc7d673"/><emphasis role="strong">Categoria</emphasis> (string nombre, string descripcion)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_categoria_1a46510a42fe305b7d8c170d84cec41d61"/>string <emphasis role="strong">Nombre</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_categoria_1afac4a324018a69d7b157dc737dddadce"/>string <emphasis role="strong">Descripcion</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Categoria.cs</section>

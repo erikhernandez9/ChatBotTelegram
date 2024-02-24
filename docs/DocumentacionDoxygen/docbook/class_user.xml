@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_user" xml:lang="es">
+<title>Referencia de la Clase User</title>
+<indexterm><primary>User</primary></indexterm>
+<para>Diagrama de herencias de User    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_user.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_user_1a7660daf25606ed5e444d4aa64319d993"/><emphasis role="strong">User</emphasis> (string nombre, string email, string telefono, string id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_user_1a298f9292e1b8be801f1a471b0e1d2899"/>string <emphasis role="strong">Nombre</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_user_1a7ed159e4b886cffcf51dd675b9e4793b"/>string <emphasis role="strong">Email</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_user_1a57c57308bef71b88b40979e1f2791d39"/>string <emphasis role="strong">Telefono</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_user_1abc5f5286bda8fca089c7af1c0fab3b57"/>string <emphasis role="strong">Id</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/User.cs</section>

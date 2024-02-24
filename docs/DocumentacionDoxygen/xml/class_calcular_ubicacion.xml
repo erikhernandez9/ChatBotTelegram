@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_calcular_ubicacion" kind="class" language="C#" prot="public">
+    <compoundname>CalcularUbicacion</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_calcular_ubicacion_1ab1b0e7334b8590ef2315cead9abe17ba" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double CalcularUbicacion.Distancia</definition>
+        <argsstring></argsstring>
+        <name>Distancia</name>
+        <qualifiedname>CalcularUbicacion.Distancia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/CalcularUbicacion.cs" line="8" column="19" bodyfile="src/Library/CalcularUbicacion.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_calcular_ubicacion_1a0fb4100bb91abf0326929b16bd92a055" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double CalcularUbicacion.Calcular</definition>
+        <argsstring>(Empleador empleador, Trabajador trabajador)</argsstring>
+        <name>Calcular</name>
+        <qualifiedname>CalcularUbicacion.Calcular</qualifiedname>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador" kindref="compound">Empleador</ref></type>
+          <declname>empleador</declname>
+        </param>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" kindref="compound">Trabajador</ref></type>
+          <declname>trabajador</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/CalcularUbicacion.cs" line="9" column="26" bodyfile="src/Library/CalcularUbicacion.cs" bodystart="9" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/CalcularUbicacion.cs" line="6" column="7" bodyfile="src/Library/CalcularUbicacion.cs" bodystart="7" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_calcular_ubicacion_1a0fb4100bb91abf0326929b16bd92a055" prot="public" virt="non-virtual"><scope>CalcularUbicacion</scope><name>Calcular</name></member>
+      <member refid="class_calcular_ubicacion_1ab1b0e7334b8590ef2315cead9abe17ba" prot="private" virt="non-virtual"><scope>CalcularUbicacion</scope><name>Distancia</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

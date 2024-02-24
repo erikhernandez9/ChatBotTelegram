@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tests_1_1_employer_tests" xml:lang="es">
+<title>Referencia de la Clase Tests.EmployerTests</title>
+<indexterm><primary>Tests.EmployerTests</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_tests_1_1_employer_tests_1a84acbb6d36d751f8ed1849896085e628"/>void <emphasis role="strong">CrearCategoriaTest</emphasis> ()</para>
+
+<para>Prueba que se creen categorías. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+test/LibraryTests/EmployerTests.cs</section>

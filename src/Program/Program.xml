@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Program</name>
+    </assembly>
+    <members>
+        <member name="T:Proyecto_Chatbot.Program">
+            <summary>
+            Un programa que implementa un bot de Telegram.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.Program.bot">
+            <summary>
+            instancia del bot.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.Program.token">
+            <summary>
+            token del bot.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.Program.BotSecret">
+            <summary>
+            Esta clase es un POCO (Plain Old CLR Object), no depende de nada en especial y es una clase simple.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.Program.ISecretService">
+            <summary>
+            Una interfaz requerida para configurar el servicio que lee el token secreto del bot.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.Program.SecretService">
+            <summary>
+            Una clase que provee el servicio de leer el token secreto del bot.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Program.Main">
+            <summary>
+            Punto de entrada al programa.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Program.HandleUpdateAsync(Telegram.Bot.ITelegramBotClient,Telegram.Bot.Types.Update,System.Threading.CancellationToken)">
+            <summary>
+            Maneja las actualizaciones del bot (todo lo que llega), incluyendo mensajes, ediciones de mensajes,
+            respuestas a botones, etc. En este ejemplo sólo manejamos mensajes de texto.
+            </summary>
+            <param name="botClient">el cliente del bot.</param>
+            <param name="update">El update del mensaje.</param>
+            <param name="cancellationToken">cancellation token para la excepción.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Program.HandleMessageReceived(Telegram.Bot.ITelegramBotClient,Telegram.Bot.Types.Message)">
+            <summary>
+            Maneja los mensajes que se envían al bot a través de handlers de una chain of responsibility.
+            </summary>
+            <param name="botClient">el cliente del bot.</param>
+            <param name="message">El mensaje recibido.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Program.HandleErrorAsync(Telegram.Bot.ITelegramBotClient,System.Exception,System.Threading.CancellationToken)">
+            <summary>
+            Manejo de excepciones. Por ahora simplemente la imprimimos en la consola.
+            </summary>
+            <param name="botClient">El bot.</param>
+            <param name="exception">Excepción correspondiente.</param>
+            <param name="cancellationToken">Cancellation Token.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_categoria" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::Categoria</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_categoria_1a46510a42fe305b7d8c170d84cec41d61" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.Categoria.Nombre</definition>
+        <argsstring></argsstring>
+        <name>Nombre</name>
+        <qualifiedname>Proyecto_Chatbot.Categoria.Nombre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Categoria.cs" line="7" column="23" bodyfile="src/Library/Categoria.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_categoria_1afac4a324018a69d7b157dc737dddadce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.Categoria.Descripcion</definition>
+        <argsstring></argsstring>
+        <name>Descripcion</name>
+        <qualifiedname>Proyecto_Chatbot.Categoria.Descripcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Categoria.cs" line="8" column="23" bodyfile="src/Library/Categoria.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_categoria_1a1c0e53cb1315e9b5df15d695edc7d673" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Proyecto_Chatbot.Categoria.Categoria</definition>
+        <argsstring>(string nombre, string descripcion)</argsstring>
+        <name>Categoria</name>
+        <qualifiedname>Proyecto_Chatbot.Categoria.Categoria</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>descripcion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Categoria.cs" line="10" column="16" bodyfile="src/Library/Categoria.cs" bodystart="10" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/Categoria.cs" line="5" column="11" bodyfile="src/Library/Categoria.cs" bodystart="6" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_proyecto___chatbot_1_1_categoria_1a1c0e53cb1315e9b5df15d695edc7d673" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Categoria</scope><name>Categoria</name></member>
+      <member refid="class_proyecto___chatbot_1_1_categoria_1afac4a324018a69d7b157dc737dddadce" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Categoria</scope><name>Descripcion</name></member>
+      <member refid="class_proyecto___chatbot_1_1_categoria_1a46510a42fe305b7d8c170d84cec41d61" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Categoria</scope><name>Nombre</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

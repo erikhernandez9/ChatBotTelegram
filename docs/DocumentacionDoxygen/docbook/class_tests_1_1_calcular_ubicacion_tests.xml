@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tests_1_1_calcular_ubicacion_tests" xml:lang="es">
+<title>Referencia de la Clase Tests.CalcularUbicacionTests</title>
+<indexterm><primary>Tests.CalcularUbicacionTests</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_tests_1_1_calcular_ubicacion_tests_1a34148ae138b6945bf7a5f730f1510c62"/>void <emphasis role="strong">DistanciaTest</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+test/LibraryTests/CalcularUbicacionTest.cs</section>

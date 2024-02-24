@@ -1,0 +1,154 @@
+\hypertarget{class_lista_administradores}{}\doxysection{Lista\+Administradores Class Reference}
+\label{class_lista_administradores}\index{ListaAdministradores@{ListaAdministradores}}
+
+
+Clase que almacena todos los administradores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos. Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular administradores. Esto es porque utiliza instancias de la clase Administrador, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.  
+
+
+Inheritance diagram for Lista\+Administradores\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lista_administradores}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lista_administradores_a20b2ebc95568a305ac6399497e17ec63}{Agregar\+Administrador}} (string nombre, string email, long id)
+\begin{DoxyCompactList}\small\item\em Método para agregar administrador a la lista de administradores y guardarlos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_administradores_ace225368db3afa83cf616184077fcdcb}{Eliminar\+Administrador}} (long id)
+\begin{DoxyCompactList}\small\item\em Método para eliminar administradores de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_administrador}{Administrador}} \mbox{\hyperlink{class_lista_administradores_af2428326ab20c5d7d4ce9fdd6f1c5b0b}{Seleccionar\+Administrador}} (long id\+Administrador)
+\begin{DoxyCompactList}\small\item\em Mpetodo para seleccionar un administrador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_lista_administradores_a4448a6ea58f3d262fce92911cd84c850}{Convert\+To\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Serializa (convierte) valores a .json. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_administradores_a3e374d95400c1311a4511a5bd1171c25}{Load\+From\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Carga el contenido del .json. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_lista_administradores_aeed0f5c59c278722b69867e33a53a5a6}{Show\+File}} ()
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Muestra el contenido del .json. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_administrador}{Administrador}} $>$ \mbox{\hyperlink{class_lista_administradores_af360174210431d257faa87ab260fef44}{Administradores}} = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_administrador}{Administrador}}$>$()
+\begin{DoxyCompactList}\small\item\em Lista para almacenar los administradores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que almacena todos los administradores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos. Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular administradores. Esto es porque utiliza instancias de la clase Administrador, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lista_administradores_a20b2ebc95568a305ac6399497e17ec63}\label{class_lista_administradores_a20b2ebc95568a305ac6399497e17ec63}} 
+\index{ListaAdministradores@{ListaAdministradores}!AgregarAdministrador@{AgregarAdministrador}}
+\index{AgregarAdministrador@{AgregarAdministrador}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{AgregarAdministrador()}{AgregarAdministrador()}}
+{\footnotesize\ttfamily void Lista\+Administradores.\+Agregar\+Administrador (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{string}]{email,  }\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para agregar administrador a la lista de administradores y guardarlos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & nombre del administrador.\\
+\hline
+{\em email} & email del administrador.\\
+\hline
+{\em id} & id del administrador.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lista_administradores_a4448a6ea58f3d262fce92911cd84c850}\label{class_lista_administradores_a4448a6ea58f3d262fce92911cd84c850}} 
+\index{ListaAdministradores@{ListaAdministradores}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string Lista\+Administradores.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializa (convierte) valores a .json. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el json en forma de string.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_lista_administradores_ace225368db3afa83cf616184077fcdcb}\label{class_lista_administradores_ace225368db3afa83cf616184077fcdcb}} 
+\index{ListaAdministradores@{ListaAdministradores}!EliminarAdministrador@{EliminarAdministrador}}
+\index{EliminarAdministrador@{EliminarAdministrador}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{EliminarAdministrador()}{EliminarAdministrador()}}
+{\footnotesize\ttfamily void Lista\+Administradores.\+Eliminar\+Administrador (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para eliminar administradores de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id del administrador a eliminar.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lista_administradores_a3e374d95400c1311a4511a5bd1171c25}\label{class_lista_administradores_a3e374d95400c1311a4511a5bd1171c25}} 
+\index{ListaAdministradores@{ListaAdministradores}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void Lista\+Administradores.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Carga el contenido del .json. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_lista_administradores_af2428326ab20c5d7d4ce9fdd6f1c5b0b}\label{class_lista_administradores_af2428326ab20c5d7d4ce9fdd6f1c5b0b}} 
+\index{ListaAdministradores@{ListaAdministradores}!SeleccionarAdministrador@{SeleccionarAdministrador}}
+\index{SeleccionarAdministrador@{SeleccionarAdministrador}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{SeleccionarAdministrador()}{SeleccionarAdministrador()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_administrador}{Administrador}} Lista\+Administradores.\+Seleccionar\+Administrador (\begin{DoxyParamCaption}\item[{long}]{id\+Administrador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mpetodo para seleccionar un administrador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Administrador} & id del administrador a seleccionar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna el objeto administrador en base a su id.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lista_administradores_aeed0f5c59c278722b69867e33a53a5a6}\label{class_lista_administradores_aeed0f5c59c278722b69867e33a53a5a6}} 
+\index{ListaAdministradores@{ListaAdministradores}!ShowFile@{ShowFile}}
+\index{ShowFile@{ShowFile}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{ShowFile()}{ShowFile()}}
+{\footnotesize\ttfamily string Lista\+Administradores.\+Show\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Muestra el contenido del .json. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_lista_administradores_af360174210431d257faa87ab260fef44}\label{class_lista_administradores_af360174210431d257faa87ab260fef44}} 
+\index{ListaAdministradores@{ListaAdministradores}!Administradores@{Administradores}}
+\index{Administradores@{Administradores}!ListaAdministradores@{ListaAdministradores}}
+\doxysubsubsection{\texorpdfstring{Administradores}{Administradores}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_administrador}{Administrador}}$>$ Lista\+Administradores.\+Administradores = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_administrador}{Administrador}}$>$()}
+
+
+
+Lista para almacenar los administradores. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\mbox{\hyperlink{_lista_administradores_8cs}{Lista\+Administradores.\+cs}}\end{DoxyCompactItemize}

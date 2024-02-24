@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="_employer_tests_8cs" kind="file" language="C#">
+    <compoundname>EmployerTests.cs</compoundname>
+    <innerclass refid="class_tests_1_1_employer_tests" prot="public">Tests::EmployerTests</innerclass>
+    <innernamespace refid="namespace_tests">Tests</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">NUnit.Framework;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_proyecto___chatbot_1_1_usuarios" kindref="compound">Proyecto_Chatbot.Usuarios</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_proyecto___chatbot_1_1_catalogos" kindref="compound">Proyecto_Chatbot.Catalogos</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_proyecto___chatbot" kindref="compound">Proyecto_Chatbot</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_tests" kindref="compound">Tests</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>[TestFixture]</highlight></codeline>
+<codeline lineno="9" refid="class_tests_1_1_employer_tests" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tests_1_1_employer_tests" kindref="compound">EmployerTests</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_tests_1_1_employer_tests_1a84acbb6d36d751f8ed1849896085e628" kindref="member">CrearCategoriaTest</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref><sp/>Categoria1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref>(</highlight><highlight class="stringliteral">&quot;Panaderia&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Descripcion1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref><sp/>Categoria2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref>(</highlight><highlight class="stringliteral">&quot;Lavanderia&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Descripcion2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_proyecto___chatbot_1_1_singleton" kindref="compound">Singleton&lt;CatalogoCategorias&gt;</ref>.Instance.Categorias.Add(Categoria1);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.IsNotEmpty(<ref refid="class_proyecto___chatbot_1_1_singleton" kindref="compound">Singleton&lt;CatalogoCategorias&gt;</ref>.Instance.Categorias);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/LibraryTests/EmployerTests.cs"/>
+  </compounddef>
+</doxygen>

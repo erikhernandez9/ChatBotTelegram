@@ -1,0 +1,173 @@
+\hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias Class Reference}
+\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias}\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+
+
+Clase que almacena todas las categorias del programa, permitiendo agregarlas, eliminarlas y seleccionarlas. Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular categorías. Esto es porque utiliza instancias de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}}, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto. Además, esta clase implementa la interfaz \mbox{\hyperlink{interface_i_json_convertible}{IJson\+Convertible}}, por lo que se esta usando el principio DIP, para implementar el uso del Json. Las categorías del catálogo se almacenan en un archivo .json para guardarlas.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a83fa39be3040283b2daf825a9381cae4}{Agregar\+Categoria}} (string nombre, string descripcion)
+\begin{DoxyCompactList}\small\item\em Metodo que permite crear una categoria, serializarla y agregarla al catalogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a51cb6d54aa7c36ab81bb44811e271d09}{Eliminar\+Categoria}} (string nombre)
+\begin{DoxyCompactList}\small\item\em Metodo que elimina una categoria. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aa2b114b0ec69e97c416174e06aadba91}{Seleccionar\+Categorias}} (string nombre\+Categoria)
+\begin{DoxyCompactList}\small\item\em Metodo que permite seleccionar una categoria. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aefe4b8a6ada0e58001416d64ce640de9}{Convert\+To\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Serializa (convierte) valores de string a .json. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abf5de9e798ed4c0596614feb7d1b7346}{Load\+From\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Carga el contenido del .json. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a04354bbb1884cdce5731a1697509b3dd}{Show\+File}} ()
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Muestra el contenido del .json. \end{DoxyCompactList}\item 
+String\+Builder \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abe66df5217ba873e1028ec70f17e69bc}{Imprimir}} ()
+\begin{DoxyCompactList}\small\item\em Método imprimir para que se muestre en el chat la lista de categorías marcada en el .json. Se utilizó un String\+Builder para tomar las categorías de donde se indicó anteriormente y construir un string que muestre, en forma de lista, qué categorias hay actualmente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_adb55037f8741d51b4c853653019daef6}{Categorias}} = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}}$>$()
+\begin{DoxyCompactList}\small\item\em Lista que almacena todas las categorias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que almacena todas las categorias del programa, permitiendo agregarlas, eliminarlas y seleccionarlas. Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular categorías. Esto es porque utiliza instancias de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}}, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto. Además, esta clase implementa la interfaz \mbox{\hyperlink{interface_i_json_convertible}{IJson\+Convertible}}, por lo que se esta usando el principio DIP, para implementar el uso del Json. Las categorías del catálogo se almacenan en un archivo .json para guardarlas. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a83fa39be3040283b2daf825a9381cae4}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a83fa39be3040283b2daf825a9381cae4}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!AgregarCategoria@{AgregarCategoria}}
+\index{AgregarCategoria@{AgregarCategoria}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{AgregarCategoria()}{AgregarCategoria()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Agregar\+Categoria (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{string}]{descripcion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metodo que permite crear una categoria, serializarla y agregarla al catalogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Representa el nombre de la categoria a agregar.\\
+\hline
+{\em descripcion} & Representa la descripcion de la categoria a agregar.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aefe4b8a6ada0e58001416d64ce640de9}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aefe4b8a6ada0e58001416d64ce640de9}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializa (convierte) valores de string a .json. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a51cb6d54aa7c36ab81bb44811e271d09}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a51cb6d54aa7c36ab81bb44811e271d09}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!EliminarCategoria@{EliminarCategoria}}
+\index{EliminarCategoria@{EliminarCategoria}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{EliminarCategoria()}{EliminarCategoria()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Eliminar\+Categoria (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metodo que elimina una categoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Representa el nombre que identifica a la categoria para eliminarla.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abe66df5217ba873e1028ec70f17e69bc}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abe66df5217ba873e1028ec70f17e69bc}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!Imprimir@{Imprimir}}
+\index{Imprimir@{Imprimir}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{Imprimir()}{Imprimir()}}
+{\footnotesize\ttfamily String\+Builder Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Imprimir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método imprimir para que se muestre en el chat la lista de categorías marcada en el .json. Se utilizó un String\+Builder para tomar las categorías de donde se indicó anteriormente y construir un string que muestre, en forma de lista, qué categorias hay actualmente. 
+
+\begin{DoxyReturn}{Returns}
+Un string que enlista todos los nombres de las categorías.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abf5de9e798ed4c0596614feb7d1b7346}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abf5de9e798ed4c0596614feb7d1b7346}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Carga el contenido del .json. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & El json a serializar.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aa2b114b0ec69e97c416174e06aadba91}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aa2b114b0ec69e97c416174e06aadba91}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!SeleccionarCategorias@{SeleccionarCategorias}}
+\index{SeleccionarCategorias@{SeleccionarCategorias}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{SeleccionarCategorias()}{SeleccionarCategorias()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}} Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Seleccionar\+Categorias (\begin{DoxyParamCaption}\item[{string}]{nombre\+Categoria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metodo que permite seleccionar una categoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Categoria} & Nombre de la categoria que se quiere seleccionar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna un objeto Categoría en base al string de su nombre.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a04354bbb1884cdce5731a1697509b3dd}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_a04354bbb1884cdce5731a1697509b3dd}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!ShowFile@{ShowFile}}
+\index{ShowFile@{ShowFile}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{ShowFile()}{ShowFile()}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Show\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Muestra el contenido del .json. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el .json de catgorias en formato string.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_adb55037f8741d51b4c853653019daef6}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_adb55037f8741d51b4c853653019daef6}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}!Categorias@{Categorias}}
+\index{Categorias@{Categorias}!Proyecto\_Chatbot.Catalogos.CatalogoCategorias@{Proyecto\_Chatbot.Catalogos.CatalogoCategorias}}
+\doxysubsubsection{\texorpdfstring{Categorias}{Categorias}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}}$>$ Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias.\+Categorias = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}}$>$()}
+
+
+
+Lista que almacena todas las categorias. 
+
+~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Catalogos/\mbox{\hyperlink{_catalogo_categorias_8cs}{Catalogo\+Categorias.\+cs}}\end{DoxyCompactItemize}

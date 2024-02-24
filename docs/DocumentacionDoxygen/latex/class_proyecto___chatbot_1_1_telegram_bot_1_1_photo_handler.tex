@@ -1,0 +1,76 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Photo\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler}\index{Proyecto\_Chatbot.TelegramBot.PhotoHandler@{Proyecto\_Chatbot.TelegramBot.PhotoHandler}}
+
+
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}foto\char`\"{}.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Photo\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler_a1bb80665edd89a5ccc50514c8cb54ab7}{Photo\+Handler}} (Telegram\+Bot\+Client bot, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler}{Photo\+Handler}}. Esta clase procesa el mensaje \char`\"{}foto\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler_a7ac83eca8f79a29ff8a5b2c628e961fd}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Procesa el mensaje \char`\"{}foto\char`\"{} y retorna true; retorna false en caso contrario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}foto\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler_a1bb80665edd89a5ccc50514c8cb54ab7}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler_a1bb80665edd89a5ccc50514c8cb54ab7}} 
+\index{Proyecto\_Chatbot.TelegramBot.PhotoHandler@{Proyecto\_Chatbot.TelegramBot.PhotoHandler}!PhotoHandler@{PhotoHandler}}
+\index{PhotoHandler@{PhotoHandler}!Proyecto\_Chatbot.TelegramBot.PhotoHandler@{Proyecto\_Chatbot.TelegramBot.PhotoHandler}}
+\doxysubsubsection{\texorpdfstring{PhotoHandler()}{PhotoHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Photo\+Handler.\+Photo\+Handler (\begin{DoxyParamCaption}\item[{Telegram\+Bot\+Client}]{bot,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler}{Photo\+Handler}}. Esta clase procesa el mensaje \char`\"{}foto\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & El próximo \char`\"{}handler\char`\"{}.\\
+\hline
+{\em bot} & El bot para enviar la foto.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler_a7ac83eca8f79a29ff8a5b2c628e961fd}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_photo_handler_a7ac83eca8f79a29ff8a5b2c628e961fd}} 
+\index{Proyecto\_Chatbot.TelegramBot.PhotoHandler@{Proyecto\_Chatbot.TelegramBot.PhotoHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.PhotoHandler@{Proyecto\_Chatbot.TelegramBot.PhotoHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Photo\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Procesa el mensaje \char`\"{}foto\char`\"{} y retorna true; retorna false en caso contrario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & El mensaje a procesar.\\
+\hline
+{\em response} & La respuesta al mensaje procesado.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_photo_handler_8cs}{Photo\+Handler.\+cs}}\end{DoxyCompactItemize}

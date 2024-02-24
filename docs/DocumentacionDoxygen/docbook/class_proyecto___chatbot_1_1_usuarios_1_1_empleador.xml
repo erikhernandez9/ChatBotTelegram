@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Usuarios.Empleador</title>
+<indexterm><primary>Proyecto_Chatbot.Usuarios.Empleador</primary></indexterm>
+<para>Diagrama de herencias de Proyecto_Chatbot.Usuarios.Empleador    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_proyecto___chatbot_1_1_usuarios_1_1_empleador.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador_1a85da77d49e650471177f5be6bf854546"/><emphasis role="strong">Empleador</emphasis> (string nombre, string email, string telefono, string id, double latitud, double longitud)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador_1adbd6a90e4985fdb930567ceed3ea8836"/>void <emphasis role="strong">CalcularReputacion</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion">CatalogoContratacion</link> catalogo)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador_1af7ec275686d10e316d1c48e0969831bb"/>double <emphasis role="strong">Reputacion</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador_1a1d90f553d7706eb56ab6d3c1091bc569"/>double <emphasis role="strong">Latitud</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador_1a4635e98b945d0aed1dbabd8dded1e75b"/>double <emphasis role="strong">Longitud</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Usuarios/Empleador.cs</section>

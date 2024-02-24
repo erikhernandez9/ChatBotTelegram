@@ -1,0 +1,281 @@
+\hypertarget{class_proyecto___chatbot_1_1_contratacion}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Contratacion Class Reference}
+\label{class_proyecto___chatbot_1_1_contratacion}\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+
+
+Clase que representa la contratacion de un servicio. Se utilizó el principio SRP, ya que la clase contiene solo a la categoría, y tiene la responsabilidad de corroborar si la misma es válida cuando se crea.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Contratacion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___chatbot_1_1_contratacion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a549dffc8d26d4deee4937d4f2e57c932}{Contratacion}} (int id, \mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}} oferta\+Laboral, \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} empleador, string descripcion)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a69849a77c36c6393945f10b8270fc178}{Calificar\+Empleador}} (string descripcion, double puntaje)
+\begin{DoxyCompactList}\small\item\em Métodos para calificar empleadores y trabajadores. Método desemplear. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a0249c956a7c61275408c36118b22c460}{Calificar\+Trabajador}} (string descripcion, double puntaje)
+\begin{DoxyCompactList}\small\item\em Metodo para calificar al trabajador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_aac77d02db58193dca19e8b32057fe862}{Calificar\+Neutral}} ()
+\begin{DoxyCompactList}\small\item\em Método para agregar una calificación neutral al empleador si el trabajador demora más de un mes en calificarlo. Este método forma parte de las USER STORIES. \char`\"{}\+Como empleador, quiero poder calificar a un trabajador; el trabajador me tiene que calificar a mi también,  si no me califica en un mes, la calificación será neutral, para que de esa forma, pueda definir la reputaión del trabajador\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a7f257c9765392f9c02e5d89b2d8c942e}{Desemplear}} ()
+\begin{DoxyCompactList}\small\item\em Metodo para desemplear a un trabajador, este pone la fecha cuando se cierra el contrato. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a0956dd31827cb7cdd5efb4782eb1cdc7}{Convert\+To\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Convierte a json los datos de la clase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a0c43d22d139740eec77751d3b2a48698}{Load\+From\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em Carga los datos json a la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_adc9dacae68693a1d3f93504ac4b98fdb}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identificador de la contratacion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a690dc8d06d6448c705e381cdb3408f4d}{Oferta\+Laboral}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa la oferta laboral del contrato. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_aae4f78d7998608023ab7ec0d6f251e37}{Empleador}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa el empleador que realiza la contratacion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a5fb7de12ed1a3a43a212ccf4dad7fece}{Costo\+Servicio}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa el costo del trabajo a realizar. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a13a0529f4a1222cc4d63385bcb325adf}{Descripcion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa la descripcion del contrato. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a4d1dba6913953d37295122c9ed4f903f}{Fecha\+\_\+inicio}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa la fecha en la que se crea el contrato. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a7ff6d8364baaf909da1ab56aa2a3cd55}{Fecha\+\_\+final}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa la fecha en la que se cierra el contrato. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a5f06dcb3d5cb5e83db82ef5bbb290be0}{Estado}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa el estado de la contratacion True = Activo, False = inactivo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a6c5f4384f33b141cb8b934c5b360c54f}{Calificacion\+Empleador}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Almacena la calificacion del empleador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a97e0f2042b7dba4a5d66823df732f0f8}{Calificacion\+Trabajador}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Almacena la califiacion del trabajador por el trabajo realizado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa la contratacion de un servicio. Se utilizó el principio SRP, ya que la clase contiene solo a la categoría, y tiene la responsabilidad de corroborar si la misma es válida cuando se crea. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a549dffc8d26d4deee4937d4f2e57c932}\label{class_proyecto___chatbot_1_1_contratacion_a549dffc8d26d4deee4937d4f2e57c932}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Contratacion@{Contratacion}}
+\index{Contratacion@{Contratacion}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Contratacion()}{Contratacion()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Contratacion (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}}}]{oferta\+Laboral,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}}}]{empleador,  }\item[{string}]{descripcion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id que se le asigna a la oferta laboral.\\
+\hline
+{\em oferta\+Laboral} & Almacena la oferta laboral que se le asigna a la contratacion.\\
+\hline
+{\em empleador} & Almacena el empleador que contrata el servicio que se le asigna a la contratacion.\\
+\hline
+{\em descripcion} & Almacena la descripcion del contrato que se le asigna a la contratacion.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a69849a77c36c6393945f10b8270fc178}\label{class_proyecto___chatbot_1_1_contratacion_a69849a77c36c6393945f10b8270fc178}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!CalificarEmpleador@{CalificarEmpleador}}
+\index{CalificarEmpleador@{CalificarEmpleador}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{CalificarEmpleador()}{CalificarEmpleador()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Calificar\+Empleador (\begin{DoxyParamCaption}\item[{string}]{descripcion,  }\item[{double}]{puntaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Métodos para calificar empleadores y trabajadores. Método desemplear. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descripcion} & Descripción de la califiación.\\
+\hline
+{\em puntaje} & puntaje de la calificación.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_aac77d02db58193dca19e8b32057fe862}\label{class_proyecto___chatbot_1_1_contratacion_aac77d02db58193dca19e8b32057fe862}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!CalificarNeutral@{CalificarNeutral}}
+\index{CalificarNeutral@{CalificarNeutral}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{CalificarNeutral()}{CalificarNeutral()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Calificar\+Neutral (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para agregar una calificación neutral al empleador si el trabajador demora más de un mes en calificarlo. Este método forma parte de las USER STORIES. \char`\"{}\+Como empleador, quiero poder calificar a un trabajador; el trabajador me tiene que calificar a mi también,  si no me califica en un mes, la calificación será neutral, para que de esa forma, pueda definir la reputaión del trabajador\char`\"{}. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a0249c956a7c61275408c36118b22c460}\label{class_proyecto___chatbot_1_1_contratacion_a0249c956a7c61275408c36118b22c460}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!CalificarTrabajador@{CalificarTrabajador}}
+\index{CalificarTrabajador@{CalificarTrabajador}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{CalificarTrabajador()}{CalificarTrabajador()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Calificar\+Trabajador (\begin{DoxyParamCaption}\item[{string}]{descripcion,  }\item[{double}]{puntaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metodo para calificar al trabajador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descripcion} & almacena la descripcion de la calificacion.\\
+\hline
+{\em puntaje} & es el puntaje de la calificacion.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a0956dd31827cb7cdd5efb4782eb1cdc7}\label{class_proyecto___chatbot_1_1_contratacion_a0956dd31827cb7cdd5efb4782eb1cdc7}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convierte a json los datos de la clase. 
+
+\begin{DoxyReturn}{Returns}
+devuelve los datos convertidos.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a7f257c9765392f9c02e5d89b2d8c942e}\label{class_proyecto___chatbot_1_1_contratacion_a7f257c9765392f9c02e5d89b2d8c942e}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Desemplear@{Desemplear}}
+\index{Desemplear@{Desemplear}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Desemplear()}{Desemplear()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Desemplear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metodo para desemplear a un trabajador, este pone la fecha cuando se cierra el contrato. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a0c43d22d139740eec77751d3b2a48698}\label{class_proyecto___chatbot_1_1_contratacion_a0c43d22d139740eec77751d3b2a48698}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Carga los datos json a la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & json a deserializar.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{IJson\+Convertible}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a6c5f4384f33b141cb8b934c5b360c54f}\label{class_proyecto___chatbot_1_1_contratacion_a6c5f4384f33b141cb8b934c5b360c54f}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!CalificacionEmpleador@{CalificacionEmpleador}}
+\index{CalificacionEmpleador@{CalificacionEmpleador}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{CalificacionEmpleador}{CalificacionEmpleador}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}} Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Calificacion\+Empleador\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Almacena la calificacion del empleador. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a97e0f2042b7dba4a5d66823df732f0f8}\label{class_proyecto___chatbot_1_1_contratacion_a97e0f2042b7dba4a5d66823df732f0f8}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!CalificacionTrabajador@{CalificacionTrabajador}}
+\index{CalificacionTrabajador@{CalificacionTrabajador}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{CalificacionTrabajador}{CalificacionTrabajador}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}} Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Calificacion\+Trabajador\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Almacena la califiacion del trabajador por el trabajo realizado. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a5fb7de12ed1a3a43a212ccf4dad7fece}\label{class_proyecto___chatbot_1_1_contratacion_a5fb7de12ed1a3a43a212ccf4dad7fece}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!CostoServicio@{CostoServicio}}
+\index{CostoServicio@{CostoServicio}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{CostoServicio}{CostoServicio}}
+{\footnotesize\ttfamily int Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Costo\+Servicio\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa el costo del trabajo a realizar. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a13a0529f4a1222cc4d63385bcb325adf}\label{class_proyecto___chatbot_1_1_contratacion_a13a0529f4a1222cc4d63385bcb325adf}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Descripcion@{Descripcion}}
+\index{Descripcion@{Descripcion}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Descripcion}{Descripcion}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Descripcion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa la descripcion del contrato. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_aae4f78d7998608023ab7ec0d6f251e37}\label{class_proyecto___chatbot_1_1_contratacion_aae4f78d7998608023ab7ec0d6f251e37}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Empleador@{Empleador}}
+\index{Empleador@{Empleador}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Empleador}{Empleador}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Empleador\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa el empleador que realiza la contratacion. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a5f06dcb3d5cb5e83db82ef5bbb290be0}\label{class_proyecto___chatbot_1_1_contratacion_a5f06dcb3d5cb5e83db82ef5bbb290be0}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Estado@{Estado}}
+\index{Estado@{Estado}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Estado}{Estado}}
+{\footnotesize\ttfamily bool Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Estado\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa el estado de la contratacion True = Activo, False = inactivo. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a7ff6d8364baaf909da1ab56aa2a3cd55}\label{class_proyecto___chatbot_1_1_contratacion_a7ff6d8364baaf909da1ab56aa2a3cd55}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Fecha\_final@{Fecha\_final}}
+\index{Fecha\_final@{Fecha\_final}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Fecha\_final}{Fecha\_final}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Fecha\+\_\+final\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa la fecha en la que se cierra el contrato. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a4d1dba6913953d37295122c9ed4f903f}\label{class_proyecto___chatbot_1_1_contratacion_a4d1dba6913953d37295122c9ed4f903f}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Fecha\_inicio@{Fecha\_inicio}}
+\index{Fecha\_inicio@{Fecha\_inicio}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Fecha\_inicio}{Fecha\_inicio}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Fecha\+\_\+inicio\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa la fecha en la que se crea el contrato. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_adc9dacae68693a1d3f93504ac4b98fdb}\label{class_proyecto___chatbot_1_1_contratacion_adc9dacae68693a1d3f93504ac4b98fdb}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!Id@{Id}}
+\index{Id@{Id}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily int Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador de la contratacion. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_contratacion_a690dc8d06d6448c705e381cdb3408f4d}\label{class_proyecto___chatbot_1_1_contratacion_a690dc8d06d6448c705e381cdb3408f4d}} 
+\index{Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}!OfertaLaboral@{OfertaLaboral}}
+\index{OfertaLaboral@{OfertaLaboral}!Proyecto\_Chatbot.Contratacion@{Proyecto\_Chatbot.Contratacion}}
+\doxysubsubsection{\texorpdfstring{OfertaLaboral}{OfertaLaboral}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}} Proyecto\+\_\+\+Chatbot.\+Contratacion.\+Oferta\+Laboral\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa la oferta laboral del contrato. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\mbox{\hyperlink{_contratacion_8cs}{Contratacion.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{class_proyecto___chatbot_1_1_program}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Program Class Reference}
+\label{class_proyecto___chatbot_1_1_program}\index{Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}}
+
+
+Un programa que implementa un bot de Telegram.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_proyecto___chatbot_1_1_program_a74201b6ae162bcd6c6be0b0905d0a379}{Main}} ()
+\begin{DoxyCompactList}\small\item\em Punto de entrada al programa. \end{DoxyCompactList}\item 
+static async Task \mbox{\hyperlink{class_proyecto___chatbot_1_1_program_a345c5c7dbf0f878be4381aa62a07a3b2}{Handle\+Update\+Async}} (ITelegram\+Bot\+Client bot\+Client, Update update, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Maneja las actualizaciones del bot (todo lo que llega), incluyendo mensajes, ediciones de mensajes, respuestas a botones, etc. En este ejemplo sólo manejamos mensajes de texto. \end{DoxyCompactList}\item 
+static Task \mbox{\hyperlink{class_proyecto___chatbot_1_1_program_adbe468932a99939b43a0c976d307ee94}{Handle\+Error\+Async}} (ITelegram\+Bot\+Client bot\+Client, Exception exception, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Manejo de excepciones. Por ahora simplemente la imprimimos en la consola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Un programa que implementa un bot de Telegram. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_program_adbe468932a99939b43a0c976d307ee94}\label{class_proyecto___chatbot_1_1_program_adbe468932a99939b43a0c976d307ee94}} 
+\index{Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}!HandleErrorAsync@{HandleErrorAsync}}
+\index{HandleErrorAsync@{HandleErrorAsync}!Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}}
+\doxysubsubsection{\texorpdfstring{HandleErrorAsync()}{HandleErrorAsync()}}
+{\footnotesize\ttfamily static Task Proyecto\+\_\+\+Chatbot.\+Program.\+Handle\+Error\+Async (\begin{DoxyParamCaption}\item[{ITelegram\+Bot\+Client}]{bot\+Client,  }\item[{Exception}]{exception,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Manejo de excepciones. Por ahora simplemente la imprimimos en la consola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bot\+Client} & El bot.\\
+\hline
+{\em exception} & Excepción correspondiente.\\
+\hline
+{\em cancellation\+Token} & Cancellation Token.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_program_a345c5c7dbf0f878be4381aa62a07a3b2}\label{class_proyecto___chatbot_1_1_program_a345c5c7dbf0f878be4381aa62a07a3b2}} 
+\index{Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}!HandleUpdateAsync@{HandleUpdateAsync}}
+\index{HandleUpdateAsync@{HandleUpdateAsync}!Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}}
+\doxysubsubsection{\texorpdfstring{HandleUpdateAsync()}{HandleUpdateAsync()}}
+{\footnotesize\ttfamily static async Task Proyecto\+\_\+\+Chatbot.\+Program.\+Handle\+Update\+Async (\begin{DoxyParamCaption}\item[{ITelegram\+Bot\+Client}]{bot\+Client,  }\item[{Update}]{update,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Maneja las actualizaciones del bot (todo lo que llega), incluyendo mensajes, ediciones de mensajes, respuestas a botones, etc. En este ejemplo sólo manejamos mensajes de texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bot\+Client} & el cliente del bot.\\
+\hline
+{\em update} & El update del mensaje.\\
+\hline
+{\em cancellation\+Token} & cancellation token para la excepción.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_program_a74201b6ae162bcd6c6be0b0905d0a379}\label{class_proyecto___chatbot_1_1_program_a74201b6ae162bcd6c6be0b0905d0a379}} 
+\index{Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}!Main@{Main}}
+\index{Main@{Main}!Proyecto\_Chatbot.Program@{Proyecto\_Chatbot.Program}}
+\doxysubsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily static void Proyecto\+\_\+\+Chatbot.\+Program.\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Punto de entrada al programa. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Program/\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

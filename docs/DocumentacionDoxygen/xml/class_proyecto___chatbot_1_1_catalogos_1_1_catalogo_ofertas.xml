@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::Catalogos::CatalogoOfertas</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a253878001f34c75474127965fcb3f499" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref> &gt;</type>
+        <definition>List&lt;OfertaLaboral&gt; Proyecto_Chatbot.Catalogos.CatalogoOfertas.Ofertas</definition>
+        <argsstring></argsstring>
+        <name>Ofertas</name>
+        <qualifiedname>Proyecto_Chatbot.Catalogos.CatalogoOfertas.Ofertas</qualifiedname>
+        <initializer>= new List&lt;<ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Catalogos/CatalogoOfertas.cs" line="13" column="21" bodyfile="src/Library/Catalogos/CatalogoOfertas.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a11a2557d5ffc722af709727690c42a3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Proyecto_Chatbot.Catalogos.CatalogoOfertas.AgregarOferta</definition>
+        <argsstring>(OfertaLaboral oferta)</argsstring>
+        <name>AgregarOferta</name>
+        <qualifiedname>Proyecto_Chatbot.Catalogos.CatalogoOfertas.AgregarOferta</qualifiedname>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref></type>
+          <declname>oferta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Catalogos/CatalogoOfertas.cs" line="14" column="21" bodyfile="src/Library/Catalogos/CatalogoOfertas.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a50930ca6a4d7e8af4c9c7dd2afd5811b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Proyecto_Chatbot.Catalogos.CatalogoOfertas.EliminarOferta</definition>
+        <argsstring>(string id)</argsstring>
+        <name>EliminarOferta</name>
+        <qualifiedname>Proyecto_Chatbot.Catalogos.CatalogoOfertas.EliminarOferta</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Catalogos/CatalogoOfertas.cs" line="18" column="21" bodyfile="src/Library/Catalogos/CatalogoOfertas.cs" bodystart="18" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a4f1307d081c1553fce950207340c6ad3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref> &gt;</type>
+        <definition>List&lt; OfertaLaboral &gt; Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOfertasPorCategoria</definition>
+        <argsstring>(Categoria categoria, string preferencia, Empleador empleador)</argsstring>
+        <name>BuscarOfertasPorCategoria</name>
+        <qualifiedname>Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOfertasPorCategoria</qualifiedname>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref></type>
+          <declname>categoria</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>preferencia</declname>
+        </param>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador" kindref="compound">Empleador</ref></type>
+          <declname>empleador</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Catalogos/CatalogoOfertas.cs" line="33" column="21" bodyfile="src/Library/Catalogos/CatalogoOfertas.cs" bodystart="33" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1ae0908081afa66b7782fce8f19a9f25cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_proyecto___chatbot_1_1_oferta_laboral" kindref="compound">OfertaLaboral</ref></type>
+        <definition>OfertaLaboral Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOferta</definition>
+        <argsstring>(string id)</argsstring>
+        <name>BuscarOferta</name>
+        <qualifiedname>Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOferta</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Catalogos/CatalogoOfertas.cs" line="62" column="30" bodyfile="src/Library/Catalogos/CatalogoOfertas.cs" bodystart="62" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/Catalogos/CatalogoOfertas.cs" line="11" column="11" bodyfile="src/Library/Catalogos/CatalogoOfertas.cs" bodystart="12" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a11a2557d5ffc722af709727690c42a3f" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Catalogos::CatalogoOfertas</scope><name>AgregarOferta</name></member>
+      <member refid="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1ae0908081afa66b7782fce8f19a9f25cb" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Catalogos::CatalogoOfertas</scope><name>BuscarOferta</name></member>
+      <member refid="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a4f1307d081c1553fce950207340c6ad3" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Catalogos::CatalogoOfertas</scope><name>BuscarOfertasPorCategoria</name></member>
+      <member refid="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a50930ca6a4d7e8af4c9c7dd2afd5811b" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Catalogos::CatalogoOfertas</scope><name>EliminarOferta</name></member>
+      <member refid="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a253878001f34c75474127965fcb3f499" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Catalogos::CatalogoOfertas</scope><name>Ofertas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

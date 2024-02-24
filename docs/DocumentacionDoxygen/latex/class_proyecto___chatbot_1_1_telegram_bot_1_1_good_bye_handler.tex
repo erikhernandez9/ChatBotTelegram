@@ -1,0 +1,74 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Good\+Bye\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler}\index{Proyecto\_Chatbot.TelegramBot.GoodByeHandler@{Proyecto\_Chatbot.TelegramBot.GoodByeHandler}}
+
+
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}chau\char`\"{}.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Good\+Bye\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler_a1c142b8f98ff439350292d79ac44f998}{Good\+Bye\+Handler}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler}{Good\+Bye\+Handler}}. Esta clase procesa el mensaje \char`\"{}chau\char`\"{} y el mensaje \char`\"{}adiós\char`\"{} -\/un ejemplo de cómo un \char`\"{}handler\char`\"{} puede procesar comandos con sinónimos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler_aee78c0d9f838345accbce461e8d7dba2}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Procesa el mensaje \char`\"{}chau\char`\"{} y retorna true; retorna false en caso contrario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}chau\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler_a1c142b8f98ff439350292d79ac44f998}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler_a1c142b8f98ff439350292d79ac44f998}} 
+\index{Proyecto\_Chatbot.TelegramBot.GoodByeHandler@{Proyecto\_Chatbot.TelegramBot.GoodByeHandler}!GoodByeHandler@{GoodByeHandler}}
+\index{GoodByeHandler@{GoodByeHandler}!Proyecto\_Chatbot.TelegramBot.GoodByeHandler@{Proyecto\_Chatbot.TelegramBot.GoodByeHandler}}
+\doxysubsubsection{\texorpdfstring{GoodByeHandler()}{GoodByeHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Good\+Bye\+Handler.\+Good\+Bye\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler}{Good\+Bye\+Handler}}. Esta clase procesa el mensaje \char`\"{}chau\char`\"{} y el mensaje \char`\"{}adiós\char`\"{} -\/un ejemplo de cómo un \char`\"{}handler\char`\"{} puede procesar comandos con sinónimos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & El próximo \char`\"{}handler\char`\"{}.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler_aee78c0d9f838345accbce461e8d7dba2}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_good_bye_handler_aee78c0d9f838345accbce461e8d7dba2}} 
+\index{Proyecto\_Chatbot.TelegramBot.GoodByeHandler@{Proyecto\_Chatbot.TelegramBot.GoodByeHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.GoodByeHandler@{Proyecto\_Chatbot.TelegramBot.GoodByeHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Good\+Bye\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Procesa el mensaje \char`\"{}chau\char`\"{} y retorna true; retorna false en caso contrario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & El mensaje a procesar.\\
+\hline
+{\em response} & La respuesta al mensaje procesado.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_good_bye_handler_8cs}{Good\+Bye\+Handler.\+cs}}\end{DoxyCompactItemize}

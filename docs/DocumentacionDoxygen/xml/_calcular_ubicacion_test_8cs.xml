@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="_calcular_ubicacion_test_8cs" kind="file" language="C#">
+    <compoundname>CalcularUbicacionTest.cs</compoundname>
+    <innerclass refid="class_tests_1_1_calcular_ubicacion_tests" prot="public">Tests::CalcularUbicacionTests</innerclass>
+    <innernamespace refid="namespace_tests">Tests</innernamespace>
+    <innernamespace refid="namespace_n_unit_1_1_framework">NUnit::Framework</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">NUnit.Framework;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_proyecto___chatbot_1_1_usuarios" kindref="compound">Proyecto_Chatbot.Usuarios</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_proyecto___chatbot_1_1_catalogos" kindref="compound">Proyecto_Chatbot.Catalogos</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_proyecto___chatbot" kindref="compound">Proyecto_Chatbot</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="namespace_tests" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_tests" kindref="compound">Tests</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>[TestFixture]</highlight></codeline>
+<codeline lineno="9" refid="class_tests_1_1_calcular_ubicacion_tests" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tests_1_1_calcular_ubicacion_tests" kindref="compound">CalcularUbicacionTests</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DistanciaTest()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" kindref="compound">Trabajador</ref><sp/>alex<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" kindref="compound">Trabajador</ref>(</highlight><highlight class="stringliteral">&quot;Alex&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;alex@gmail.com&quot;</highlight><highlight class="normal">,<sp/>1.0,<sp/></highlight><highlight class="stringliteral">&quot;099333111&quot;</highlight><highlight class="normal">,<sp/>2.0,<sp/></highlight><highlight class="stringliteral">&quot;55555550&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador" kindref="compound">Empleador</ref><sp/>juan<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador" kindref="compound">Empleador</ref>(</highlight><highlight class="stringliteral">&quot;Juan&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;juan@gmail.com&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;099123345&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;553423678&quot;</highlight><highlight class="normal">,<sp/>4.0,<sp/>3.0);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>Distance<sp/>=<sp/><ref refid="class_calcular_ubicacion" kindref="compound">CalcularUbicacion</ref>.Calcular(juan,<sp/>alex);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(3.1622776601683795,<sp/>Distance);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/LibraryTests/CalcularUbicacionTest.cs"/>
+  </compounddef>
+</doxygen>

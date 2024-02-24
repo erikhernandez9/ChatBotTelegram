@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryTests</name>
+    </assembly>
+    <members>
+        <member name="T:Tests.CatalogoCategoriasTests">
+            <summary>
+            ESTOS TEST PERTENECEN A LA USER STORY:
+            "Como administrador, quiero poder indicar categorías sobre
+            las cuales se realizarán las ofertas de servicios para que de esa forma,
+            los trabajadoras puedan clasificarlos." Se decició utilizar el patrón Creator, estas tareas
+            de creación y eliminación de categorías se le asignaron a la clase "Catálogo Categorías".
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoCategoriasTests.CrearCategoriaTest">
+            <summary>
+            User story.
+            Prueba que se creen categorías, para ello, se llama al catálogo de categorías y se utiliza el método de agregar categoría
+            que pide como parametro en nombre y la descripción de la categoría, se fija si no existe y, de ser así, lo agrega a la
+            lista de categorías y la serializa.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoCategoriasTests.EliminarCategoriaTest">
+            <summary>
+            Prueba que se eliminen categorías, para ello creamos una categoria con el fin de eliminarla más adelante.
+            Una vez creada, llamamos al método eliminar categoría del catálogo categorías, que se encarga de
+            seleccionar la categoría enviada por parámetro y luego eliminarla.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoCategoriasTests.SeleccionarCategoriaTest">
+            <summary>
+            Prueba la búsqueda de categorías, se selecciona de qué área se quiere buscar. Para realizar esta tarea, se
+            envía por parámetro el nombre de la categoría deseada.
+            Para hacer uso de este método, creamos dos categorías de la forma previamente explicada.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoCategoriasTests.CategoriaRepetidaTest">
+            <summary>
+            Prueba la creación de una categoría ya creada anteriormente. Para esto, creamos una categoría con una nombre
+            y luego creamos otra con el mismo nombre para comprobar si se ejecuta una excepción.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoCategoriasTests.GuardarTraerDatosJsonFileTest">
+            <summary>
+            Prueba el guardado de datos de categoria en un archivo .json. Para esto, creamos categorías y las guardamos en un archivo .json
+            luego las traemos y procedemos a comprobar si son correctas.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoCategoriasTests.ParametrosIncorrectosCategoriaTest">
+            <summary>
+            Este test verifica si aparece la excepcion luego de enviar valores no esperados.
+            Este test lo hicimos aca porque al ser uno solo para OfertaLaboral, nos parecia mejor ponerlo aca.
+            </summary>
+        </member>
+        <member name="T:Tests.CatalogoContratacionesTests">
+            <summary>
+            Tests del catálogo de contrataciones.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoContratacionesTests.AgregarContratacionTest">
+            <summary>
+            Prueba que se creen contrataciones.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoContratacionesTests.EliminarContratacionTest">
+            <summary>
+            Prueba que se eliminen contrataciones.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoContratacionesTests.BuscarContratacionTest">
+            <summary>
+            Prueba que la búsqueda de contrataciones.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoContratacionesTests.GuardarTraerDatosJsonFileContratacionesTest">
+            <summary>
+            Prueba la serialización y la descerialización de las contrataciones en .json. Para eso creamos varias contrataciones
+            que luego serializamos, para consecuentemente traerlas y testear si se encuentran de forma correcta.
+            </summary>
+        </member>
+        <member name="T:Tests.CatalogoOfertasTests">
+            <summary>
+            ESTOS TEST PERTENECEN A LA USER STORY:
+            "Como administrador, quiero poder dar de baja ofertas de servicios,
+            avisando al oferente para que de esa forma, pueda evitar ofertas inadecudas.".
+            También a:
+            "Como empleador, quiero ver el resultado de las búsquedas de ofertas de trabajo
+            ordenado en forma descendente por reputación, es decir, las de mejor reputación
+            primero para que de esa forma, pueda contratar un servicio.".
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.BuscarOfertaTest">
+            <summary>
+            Prueba la búsqueda de ofertas.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.AgregarOfertaTest">
+            <summary>
+            USER STORY. Prueba que se puedan crear ofertas.
+            Prueba el agregar una nueva oferta. Para esto crea todos los objetos necesarios como el Trabajador y la Categoría,
+            y luego comprobamos si se creo de forma correcta.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.EliminarOfertaTest">
+            <summary>
+            USER STORY. Prueba que se puedan eliminar ofertas.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.BuscarOfertasPorCategoriaTest">
+            <summary>
+            Prueba el método BuscarOfertasPorCategoria. Esto se hace mediante la creacion de multiples categorias y trabajadores
+            para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su categoría.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.BuscarOfertasPorPrecioTest">
+            <summary>
+            Prueba el método BuscarOfertasPorPrecio. Esto se hace mediante la creacion de multiples categorias y trabajadores
+            para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su precio.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.BuscarOfertasPorUbicacionTest">
+            <summary>
+            Prueba el método BuscarOfertasPorUbiacion. Esto se hace mediante la creacion de multiples categorias y trabajadores
+            para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su ubicación.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.BuscarOfertasPorCalificacionTest">
+            <summary>
+            Prueba el método BuscarOfertasPorCalifiación. Esto se hace mediante la creacion de multiples categorias y trabajadores
+            para crear varias ofertas, luego califica a varios trabajadores y sus ofertas
+            y por ultimo comprueba si se pueden buscar de forma correcta las ofertas en base a su calificación.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.GuardarTraerDatosJsonFileOfertaTes">
+            <summary>
+            Prueba la serialización y la descerialización de las ofertas en .json. Para eso crea varias ofertas
+            que luego serializa, para consecuentemente traerlas y testear si se encuentran de forma correcta.
+            </summary>
+        </member>
+        <member name="M:Tests.CatalogoOfertasTests.ParametrosIncorrectosOfertaTest">
+            <summary>
+            Este test verifica si aparece la excepcion luego de enviar valores no esperados.
+            Este test lo hicimos aca porque al ser uno solo para OfertaLaboral, nos parecia mejor ponerlo aca.
+            </summary>
+        </member>
+        <member name="T:Tests.ContratacionTests">
+            <summary>
+            TESTS de la clase CONTRATACION.
+            
+            ESTOS TESTS PERTENECEN A LA USER STORY:
+            "Como empleador, quiero poder contactar a un trabajador para que de esa forma pueda 
+            contratar una oferta de servicios determinada." ya que se prueba que una contratación
+            se agregue de forma erronea.
+            
+            También pertenecen a las user story:
+            "Como trabajador, quiero poder calificar a un empleador; el empleador me tiene que calificar a mi también, 
+            si no me califica en un mes, la calificación será neutral, para que de esa forma pueda definir 
+            la reputación de mi empleador."
+            
+            "Como empleador, quiero poder calificar a un trabajador; el trabajador me tiene que calificar a mi también, 
+            si no me califica en un mes, la calificación será neutral, para que de esa forma, pueda definir la reputaión del trabajador."
+            </summary>
+        </member>
+        <member name="M:Tests.ContratacionTests.AgregarContratacionErroneaTest">
+            <summary>
+            Prueba la acción de contratar.
+            </summary>
+        </member>
+        <member name="M:Tests.ContratacionTests.CalificacionEmpleadorTest">
+            <summary>
+            Prueba que se puedan calificar empleadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ContratacionTests.CalificacionTrabajadorTest">
+            <summary>
+            Prueba que se puedan calificar trabajadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ContratacionTests.CalificacionIncorrecta1Test">
+            <summary>
+            Prueba hacer una calificación erronea para así tirar una excepción.
+            </summary>
+        </member>
+        <member name="M:Tests.ContratacionTests.CalificacionIncorrecta2Test">
+            <summary>
+            Prueba hacer una califiación negativa, y si esto tira una excepción como es esperado.
+            </summary>
+        </member>
+        <member name="M:Tests.ContratacionTests.DesemplearTest">
+            <summary>
+            Prueba que se puedan despedir trabajadores.
+            </summary>
+        </member>
+        <member name="T:Tests.EmpleadorTests">
+            <summary>
+            Tests del empleador
+            </summary>
+        </member>
+        <member name="M:Tests.EmpleadorTests.CalcularReputacionEmpleadorTest">
+            <summary>
+            Prueba el cálculo de la reputación del empleador.
+            </summary>
+        </member>
+        <member name="M:Tests.EmpleadorTests.CrearEmpleador">
+            <summary>
+            Prueba el crear un empleador. Para esto crea el objeto empleador y comprueba si el nombre es relacionado
+            al objeto es correcto.
+            </summary>
+        </member>
+        <member name="M:Tests.EmpleadorTests.CrearEmpleadorParametrosIncorrectos">
+            <summary>
+            Prueba el caso de crear un empleador pero con parámetros incorrectos, y tira una excepción en caso de
+            ser erroneos.
+            </summary>
+        </member>
+        <member name="T:Tests.ListaAdministradoresTest">
+            <summary>
+            Tests de la lista de administradores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaAdministradoresTest.AgregarAdministradorTest">
+            <summary>
+            Prueba la creación de un administrador.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaAdministradoresTest.EliminarAgregarAdministradorTest">
+            <summary>
+            Prueba eliminar un administrador.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaAdministradoresTest.SeleccionarAAgregarAdministradorTest">
+            <summary>
+            Prueba el método SeleccionarAdministrador, mediante la creación del administrador, y luego la posterior selección de
+            este dentro de la lista de administradores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaAdministradoresTest.GuardarTraerDatosJsonFileAdministradoresTest">
+            <summary>
+            Prueba la serialización y la deserialización de la lista de administradores en .json. 
+            </summary>
+        </member>
+        <member name="T:Tests.ListaEmpleadoresTest">
+            <summary>
+            Tests de la Lista de empleadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaEmpleadoresTest.AgregarEmpleadorTest">
+            <summary>
+            Prueba el agregar un empleador a la lista de empleadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaEmpleadoresTest.EliminarEmpleadorTest">
+            <summary>
+            Prueba el eliminar un empleador de la lista de empleadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaEmpleadoresTest.SeleccionarEmpleadorTest">
+            <summary>
+            Prueba el seleccionar un empleador de la lista de empleadores a través de su id.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaEmpleadoresTest.GuardarTraerDatosJsonFileEmpleadoresTest">
+            <summary>
+            Prueba la serialización y la deserialización de la lista de empleadores en .json.
+            </summary>
+        </member>
+        <member name="T:Tests.ListaTrabajadoresTest">
+            <summary>
+            Tests de la lista de trabajadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaTrabajadoresTest.AgregarTrabajadorTest">
+            <summary>
+            Prueba la búsqueda de categorías.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaTrabajadoresTest.EliminarTrabajadorTest">
+            <summary>
+            Prueba el eliminar un trabajador de la lista de empleadores.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaTrabajadoresTest.SeleccionarTrabajadorTest">
+            <summary>
+            Prueba el seleccionar un trabajador de la lista de empleadores a través de su id.
+            </summary>
+        </member>
+        <member name="M:Tests.ListaTrabajadoresTest.GuardarTraerDatosJsonFileTrabajadoresTest">
+            <summary>
+            Prueba la serialización y la deserialización de la lista de trabajadores en .json.
+            </summary>
+        </member>
+        <member name="T:Tests.TrabajadorTests">
+            <summary>
+            Tests sobre el trabajador.
+            </summary>
+        </member>
+        <member name="M:Tests.TrabajadorTests.CalcularReputacionTest">
+            <summary>
+            Prueba el cálculo de la reputación.
+            </summary>
+        </member>
+        <member name="M:Tests.TrabajadorTests.CrearTrabajador">
+            <summary>
+            Prueba el crear un objeto trabajador.
+            </summary>
+        </member>
+        <member name="M:Tests.TrabajadorTests.CrearTrabajadorParametrosIncorrectos">
+            <summary>
+            Prueba el crear un trabajador con parámetros incorrectos para comprobar si salta la excepción.
+            </summary>
+        </member>
+        <member name="T:ProgramTests.HandlersTests">
+            <summary>
+            ESTOS TEST PERTENECEN A LA USER STORY:
+            "Como administrador, quiero poder indicar categorías sobre
+            las cuales se realizarán las ofertas de servicios para que de esa forma,
+            los trabajadoras puedan clasificarlos." Se decició utilizar el patrón Creator, estas tareas
+            de creación y eliminación de categorías se le asignaron a la clase "Catálogo Categorías".
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.CrearCategoriaHandlerTest">
+            <summary>
+            User story.
+            Prueba que el administrador cree categorías utilizando el bot, para ello, se llama al catálogo de categorías y se utiliza el método de agregar categoría
+            que pide como parametro en nombre y la descripción de la categoría, se fija si no existe y, de ser así, lo agrega a la
+            lista de categorías y la serializa.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.AgregarEmpleadorHandlerTest">
+            <summary>
+            User story.
+            Prueba que se creen empleadores utilizando el bot, para ello, se llama a la lista de empleadores y se utiliza el método de agregar empleador
+            que pide como parametro el nombre, el email, el telefono y la direccion y lo agrega a la
+            lista de empleadores y la serializa.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.AgregarTrabajadorHandlerTest">
+            <summary>
+            User story.
+            Prueba que se creen trabajadores utilizando el bot, para ello, se llama a la lista de trabajadores y se utiliza el método de agregar trabajador
+            que pide como parametro el nombre, el email, el telefono y la direccion y lo agrega a la
+            lista de trabajadores y la serializa.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.CalificarEmpleadorHandlerTest">
+            <summary>
+            User story.
+            Prueba que un trabajador pueda calificar a un empleador utilizando el bot, para ello, se selecciona la contratacion 
+            en la que desea calificar al empleador, y para cumplir con dicha tarea se utiliza el método calificar empleador, 
+            que solicita el puntaje y una descripcion, y por último te guarda un promedio con las calificaciones que ya tiene (en su reputacion)
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.CalificarTrabajadorHandlerTest">
+            <summary>
+            User story.
+            Prueba que un empleador pueda calificar a un trabajador utilizando el bot, para ello, se selecciona la contratacion 
+            en la que desea calificar al trabajador, y para cumplir con dicha tarea se utiliza el método calificar trabajador, 
+            que solicita el puntaje y una descripcion, y por último te guarda un promedio con las calificaciones que ya tiene (en su reputacion)
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.CrearOfertaLaboralHandler">
+            <summary>
+            User story.
+            Prueba que se creen ofertas utilizando el bot, para ello, se llama a la catalogo de ofertas y se utiliza el método de crear oferta
+            que pide como parametro un objeto categoria, un objeto trabajador, una descripcion y un precio y lo agrega a la
+            lista de ofertas y la serializa.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.CrearContratacionHandler">
+            <summary>
+            User story.
+            Prueba que se creen contrataciones utilizando el bot, para ello, se llama a la catalogo de contrataciones y se utiliza el método de crear contratacion
+            que pide como parametro un objeto oferta laboral, un objeto empleador y una descripcion y lo agrega a la
+            lista de contrataciones y la serializa. Aclaración: a la hor de seleccionar la oferta laboral, te da la opcion de ordenarlas por: calificacion, ubicacion, precio, categoria.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.EliminarCategoriaHandler">
+            <summary>
+            Prueba que se eliminen categorias utilizando el bot, para ello, se llama al catalogo de categorias y se utiliza el método de eliminar categoria
+            que pide como parametro el nombre de una categoria, lo selecciona de la lista de categorias, y , de existir, lo elimina y serializa la lista.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.EliminarEmpleadorHandler">
+            <summary>
+            Prueba que se eliminen empleadores utilizando el bot, para ello, se llama al lista de empleadores y se utiliza el método de eliminar empleador
+            que pide como parametro el id del empleador, lo selecciona de la lista de empleadores, y , de existir, lo elimina y serializa la lista.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.EliminarOfertaHandler">
+            <summary>
+            Prueba que se eliminen ofertas utilizando el bot, para ello, se llama al catalogo de ofertas y se utiliza el método de eliminar oferta
+            que pide como parametro el id, lo selecciona de la lista de ofertas, y , de existir, lo elimina y serializa la lista.
+            </summary>
+        </member>
+        <member name="M:ProgramTests.HandlersTests.EliminarTrabajadorHandler">
+            <summary>
+            Prueba que se eliminen trabajadores utilizando el bot, para ello, se llama al lista de trabajadores y se utiliza el método de eliminar trabajador
+            que pide como parametro el id del trabajador, lo selecciona de la lista de trabajadores, y , de existir, lo elimina y serializa la lista.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,153 @@
+\hypertarget{class_handlers_tests}{}\doxysection{Handlers\+Tests Class Reference}
+\label{class_handlers_tests}\index{HandlersTests@{HandlersTests}}
+
+
+ESTOS TEST PERTENECEN A LA USER STORY\+: \char`\"{}\+Como administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas de servicios para que de esa forma, los trabajadoras puedan clasificarlos.\char`\"{} Se decició utilizar el patrón Creator, estas tareas de creación y eliminación de categorías se le asignaron a la clase \char`\"{}\+Catálogo Categorías\char`\"{}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_handlers_tests_a41037e0b1ccb845da6921da3710743f3}{Crear\+Categoria\+Handler\+Test}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que el administrador cree categorías utilizando el bot, para ello, se llama al catálogo de categorías y se utiliza el método de agregar categoría que pide como parametro en nombre y la descripción de la categoría, se fija si no existe y, de ser así, lo agrega a la lista de categorías y la serializa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_a66878199e06a0a17282ce7852d40cd3f}{Agregar\+Empleador\+Handler\+Test}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que se creen empleadores utilizando el bot, para ello, se llama a la lista de empleadores y se utiliza el método de agregar empleador que pide como parametro el nombre, el email, el telefono y la direccion y lo agrega a la lista de empleadores y la serializa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_ae1ca5f7a78e0054f4c70c3e7f6b87011}{Agregar\+Trabajador\+Handler\+Test}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que se creen trabajadores utilizando el bot, para ello, se llama a la lista de trabajadores y se utiliza el método de agregar trabajador que pide como parametro el nombre, el email, el telefono y la direccion y lo agrega a la lista de trabajadores y la serializa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_ae3a3d1356aee5c808546e3bf759f7e97}{Calificar\+Empleador\+Handler\+Test}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que un trabajador pueda calificar a un empleador utilizando el bot, para ello, se selecciona la contratacion en la que desea calificar al empleador, y para cumplir con dicha tarea se utiliza el método calificar empleador, que solicita el puntaje y una descripcion, y por último te guarda un promedio con las calificaciones que ya tiene (en su reputacion) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_a45dce5b57bdcdfab423a777dd5bcd718}{Calificar\+Trabajador\+Handler\+Test}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que un empleador pueda calificar a un trabajador utilizando el bot, para ello, se selecciona la contratacion en la que desea calificar al trabajador, y para cumplir con dicha tarea se utiliza el método calificar trabajador, que solicita el puntaje y una descripcion, y por último te guarda un promedio con las calificaciones que ya tiene (en su reputacion) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_a6010976c3be0ab8532bd38bcfc8bf5a7}{Crear\+Oferta\+Laboral\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que se creen ofertas utilizando el bot, para ello, se llama a la catalogo de ofertas y se utiliza el método de crear oferta que pide como parametro un objeto categoria, un objeto trabajador, una descripcion y un precio y lo agrega a la lista de ofertas y la serializa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_a398e1d920020bcd6546b89c094eff491}{Crear\+Contratacion\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que se creen contrataciones utilizando el bot, para ello, se llama a la catalogo de contrataciones y se utiliza el método de crear contratacion que pide como parametro un objeto oferta laboral, un objeto empleador y una descripcion y lo agrega a la lista de contrataciones y la serializa. Aclaración\+: a la hor de seleccionar la oferta laboral, te da la opcion de ordenarlas por\+: calificacion, ubicacion, precio, categoria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_a5769aa8b8e866220ef5380e653925f25}{Eliminar\+Categoria\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que se eliminen categorias utilizando el bot, para ello, se llama al catalogo de categorias y se utiliza el método de eliminar categoria que pide como parametro el nombre de una categoria, lo selecciona de la lista de categorias, y , de existir, lo elimina y serializa la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_ad5493bed01f70dadfd74eb4503ed8d5d}{Eliminar\+Empleador\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que se eliminen empleadores utilizando el bot, para ello, se llama al lista de empleadores y se utiliza el método de eliminar empleador que pide como parametro el id del empleador, lo selecciona de la lista de empleadores, y , de existir, lo elimina y serializa la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_handlers_tests_a69909f66c7199d62e943fc328637d1ff}{Eliminar\+Oferta\+Handler}} ()
+\item 
+void \mbox{\hyperlink{class_handlers_tests_aeb37ff45b12613d9640258a75b029c13}{Eliminar\+Trabajador\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que se eliminen trabajadores utilizando el bot, para ello, se llama al lista de trabajadores y se utiliza el método de eliminar trabajador que pide como parametro el id del trabajador, lo selecciona de la lista de trabajadores, y , de existir, lo elimina y serializa la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ESTOS TEST PERTENECEN A LA USER STORY\+: \char`\"{}\+Como administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas de servicios para que de esa forma, los trabajadoras puedan clasificarlos.\char`\"{} Se decició utilizar el patrón Creator, estas tareas de creación y eliminación de categorías se le asignaron a la clase \char`\"{}\+Catálogo Categorías\char`\"{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_handlers_tests_a66878199e06a0a17282ce7852d40cd3f}\label{class_handlers_tests_a66878199e06a0a17282ce7852d40cd3f}} 
+\index{HandlersTests@{HandlersTests}!AgregarEmpleadorHandlerTest@{AgregarEmpleadorHandlerTest}}
+\index{AgregarEmpleadorHandlerTest@{AgregarEmpleadorHandlerTest}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{AgregarEmpleadorHandlerTest()}{AgregarEmpleadorHandlerTest()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Agregar\+Empleador\+Handler\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que se creen empleadores utilizando el bot, para ello, se llama a la lista de empleadores y se utiliza el método de agregar empleador que pide como parametro el nombre, el email, el telefono y la direccion y lo agrega a la lista de empleadores y la serializa. 
+
+\mbox{\Hypertarget{class_handlers_tests_ae1ca5f7a78e0054f4c70c3e7f6b87011}\label{class_handlers_tests_ae1ca5f7a78e0054f4c70c3e7f6b87011}} 
+\index{HandlersTests@{HandlersTests}!AgregarTrabajadorHandlerTest@{AgregarTrabajadorHandlerTest}}
+\index{AgregarTrabajadorHandlerTest@{AgregarTrabajadorHandlerTest}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{AgregarTrabajadorHandlerTest()}{AgregarTrabajadorHandlerTest()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Agregar\+Trabajador\+Handler\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que se creen trabajadores utilizando el bot, para ello, se llama a la lista de trabajadores y se utiliza el método de agregar trabajador que pide como parametro el nombre, el email, el telefono y la direccion y lo agrega a la lista de trabajadores y la serializa. 
+
+\mbox{\Hypertarget{class_handlers_tests_ae3a3d1356aee5c808546e3bf759f7e97}\label{class_handlers_tests_ae3a3d1356aee5c808546e3bf759f7e97}} 
+\index{HandlersTests@{HandlersTests}!CalificarEmpleadorHandlerTest@{CalificarEmpleadorHandlerTest}}
+\index{CalificarEmpleadorHandlerTest@{CalificarEmpleadorHandlerTest}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{CalificarEmpleadorHandlerTest()}{CalificarEmpleadorHandlerTest()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Calificar\+Empleador\+Handler\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que un trabajador pueda calificar a un empleador utilizando el bot, para ello, se selecciona la contratacion en la que desea calificar al empleador, y para cumplir con dicha tarea se utiliza el método calificar empleador, que solicita el puntaje y una descripcion, y por último te guarda un promedio con las calificaciones que ya tiene (en su reputacion) 
+
+\mbox{\Hypertarget{class_handlers_tests_a45dce5b57bdcdfab423a777dd5bcd718}\label{class_handlers_tests_a45dce5b57bdcdfab423a777dd5bcd718}} 
+\index{HandlersTests@{HandlersTests}!CalificarTrabajadorHandlerTest@{CalificarTrabajadorHandlerTest}}
+\index{CalificarTrabajadorHandlerTest@{CalificarTrabajadorHandlerTest}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{CalificarTrabajadorHandlerTest()}{CalificarTrabajadorHandlerTest()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Calificar\+Trabajador\+Handler\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que un empleador pueda calificar a un trabajador utilizando el bot, para ello, se selecciona la contratacion en la que desea calificar al trabajador, y para cumplir con dicha tarea se utiliza el método calificar trabajador, que solicita el puntaje y una descripcion, y por último te guarda un promedio con las calificaciones que ya tiene (en su reputacion) 
+
+\mbox{\Hypertarget{class_handlers_tests_a41037e0b1ccb845da6921da3710743f3}\label{class_handlers_tests_a41037e0b1ccb845da6921da3710743f3}} 
+\index{HandlersTests@{HandlersTests}!CrearCategoriaHandlerTest@{CrearCategoriaHandlerTest}}
+\index{CrearCategoriaHandlerTest@{CrearCategoriaHandlerTest}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{CrearCategoriaHandlerTest()}{CrearCategoriaHandlerTest()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Crear\+Categoria\+Handler\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que el administrador cree categorías utilizando el bot, para ello, se llama al catálogo de categorías y se utiliza el método de agregar categoría que pide como parametro en nombre y la descripción de la categoría, se fija si no existe y, de ser así, lo agrega a la lista de categorías y la serializa. 
+
+\mbox{\Hypertarget{class_handlers_tests_a398e1d920020bcd6546b89c094eff491}\label{class_handlers_tests_a398e1d920020bcd6546b89c094eff491}} 
+\index{HandlersTests@{HandlersTests}!CrearContratacionHandler@{CrearContratacionHandler}}
+\index{CrearContratacionHandler@{CrearContratacionHandler}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{CrearContratacionHandler()}{CrearContratacionHandler()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Crear\+Contratacion\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que se creen contrataciones utilizando el bot, para ello, se llama a la catalogo de contrataciones y se utiliza el método de crear contratacion que pide como parametro un objeto oferta laboral, un objeto empleador y una descripcion y lo agrega a la lista de contrataciones y la serializa. Aclaración\+: a la hor de seleccionar la oferta laboral, te da la opcion de ordenarlas por\+: calificacion, ubicacion, precio, categoria. 
+
+\mbox{\Hypertarget{class_handlers_tests_a6010976c3be0ab8532bd38bcfc8bf5a7}\label{class_handlers_tests_a6010976c3be0ab8532bd38bcfc8bf5a7}} 
+\index{HandlersTests@{HandlersTests}!CrearOfertaLaboralHandler@{CrearOfertaLaboralHandler}}
+\index{CrearOfertaLaboralHandler@{CrearOfertaLaboralHandler}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{CrearOfertaLaboralHandler()}{CrearOfertaLaboralHandler()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Crear\+Oferta\+Laboral\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que se creen ofertas utilizando el bot, para ello, se llama a la catalogo de ofertas y se utiliza el método de crear oferta que pide como parametro un objeto categoria, un objeto trabajador, una descripcion y un precio y lo agrega a la lista de ofertas y la serializa. 
+
+\mbox{\Hypertarget{class_handlers_tests_a5769aa8b8e866220ef5380e653925f25}\label{class_handlers_tests_a5769aa8b8e866220ef5380e653925f25}} 
+\index{HandlersTests@{HandlersTests}!EliminarCategoriaHandler@{EliminarCategoriaHandler}}
+\index{EliminarCategoriaHandler@{EliminarCategoriaHandler}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{EliminarCategoriaHandler()}{EliminarCategoriaHandler()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Eliminar\+Categoria\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que se eliminen categorias utilizando el bot, para ello, se llama al catalogo de categorias y se utiliza el método de eliminar categoria que pide como parametro el nombre de una categoria, lo selecciona de la lista de categorias, y , de existir, lo elimina y serializa la lista. 
+
+\mbox{\Hypertarget{class_handlers_tests_ad5493bed01f70dadfd74eb4503ed8d5d}\label{class_handlers_tests_ad5493bed01f70dadfd74eb4503ed8d5d}} 
+\index{HandlersTests@{HandlersTests}!EliminarEmpleadorHandler@{EliminarEmpleadorHandler}}
+\index{EliminarEmpleadorHandler@{EliminarEmpleadorHandler}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{EliminarEmpleadorHandler()}{EliminarEmpleadorHandler()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Eliminar\+Empleador\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que se eliminen empleadores utilizando el bot, para ello, se llama al lista de empleadores y se utiliza el método de eliminar empleador que pide como parametro el id del empleador, lo selecciona de la lista de empleadores, y , de existir, lo elimina y serializa la lista. 
+
+\mbox{\Hypertarget{class_handlers_tests_a69909f66c7199d62e943fc328637d1ff}\label{class_handlers_tests_a69909f66c7199d62e943fc328637d1ff}} 
+\index{HandlersTests@{HandlersTests}!EliminarOfertaHandler@{EliminarOfertaHandler}}
+\index{EliminarOfertaHandler@{EliminarOfertaHandler}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{EliminarOfertaHandler()}{EliminarOfertaHandler()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Eliminar\+Oferta\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+Prueba que se eliminen ofertas utilizando el bot, para ello, se llama al catalogo de ofertas y se utiliza el método de eliminar oferta que pide como parametro el id, lo selecciona de la lista de ofertas, y , de existir, lo elimina y serializa la lista. \mbox{\Hypertarget{class_handlers_tests_aeb37ff45b12613d9640258a75b029c13}\label{class_handlers_tests_aeb37ff45b12613d9640258a75b029c13}} 
+\index{HandlersTests@{HandlersTests}!EliminarTrabajadorHandler@{EliminarTrabajadorHandler}}
+\index{EliminarTrabajadorHandler@{EliminarTrabajadorHandler}!HandlersTests@{HandlersTests}}
+\doxysubsubsection{\texorpdfstring{EliminarTrabajadorHandler()}{EliminarTrabajadorHandler()}}
+{\footnotesize\ttfamily void Handlers\+Tests.\+Eliminar\+Trabajador\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que se eliminen trabajadores utilizando el bot, para ello, se llama al lista de trabajadores y se utiliza el método de eliminar trabajador que pide como parametro el id del trabajador, lo selecciona de la lista de trabajadores, y , de existir, lo elimina y serializa la lista. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/test/\+Library\+Tests/\mbox{\hyperlink{_handlers_tests_8cs}{Handlers\+Tests.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tests_1_1_contratacion_tests" xml:lang="es">
+<title>Referencia de la Clase Tests.ContratacionTests</title>
+<indexterm><primary>Tests.ContratacionTests</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_tests_1_1_contratacion_tests_1a459117790f46e762cbfd403367d9a552"/>void <emphasis role="strong">ContratacionTest</emphasis> ()</para>
+
+<para>Prueba que se creen categorías. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_contratacion_tests_1a44e373178dd191abcfcc01f8d1b461cb"/>void <emphasis role="strong">CalificacionEmpleadorTest</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_contratacion_tests_1a25b88a31ce437c27319594e75588a8f8"/>void <emphasis role="strong">CalificacionTrabajadorTest</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_contratacion_tests_1abf3197a0508a668d00e1158cc1d565fa"/>void <emphasis role="strong">DesemplearTest</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+test/LibraryTests/ContratacionTests.cs</section>

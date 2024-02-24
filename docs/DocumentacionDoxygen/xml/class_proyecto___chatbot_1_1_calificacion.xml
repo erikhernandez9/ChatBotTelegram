@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_calificacion" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::Calificacion</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_calificacion_1acde3f9c630e91896f423cb4efdf091d7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.Calificacion.Descripcion</definition>
+        <argsstring></argsstring>
+        <name>Descripcion</name>
+        <qualifiedname>Proyecto_Chatbot.Calificacion.Descripcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Calificacion.cs" line="7" column="23" bodyfile="src/Library/Calificacion.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_calificacion_1a2cadf01b8b83ecb8aff8bcea9224b46b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Proyecto_Chatbot.Calificacion.Puntaje</definition>
+        <argsstring></argsstring>
+        <name>Puntaje</name>
+        <qualifiedname>Proyecto_Chatbot.Calificacion.Puntaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Calificacion.cs" line="8" column="23" bodyfile="src/Library/Calificacion.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_calificacion_1ae49f20c5acdc6d3e1092252d37192ea9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Proyecto_Chatbot.Calificacion.Calificacion</definition>
+        <argsstring>(string descripcion, double puntaje)</argsstring>
+        <name>Calificacion</name>
+        <qualifiedname>Proyecto_Chatbot.Calificacion.Calificacion</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>descripcion</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>puntaje</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Calificacion.cs" line="10" column="16" bodyfile="src/Library/Calificacion.cs" bodystart="10" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/Calificacion.cs" line="5" column="11" bodyfile="src/Library/Calificacion.cs" bodystart="6" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_proyecto___chatbot_1_1_calificacion_1ae49f20c5acdc6d3e1092252d37192ea9" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Calificacion</scope><name>Calificacion</name></member>
+      <member refid="class_proyecto___chatbot_1_1_calificacion_1acde3f9c630e91896f423cb4efdf091d7" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Calificacion</scope><name>Descripcion</name></member>
+      <member refid="class_proyecto___chatbot_1_1_calificacion_1a2cadf01b8b83ecb8aff8bcea9224b46b" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Calificacion</scope><name>Puntaje</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="interface_proyecto___chatbot_1_1_i_user" kind="interface" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::IUser</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_proyecto___chatbot_1_1_i_user_1ae5b7c506db921cb1fb7c2d9e449742d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.IUser.Nombre</definition>
+        <argsstring></argsstring>
+        <name>Nombre</name>
+        <qualifiedname>Proyecto_Chatbot.IUser.Nombre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/IUser.cs" line="6" column="16" bodyfile="src/Library/IUser.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_proyecto___chatbot_1_1_i_user_1aba59137b8179cfaaae32c7380ff621cb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.IUser.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <qualifiedname>Proyecto_Chatbot.IUser.Email</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/IUser.cs" line="7" column="16" bodyfile="src/Library/IUser.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_proyecto___chatbot_1_1_i_user_1a2aa5faf456090d521732f763c04b68e4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.IUser.Telefono</definition>
+        <argsstring></argsstring>
+        <name>Telefono</name>
+        <qualifiedname>Proyecto_Chatbot.IUser.Telefono</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/IUser.cs" line="8" column="16" bodyfile="src/Library/IUser.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/IUser.cs" line="4" column="22" bodyfile="src/Library/IUser.cs" bodystart="5" bodyend="9"/>
+    <listofallmembers>
+      <member refid="interface_proyecto___chatbot_1_1_i_user_1aba59137b8179cfaaae32c7380ff621cb" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::IUser</scope><name>Email</name></member>
+      <member refid="interface_proyecto___chatbot_1_1_i_user_1ae5b7c506db921cb1fb7c2d9e449742d1" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::IUser</scope><name>Nombre</name></member>
+      <member refid="interface_proyecto___chatbot_1_1_i_user_1a2aa5faf456090d521732f763c04b68e4" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::IUser</scope><name>Telefono</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

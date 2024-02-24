@@ -1,0 +1,222 @@
+\hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client Class Reference}
+\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client}\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+
+
+Un cliente de la API de localización.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a1f5d7fb2d2498f6c8c7904e9602b7240}{Get\+Location\+Async}} (string address, string city=\char`\"{}Montevideo\char`\"{}, string department=\char`\"{}Montevideo\char`\"{}, string country=\char`\"{}Uruguay\char`\"{})
+\begin{DoxyCompactList}\small\item\em Obtiene las coordenadas de una dirección. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a124eb00c465578b01412fb7acb77b028}{Get\+Location}} (string address, string city=\char`\"{}Montevideo\char`\"{}, string department=\char`\"{}Montevideo\char`\"{}, string country=\char`\"{}Uruguay\char`\"{})
+\item 
+async Task$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a372569098f3953d22b846310b59a8873}{Get\+Distance\+Async}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} from, \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} to)
+\begin{DoxyCompactList}\small\item\em Obtiene la distancia entre dos coordenadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ad7b30508f1764a9cbd3cc755cc2f8288}{Get\+Distance}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} from, \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} to)
+\item 
+async Task$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_adee91f5fd75c251649ee7e67080523b3}{Get\+Distance\+Async}} (string from, string to)
+\begin{DoxyCompactList}\small\item\em Obtiene la distancia entre dos direcciones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a0812e056ea95dc8f0c5f10da290660ee}{Get\+Distance}} (string from, string to)
+\item 
+async Task \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ab82fecc64c2bb006290a9eef8a6753c0}{Download\+Map\+Async}} (double latitude, double longitude, string path, int zoom\+Level=15)
+\begin{DoxyCompactList}\small\item\em Descarga una mapa de una coordenada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ad2c031d43745306b5de2b9103d31534d}{Download\+Map}} (double latitude, double longitude, string path, int zoom\+Level=15)
+\item 
+async Task \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a378de9d4e672a9de01e5afac56e442db}{Download\+Route\+Async}} (double from\+Latitude, double from\+Longitude, double to\+Latitude, double to\+Longitude, string path)
+\begin{DoxyCompactList}\small\item\em Un mapa con una ruta entre dos coordenadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_afb431ce7e017b23adf556bca427cc38c}{Download\+Route}} (double from\+Latitude, double from\+Longitude, double to\+Latitude, double to\+Longitude, string path)
+\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a88f2bb74d8c511eda353a7e966536626}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ae9f6b5690c8ea32ad6394039aed257db}{Dispose}} (bool disposing)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Un cliente de la API de localización. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a88f2bb74d8c511eda353a7e966536626}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a88f2bb74d8c511eda353a7e966536626}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ae9f6b5690c8ea32ad6394039aed257db}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ae9f6b5690c8ea32ad6394039aed257db}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ad2c031d43745306b5de2b9103d31534d}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ad2c031d43745306b5de2b9103d31534d}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!DownloadMap@{DownloadMap}}
+\index{DownloadMap@{DownloadMap}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{DownloadMap()}{DownloadMap()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Download\+Map (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude,  }\item[{string}]{path,  }\item[{int}]{zoom\+Level = {\ttfamily 15} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+. 
+
+Versión sincrónica. \mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ab82fecc64c2bb006290a9eef8a6753c0}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ab82fecc64c2bb006290a9eef8a6753c0}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!DownloadMapAsync@{DownloadMapAsync}}
+\index{DownloadMapAsync@{DownloadMapAsync}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{DownloadMapAsync()}{DownloadMapAsync()}}
+{\footnotesize\ttfamily async Task Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Download\+Map\+Async (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude,  }\item[{string}]{path,  }\item[{int}]{zoom\+Level = {\ttfamily 15} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Descarga una mapa de una coordenada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & La latitud de la coordenada.\\
+\hline
+{\em longitude} & La longitud de la coordenada.\\
+\hline
+{\em path} & La ruta del archivo donde guardar el mapa. El formato es PNG.\\
+\hline
+{\em zoom\+Level} & El nivel de zoom del mapa entre 1 y 20. Es opcional. El valor predeterminado es 15.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una tarea que representa la operación asincrónica. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_afb431ce7e017b23adf556bca427cc38c}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_afb431ce7e017b23adf556bca427cc38c}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!DownloadRoute@{DownloadRoute}}
+\index{DownloadRoute@{DownloadRoute}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{DownloadRoute()}{DownloadRoute()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Download\+Route (\begin{DoxyParamCaption}\item[{double}]{from\+Latitude,  }\item[{double}]{from\+Longitude,  }\item[{double}]{to\+Latitude,  }\item[{double}]{to\+Longitude,  }\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Versión sincrónica. \mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a378de9d4e672a9de01e5afac56e442db}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a378de9d4e672a9de01e5afac56e442db}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!DownloadRouteAsync@{DownloadRouteAsync}}
+\index{DownloadRouteAsync@{DownloadRouteAsync}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{DownloadRouteAsync()}{DownloadRouteAsync()}}
+{\footnotesize\ttfamily async Task Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Download\+Route\+Async (\begin{DoxyParamCaption}\item[{double}]{from\+Latitude,  }\item[{double}]{from\+Longitude,  }\item[{double}]{to\+Latitude,  }\item[{double}]{to\+Longitude,  }\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Un mapa con una ruta entre dos coordenadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Latitude} & La latitud de la coordenada de origen.\\
+\hline
+{\em from\+Longitude} & La longitu de la coordenada de origen.\\
+\hline
+{\em to\+Latitude} & La latitud de la coordenada de destino.\\
+\hline
+{\em to\+Longitude} & La longitud de la coordenada de destino.\\
+\hline
+{\em path} & La ruta del archivo donde guardar el mapa. Es formato es PNG.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una tarea que representa la operación asincrónica. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ad7b30508f1764a9cbd3cc755cc2f8288}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_ad7b30508f1764a9cbd3cc755cc2f8288}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Get\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}}}]{from,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}}}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Versión sincrónica. \mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a0812e056ea95dc8f0c5f10da290660ee}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a0812e056ea95dc8f0c5f10da290660ee}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Get\+Distance (\begin{DoxyParamCaption}\item[{string}]{from,  }\item[{string}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+. 
+
+Versión sincrónica. \mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a372569098f3953d22b846310b59a8873}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a372569098f3953d22b846310b59a8873}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!GetDistanceAsync@{GetDistanceAsync}}
+\index{GetDistanceAsync@{GetDistanceAsync}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{GetDistanceAsync()}{GetDistanceAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} $>$ Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Get\+Distance\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}}}]{from,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}}}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la distancia entre dos coordenadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & La coordenada de origen.\\
+\hline
+{\em to} & La coordenada de destino.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La distancia entre las dos coordenadas.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_adee91f5fd75c251649ee7e67080523b3}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_adee91f5fd75c251649ee7e67080523b3}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!GetDistanceAsync@{GetDistanceAsync}}
+\index{GetDistanceAsync@{GetDistanceAsync}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{GetDistanceAsync()}{GetDistanceAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_distance}{Distance}} $>$ Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Get\+Distance\+Async (\begin{DoxyParamCaption}\item[{string}]{from,  }\item[{string}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la distancia entre dos direcciones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & La dirección de origen.\\
+\hline
+{\em to} & La dirección de destino.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La distancia entre las dos direcciones.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a124eb00c465578b01412fb7acb77b028}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a124eb00c465578b01412fb7acb77b028}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!GetLocation@{GetLocation}}
+\index{GetLocation@{GetLocation}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{GetLocation()}{GetLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Get\+Location (\begin{DoxyParamCaption}\item[{string}]{address,  }\item[{string}]{city = {\ttfamily \char`\"{}Montevideo\char`\"{}},  }\item[{string}]{department = {\ttfamily \char`\"{}Montevideo\char`\"{}},  }\item[{string}]{country = {\ttfamily \char`\"{}Uruguay\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Versión sincrónica. \mbox{\Hypertarget{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a1f5d7fb2d2498f6c8c7904e9602b7240}\label{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location_api_client_a1f5d7fb2d2498f6c8c7904e9602b7240}} 
+\index{Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}!GetLocationAsync@{GetLocationAsync}}
+\index{GetLocationAsync@{GetLocationAsync}!Proyecto\_Chatbot.Locations.Client.LocationApiClient@{Proyecto\_Chatbot.Locations.Client.LocationApiClient}}
+\doxysubsubsection{\texorpdfstring{GetLocationAsync()}{GetLocationAsync()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} $>$ Proyecto\+\_\+\+Chatbot.\+Locations.\+Client.\+Location\+Api\+Client.\+Get\+Location\+Async (\begin{DoxyParamCaption}\item[{string}]{address,  }\item[{string}]{city = {\ttfamily \char`\"{}Montevideo\char`\"{}},  }\item[{string}]{department = {\ttfamily \char`\"{}Montevideo\char`\"{}},  }\item[{string}]{country = {\ttfamily \char`\"{}Uruguay\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene las coordenadas de una dirección. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & La dirección.\\
+\hline
+{\em city} & La ciudad. Es opcional. El valor predeterminado es Montevideo.\\
+\hline
+{\em department} & El departamento, estado, provincia, etc. Es opcional. El valor predeterminado es \`{}ontevideo.\\
+\hline
+{\em country} & El país. Es opcional. El valor predeterminado es Uruguay.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Las coordenadas de la dirección.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\mbox{\hyperlink{_location_api_client_8cs}{Location\+Api\+Client.\+cs}}\end{DoxyCompactItemize}

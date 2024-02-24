@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_proyecto___chatbot" xml:lang="es">
+<title>Referencia del Namespace Proyecto_Chatbot</title>
+<indexterm><primary>Proyecto_Chatbot</primary></indexterm>
+<simplesect>
+    <title>Clases    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_calificacion">Calificacion</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_categoria">Categoria</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_contratacion">Contratacion</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interface_proyecto___chatbot_1_1_i_user">IUser</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_program">Program</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_singleton">Singleton</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

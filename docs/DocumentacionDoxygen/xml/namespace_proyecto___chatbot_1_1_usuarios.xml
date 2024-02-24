@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="namespace_proyecto___chatbot_1_1_usuarios" kind="namespace" language="C#">
+    <compoundname>Proyecto_Chatbot::Usuarios</compoundname>
+    <innerclass refid="class_proyecto___chatbot_1_1_usuarios_1_1_administrador" prot="public">Proyecto_Chatbot::Usuarios::Administrador</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador" prot="public">Proyecto_Chatbot::Usuarios::Empleador</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" prot="public">Proyecto_Chatbot::Usuarios::Trabajador</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/Usuarios/Administrador.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

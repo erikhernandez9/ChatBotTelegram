@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_user" kind="class" language="C#" prot="public">
+    <compoundname>User</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IUser</basecompoundref>
+    <derivedcompoundref refid="class_proyecto___chatbot_1_1_usuarios_1_1_administrador" prot="public" virt="non-virtual">Proyecto_Chatbot.Usuarios.Administrador</derivedcompoundref>
+    <derivedcompoundref refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador" prot="public" virt="non-virtual">Proyecto_Chatbot.Usuarios.Empleador</derivedcompoundref>
+    <derivedcompoundref refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" prot="public" virt="non-virtual">Proyecto_Chatbot.Usuarios.Trabajador</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_user_1a298f9292e1b8be801f1a471b0e1d2899" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string User.Nombre</definition>
+        <argsstring></argsstring>
+        <name>Nombre</name>
+        <qualifiedname>User.Nombre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/User.cs" line="15" column="19" bodyfile="src/Library/User.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_user_1a7ed159e4b886cffcf51dd675b9e4793b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string User.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <qualifiedname>User.Email</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/User.cs" line="16" column="19" bodyfile="src/Library/User.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_user_1a57c57308bef71b88b40979e1f2791d39" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string User.Telefono</definition>
+        <argsstring></argsstring>
+        <name>Telefono</name>
+        <qualifiedname>User.Telefono</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/User.cs" line="17" column="19" bodyfile="src/Library/User.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_user_1abc5f5286bda8fca089c7af1c0fab3b57" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string User.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>User.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/User.cs" line="18" column="19" bodyfile="src/Library/User.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_user_1a7660daf25606ed5e444d4aa64319d993" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>User.User</definition>
+        <argsstring>(string nombre, string email, string telefono, string id)</argsstring>
+        <name>User</name>
+        <qualifiedname>User.User</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>telefono</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/User.cs" line="7" column="12" bodyfile="src/Library/User.cs" bodystart="7" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IUser</label>
+      </node>
+      <node id="3">
+        <label>Proyecto_Chatbot.Usuarios.Administrador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_administrador"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Proyecto_Chatbot.Usuarios.Empleador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_empleador"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Proyecto_Chatbot.Usuarios.Trabajador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>User</label>
+        <link refid="class_user"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IUser</label>
+      </node>
+      <node id="1">
+        <label>User</label>
+        <link refid="class_user"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Library/User.cs" line="5" column="17" bodyfile="src/Library/User.cs" bodystart="6" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_user_1a7ed159e4b886cffcf51dd675b9e4793b" prot="public" virt="non-virtual"><scope>User</scope><name>Email</name></member>
+      <member refid="class_user_1abc5f5286bda8fca089c7af1c0fab3b57" prot="public" virt="non-virtual"><scope>User</scope><name>Id</name></member>
+      <member refid="class_user_1a298f9292e1b8be801f1a471b0e1d2899" prot="public" virt="non-virtual"><scope>User</scope><name>Nombre</name></member>
+      <member refid="class_user_1a57c57308bef71b88b40979e1f2791d39" prot="public" virt="non-virtual"><scope>User</scope><name>Telefono</name></member>
+      <member refid="class_user_1a7660daf25606ed5e444d4aa64319d993" prot="public" virt="non-virtual"><scope>User</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

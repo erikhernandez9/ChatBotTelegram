@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_contratacion" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Contratacion</title>
+<indexterm><primary>Proyecto_Chatbot.Contratacion</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a03bdc4e52716924a1ed898df058e38b1"/><emphasis role="strong">Contratacion</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> ofertaLaboral, <link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador">Empleador</link> empleador, string descripcion)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_proyecto___chatbot_1_1_contratacion_1a69849a77c36c6393945f10b8270fc178">CalificarEmpleador</link> (string descripcion, double puntaje)</para>
+
+<para>Métodos para calificar empleadores y trabajadores. Método desemplear. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a0249c956a7c61275408c36118b22c460"/>void <emphasis role="strong">CalificarTrabajador</emphasis> (string descripcion, double puntaje)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a7f257c9765392f9c02e5d89b2d8c942e"/>void <emphasis role="strong">Desemplear</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1adc9dacae68693a1d3f93504ac4b98fdb"/>int <emphasis role="strong">Id</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a690dc8d06d6448c705e381cdb3408f4d"/><link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> <emphasis role="strong">OfertaLaboral</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1aae4f78d7998608023ab7ec0d6f251e37"/><link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador">Empleador</link> <emphasis role="strong">Empleador</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a5fb7de12ed1a3a43a212ccf4dad7fece"/>int <emphasis role="strong">CostoServicio</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a13a0529f4a1222cc4d63385bcb325adf"/>string <emphasis role="strong">Descripcion</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a4d1dba6913953d37295122c9ed4f903f"/>string <emphasis role="strong">Fecha_inicio</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a5f06dcb3d5cb5e83db82ef5bbb290be0"/>bool <emphasis role="strong">Estado</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a6c5f4384f33b141cb8b934c5b360c54f"/><link linkend="_class_proyecto___chatbot_1_1_calificacion">Calificacion</link> <emphasis role="strong">CalificacionEmpleador</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a97e0f2042b7dba4a5d66823df732f0f8"/><link linkend="_class_proyecto___chatbot_1_1_calificacion">Calificacion</link> <emphasis role="strong">CalificacionTrabajador</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentación de las funciones miembro</title>
+<anchor xml:id="_class_proyecto___chatbot_1_1_contratacion_1a69849a77c36c6393945f10b8270fc178"/><section>
+    <title>CalificarEmpleador()</title>
+<indexterm><primary>CalificarEmpleador</primary><secondary>Proyecto_Chatbot.Contratacion</secondary></indexterm>
+<indexterm><primary>Proyecto_Chatbot.Contratacion</primary><secondary>CalificarEmpleador</secondary></indexterm>
+<para><computeroutput>void Proyecto_Chatbot.Contratacion.CalificarEmpleador (string descripcion, double puntaje)</computeroutput></para><para>
+
+<para>Métodos para calificar empleadores y trabajadores. Método desemplear. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parámetros</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>descripcion</entry><entry></entry>
+                            </row>
+                            <row>
+<entry>puntaje</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Contratacion.cs</section>
+</section>

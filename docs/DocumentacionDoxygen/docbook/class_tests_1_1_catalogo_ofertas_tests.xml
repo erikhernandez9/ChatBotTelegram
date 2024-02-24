@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tests_1_1_catalogo_ofertas_tests" xml:lang="es">
+<title>Referencia de la Clase Tests.CatalogoOfertasTests</title>
+<indexterm><primary>Tests.CatalogoOfertasTests</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_ofertas_tests_1a147b0b61993673cca5c16005ff4a27a6"/>void <emphasis role="strong">BuscarOfertaTest</emphasis> ()</para>
+
+<para>Prueba la búsqueda de categorías. /// </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_ofertas_tests_1ac63ebc9b68eadda90a137da91c397e1d"/>void <emphasis role="strong">AgregarOferta</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_ofertas_tests_1a240e58cdc4111aaa3f985e25a2c30dbd"/>void <emphasis role="strong">EliminarOferta</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_ofertas_tests_1a4c05c8389a06551739d3371cd71b112e"/>void <emphasis role="strong">BuscarOfertasPorCategoria</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+test/LibraryTests/CatalogoOfertasTests.cs</section>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>PROYECTO<sp/>PROGRAMACIÓN<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">TESTS:</highlight></codeline>
+<codeline><highlight class="normal">Empleador<sp/>-<sp/>pronto</highlight></codeline>
+<codeline><highlight class="normal">CatalogoOfertas<sp/>-<sp/>pronto</highlight></codeline>
+<codeline><highlight class="normal">CatalogoContrataciones<sp/>-<sp/>pronto</highlight></codeline>
+<codeline><highlight class="normal">CatalogoCategorias<sp/>-<sp/>pronto</highlight></codeline>
+<codeline><highlight class="normal">Calificacion<sp/>-</highlight></codeline>
+<codeline><highlight class="normal">CalcularUbicacion<sp/>-<sp/>pronto</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tareas<sp/>para<sp/>hacer:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Poner<sp/>fecha<sp/>de<sp/>contratacion.<sp/>Erik</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Clase<sp/>de<sp/>busqueda.<sp/>Erik<sp/>y<sp/>Emi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Clase<sp/>de<sp/>diálogos.<sp/>Erik<sp/>y<sp/>Emi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Comprobar<sp/>si<sp/>se<sp/>cumplen<sp/>las<sp/>historias<sp/>de<sp/>usuario.<sp/>Flor<sp/>y<sp/>Renzo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Tests<sp/>de<sp/>clases<sp/>y<sp/>de<sp/>User<sp/>Stories.<sp/>Flor<sp/>y<sp/>Renzo.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Modificar<sp/>UML<sp/>y<sp/>CRC.<sp/>Flor<sp/>y<sp/>Renzo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Corrección<sp/>y<sp/>completar<sp/>clase<sp/>CatalogoOferta.<sp/>Flor<sp/>y<sp/>Renzo.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Preguntas<sp/>para<sp/>mañana:</highlight></codeline>
+<codeline><highlight class="normal">1-<sp/>Opiniones<sp/>de<sp/>la<sp/>clase<sp/>Registrarse</highlight></codeline>
+<codeline><highlight class="normal">2-<sp/>Admin<sp/>y<sp/>catalogo<sp/>categorias<sp/>(quien<sp/>crea<sp/>las<sp/>categorias)</highlight></codeline>
+<codeline><highlight class="normal">3-<sp/>Lo<sp/>mismo<sp/>que<sp/>arriba<sp/>pero<sp/>con<sp/>el<sp/>trabajador<sp/>y<sp/>las<sp/>ofertas<sp/></highlight></codeline>
+<codeline><highlight class="normal">4-<sp/>Hay<sp/>que<sp/>hacer<sp/>un<sp/>metodo<sp/>registrarse?</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>User<sp/>Stories:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Cómo<sp/>administrador,<sp/>quiero<sp/>poder<sp/>indicar<sp/>categorías<sp/>sobre<sp/>las<sp/>cuales<sp/>se<sp/>realizarán<sp/>las<sp/>ofertas<sp/>de<sp/>servicios<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>los<sp/>trabajadoras<sp/>puedan<sp/>clasificarlos.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>administrador,<sp/>quiero<sp/>poder<sp/>dar<sp/>de<sp/>baja<sp/>ofertas<sp/>de<sp/>servicios,<sp/>{avisando<sp/>al<sp/>oferente<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>evitar<sp/>ofertas<sp/>inadecudas}.<sp/>[CUMPLE*]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>trabajador,<sp/>quiero<sp/>registrarme<sp/>en<sp/>la<sp/>plataforma,<sp/>indicando<sp/>mis<sp/>datos<sp/>personales<sp/>e<sp/>información<sp/>de<sp/>contacto<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>proveer<sp/>información<sp/>de<sp/>contacto<sp/>a<sp/>quienes<sp/>quieran<sp/>contratar<sp/>mis<sp/>servicios.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>trabajador,<sp/>quiero<sp/>poder<sp/>hacer<sp/>ofertas<sp/>de<sp/>servicios;<sp/>mi<sp/>oferta<sp/>indicará<sp/>en<sp/>qué<sp/>categoría<sp/>quiero<sp/>publicar,<sp/>tendrá<sp/>una<sp/>descripción<sp/>del<sp/>servicio<sp/>ofertado,<sp/>y<sp/>un<sp/>precio<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>mis<sp/>ofertas<sp/>sean<sp/>ofrecidas<sp/>a<sp/>quienes<sp/>quieren<sp/>contratar<sp/>servicios.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>empleador,<sp/>quiero<sp/>registrarme<sp/>en<sp/>la<sp/>plataforma,<sp/>indicando<sp/>mis<sp/>datos<sp/>personales<sp/>e<sp/>información<sp/>de<sp/>contacto<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>proveer<sp/>información<sp/>de<sp/>contacto<sp/>a<sp/>los<sp/>trabajadores<sp/>que<sp/>quiero<sp/>contratar.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>empleador,<sp/>quiero<sp/>buscar<sp/>ofertas<sp/>de<sp/>trabajo,<sp/>opcionalmente<sp/>filtrando<sp/>por<sp/>categoría<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>contratar<sp/>un<sp/>servicio.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>empleador,<sp/>quiero<sp/>ver<sp/>el<sp/>resultado<sp/>de<sp/>las<sp/>búsquedas<sp/>de<sp/>ofertas<sp/>de<sp/>trabajo<sp/>ordenado<sp/>en<sp/>forma<sp/>*ascendente*<sp/>de<sp/>*distancia<sp/>a<sp/>mi<sp/>ubicación*,<sp/>es<sp/>decir,<sp/>las<sp/>más<sp/>cercanas<sp/>primero<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>poder<sp/>contratar<sp/>un<sp/>servicio.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>empleador,<sp/>quiero<sp/>ver<sp/>el<sp/>resultado<sp/>de<sp/>las<sp/>búsquedas<sp/>de<sp/>ofertas<sp/>de<sp/>trabajo<sp/>ordenado<sp/>en<sp/>forma<sp/>*descendente*<sp/>por<sp/>reputación,<sp/>es<sp/>decir,<sp/>las<sp/>*de<sp/>mejor<sp/>reputación<sp/>primero*<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>contratar<sp/>un<sp/>servicio.<sp/>[CUMPLE]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>empleador,<sp/>quiero<sp/>poder<sp/>contactar<sp/>a<sp/>un<sp/>trabajador<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma<sp/>pueda,<sp/>contratar<sp/>una<sp/>oferta<sp/>de<sp/>servicios<sp/>determinada.<sp/>[FALTA]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>*trabajador*,<sp/>quiero<sp/>poder<sp/>calificar<sp/>a<sp/>un<sp/>empleador;<sp/>el<sp/>empleador<sp/>me<sp/>tiene<sp/>que<sp/>calificar<sp/>a<sp/>mi<sp/>también,<sp/>{si<sp/>no<sp/>me<sp/>califica<sp/>en<sp/>un<sp/>mes,<sp/>la<sp/>calificación<sp/>será<sp/>neutral,<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma<sp/>pueda<sp/>definir<sp/>la<sp/>reputación<sp/>de<sp/>mi<sp/>empleador.}<sp/>[CUMPLE*]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>*empleador*,<sp/>quiero<sp/>poder<sp/>calificar<sp/>a<sp/>un<sp/>trabajador;<sp/>el<sp/>trabajador<sp/>me<sp/>tiene<sp/>que<sp/>calificar<sp/>a<sp/>mi<sp/>también,<sp/>{si<sp/>no<sp/>me<sp/>califica<sp/>en<sp/>un<sp/>mes,<sp/>la<sp/>calificación<sp/>será<sp/>neutral,<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>pueda<sp/>definir<sp/>la<sp/>reputaión<sp/>del<sp/>trabajador.}<sp/>[CUMPLE*]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>trabajador,<sp/>quiero<sp/>poder<sp/>saber<sp/>la<sp/>reputación<sp/>de<sp/>un<sp/>empleador<sp/>que<sp/>me<sp/>contacte<sp/>para<sp/>que<sp/>de<sp/>esa<sp/>forma,<sp/>poder<sp/>decidir<sp/>sobre<sp/>su<sp/>solicitud<sp/>de<sp/>contratación.<sp/>[FALTA]</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

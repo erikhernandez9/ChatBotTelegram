@@ -1,0 +1,194 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+
+
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}\+Agregar empleador\char`\"{} y agrega un empleador con todos sus datos. Este handler es un USER STORY. Permite que un usuario se registre en la plataforma, ingresando el mensaje \char`\"{}\+Quiero registrarme como empleador.\char`\"{} Se solicitan todos los datos personales necesarios durante el registro y se guardan en una lista de empleadores.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_1_1_empleador_data}{Empleador\+Data}}
+\begin{DoxyCompactList}\small\item\em Representa los datos que va obteniendo el comando Agregar\+Empleador en los diferentes estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910f}{Empleador\+State}} \{ \newline
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910faa6122a65eaa676f700ae68d393054a37}{Start}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa293ef2966dd6c14bdd2d76f6301ee9b8}{Nombre\+Empleador}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa16d711d06129d4a45459ecaad9cf3237}{Email\+Empleador}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fab4d9658cd6754a8e0458379083a5a9d7}{Telefono\+Empleador}}
+, \newline
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa2c82e9d91acdd80a1eaedda114d8830b}{Id\+Empleador}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fae1c2ac453f1d3ae52627a7ecb48be374}{Ubicacion\+Empleador}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica los diferentes estados que puede tener el comando Agregar\+Empleador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_ae323619556f588e9c797618efbaf3682}{Agregar\+Empleador\+Handler}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una nueva instancia de la clase. \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler}{Agregar\+Empleador\+Handler}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a1e24f2f7f3436062930e30daa7b93f8f}{Can\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje)
+\begin{DoxyCompactList}\small\item\em Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_afc08830b3d454eb22aaad325964cb506}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Verifica los estados y responde según el estado del empleador, verificandolo con el diccionario. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a370a84822aa247d0e80d13776308b587}{Internal\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Método para cambiar estados dentro de la clase a la hora de tener que modificarlos entre mensajes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910f}{Empleador\+State}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_acab11b1ca2ec5fa7d87ceb8cac480734}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Estado del comando. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_1_1_empleador_data}{Empleador\+Data}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_aaecd340fbaf3dcae5b8313fb28b355fc}{Data}} = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_1_1_empleador_data}{Empleador\+Data}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Los datos que va obteniendo el comando en los diferentes estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}\+Agregar empleador\char`\"{} y agrega un empleador con todos sus datos. Este handler es un USER STORY. Permite que un usuario se registre en la plataforma, ingresando el mensaje \char`\"{}\+Quiero registrarme como empleador.\char`\"{} Se solicitan todos los datos personales necesarios durante el registro y se guardan en una lista de empleadores. 
+
+\char`\"{}\+Como empleador, quiero registrarme en la plataforma, indicando mis datos personales e información de contacto para  que de esa forma, pueda proveer información de contacto a quienes quieran contratar mis servicios.\char`\"{} 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910f}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910f}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!EmpleadorState@{EmpleadorState}}
+\index{EmpleadorState@{EmpleadorState}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{EmpleadorState}{EmpleadorState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910f}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+Empleador\+State}}}
+
+
+
+Indica los diferentes estados que puede tener el comando Agregar\+Empleador. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!Start@{Start}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910faa6122a65eaa676f700ae68d393054a37}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910faa6122a65eaa676f700ae68d393054a37}} 
+Start&El estado inicial del comando. En este estado el comando pide los datos del empleador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NombreEmpleador@{NombreEmpleador}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!NombreEmpleador@{NombreEmpleador}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa293ef2966dd6c14bdd2d76f6301ee9b8}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa293ef2966dd6c14bdd2d76f6301ee9b8}} 
+Nombre\+Empleador&El estado del nombre del empleador. En este estado el comando pide los datos del empleador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EmailEmpleador@{EmailEmpleador}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!EmailEmpleador@{EmailEmpleador}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa16d711d06129d4a45459ecaad9cf3237}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa16d711d06129d4a45459ecaad9cf3237}} 
+Email\+Empleador&El estado del email del empleador. En este estado el comando pide los datos del empleador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TelefonoEmpleador@{TelefonoEmpleador}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!TelefonoEmpleador@{TelefonoEmpleador}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fab4d9658cd6754a8e0458379083a5a9d7}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fab4d9658cd6754a8e0458379083a5a9d7}} 
+Telefono\+Empleador&El estado del telefono del empleador. En este estado el comando pide los datos del empleador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IdEmpleador@{IdEmpleador}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!IdEmpleador@{IdEmpleador}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa2c82e9d91acdd80a1eaedda114d8830b}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fa2c82e9d91acdd80a1eaedda114d8830b}} 
+Id\+Empleador&El estado del id del empleador. En este estado el comando pide los datos del empleador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UbicacionEmpleador@{UbicacionEmpleador}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!UbicacionEmpleador@{UbicacionEmpleador}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fae1c2ac453f1d3ae52627a7ecb48be374}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910fae1c2ac453f1d3ae52627a7ecb48be374}} 
+Ubicacion\+Empleador&El estado de la ubicación del empleador. En este estado el comando pide los datos del empleador. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_ae323619556f588e9c797618efbaf3682}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_ae323619556f588e9c797618efbaf3682}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!AgregarEmpleadorHandler@{AgregarEmpleadorHandler}}
+\index{AgregarEmpleadorHandler@{AgregarEmpleadorHandler}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{AgregarEmpleadorHandler()}{AgregarEmpleadorHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+Agregar\+Empleador\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una nueva instancia de la clase. \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler}{Agregar\+Empleador\+Handler}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & siguiente handler.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a1e24f2f7f3436062930e30daa7b93f8f}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a1e24f2f7f3436062930e30daa7b93f8f}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!CanHandle@{CanHandle}}
+\index{CanHandle@{CanHandle}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{CanHandle()}{CanHandle()}}
+{\footnotesize\ttfamily override bool Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+Can\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a16ac18cbf696cdbadf99f273cd718c35}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a370a84822aa247d0e80d13776308b587}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a370a84822aa247d0e80d13776308b587}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!InternalCancel@{InternalCancel}}
+\index{InternalCancel@{InternalCancel}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{InternalCancel()}{InternalCancel()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+Internal\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método para cambiar estados dentro de la clase a la hora de tener que modificarlos entre mensajes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a27b7917375368a0250c733b01bf4d7ce}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_afc08830b3d454eb22aaad325964cb506}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_afc08830b3d454eb22aaad325964cb506}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Verifica los estados y responde según el estado del empleador, verificandolo con el diccionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & mensaje.\\
+\hline
+{\em response} & contestación al mensaje.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_aaecd340fbaf3dcae5b8313fb28b355fc}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_aaecd340fbaf3dcae5b8313fb28b355fc}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!Data@{Data}}
+\index{Data@{Data}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_1_1_empleador_data}{Empleador\+Data}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+Data = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_1_1_empleador_data}{Empleador\+Data}}()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Los datos que va obteniendo el comando en los diferentes estados. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_acab11b1ca2ec5fa7d87ceb8cac480734}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_acab11b1ca2ec5fa7d87ceb8cac480734}} 
+\index{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}!State@{State}}
+\index{State@{State}!Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler@{Proyecto\_Chatbot.TelegramBot.AgregarEmpleadorHandler}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_agregar_empleador_handler_a09663659ccebb821ca3de8b4ed0d910f}{Empleador\+State}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Agregar\+Empleador\+Handler.\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Estado del comando. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_agregar_empleador_handler_8cs}{Agregar\+Empleador\+Handler.\+cs}}\end{DoxyCompactItemize}

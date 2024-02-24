@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_proyecto___chatbot_1_1_i_user" xml:lang="es">
+<title>Referencia de la Interfaz Proyecto_Chatbot.IUser</title>
+<indexterm><primary>Proyecto_Chatbot.IUser</primary></indexterm>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_interface_proyecto___chatbot_1_1_i_user_1ae5b7c506db921cb1fb7c2d9e449742d1"/>string <emphasis role="strong">Nombre</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_interface_proyecto___chatbot_1_1_i_user_1aba59137b8179cfaaae32c7380ff621cb"/>string <emphasis role="strong">Email</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_interface_proyecto___chatbot_1_1_i_user_1a2aa5faf456090d521732f763c04b68e4"/>string <emphasis role="strong">Telefono</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para este interfaz fue generada a partir del siguiente fichero:</para>
+src/Library/IUser.cs</section>

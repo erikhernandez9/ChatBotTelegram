@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_calcular_ubicacion" xml:lang="es">
+<title>Referencia de la Clase CalcularUbicacion</title>
+<indexterm><primary>CalcularUbicacion</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos estáticos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_calcular_ubicacion_1a0fb4100bb91abf0326929b16bd92a055"/>static double <emphasis role="strong">Calcular</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador">Empleador</link> empleador, <link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador">Trabajador</link> trabajador)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/CalcularUbicacion.cs</section>

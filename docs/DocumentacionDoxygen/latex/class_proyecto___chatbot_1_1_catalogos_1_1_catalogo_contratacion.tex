@@ -1,0 +1,222 @@
+\hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion Class Reference}
+\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion}\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+
+
+Clase que almacena todas las contrataciones, permitiendo agregar, eliminar y buscar contrataciones. Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular contrataciones. Esto es porque utiliza instancias de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}}, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_ae5a38eccffff93e903194db00ca06338}{Agregar\+Contratacion}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}} oferta\+Laboral, \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} empleador, string descripcion)
+\begin{DoxyCompactList}\small\item\em Método que crea una contratación y la agrega al católogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a374782af7d885a3fe409680115798b25}{Eliminar\+Contratacion}} (long id)
+\begin{DoxyCompactList}\small\item\em Método que elimina una contratación del catálogo. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_ac4c27f01579a2563105029db6d82e7fa}{Filtrar\+Contrataciones\+Por\+Empleador}} (long id)
+\begin{DoxyCompactList}\small\item\em Lista que almacena las contrataciones filtradas por la ID del empleador. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a043300b50e9830595cdf81c629fe8a3d}{Filtrar\+Contrataciones\+Por\+Trabajador}} (long id)
+\begin{DoxyCompactList}\small\item\em Lista que almacena las contrataciones (servicios contratados) que tiene el trabajador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a2be29e89d388f5bf58f8d417a7439fd0}{Buscar\+Contratacion}} (long id)
+\begin{DoxyCompactList}\small\item\em Método que busca una contratación en específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a19e80f84886550f22ba140d477e1eef9}{Contrataciones\+Neutras}} ()
+\begin{DoxyCompactList}\small\item\em Recorre todas las contrataciones para verificar si no se calificaron en un mes, les asigna una calificacion neutral. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a480f418719d3fdeb9400545820233bc7}{Convert\+To\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Serializa (convierte) valores a .json. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_aaed9f4cf13268baa362fccba7961eebf}{Load\+From\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Carga el contenido del .json. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a6475e922391dfb2583b5b78b18dca5c9}{Show\+File}} ()
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Muestra el contenido del .json. \end{DoxyCompactList}\item 
+String\+Builder \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a641fca715d3b69815d1690949696fd4a}{Imprimir}} ()
+\begin{DoxyCompactList}\small\item\em Método imprimir para que se muestre en el chat la lista de contrataciones guardadas en el .json. Se utilizó un String\+Builder para tomar las contrataciones de donde se indicó anteriormente y construir un string que muestre, en forma de lista, qué contrataciones vigentes existen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} $>$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a5938b0024c6897a35ce7504a781daf04}{Contratacion}} = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}}$>$()
+\begin{DoxyCompactList}\small\item\em Lista que almacena todas las contrataciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que almacena todas las contrataciones, permitiendo agregar, eliminar y buscar contrataciones. Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular contrataciones. Esto es porque utiliza instancias de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}}, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_ae5a38eccffff93e903194db00ca06338}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_ae5a38eccffff93e903194db00ca06338}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!AgregarContratacion@{AgregarContratacion}}
+\index{AgregarContratacion@{AgregarContratacion}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{AgregarContratacion()}{AgregarContratacion()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Agregar\+Contratacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}}}]{oferta\+Laboral,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}}}]{empleador,  }\item[{string}]{descripcion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que crea una contratación y la agrega al católogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em oferta\+Laboral} & representa la oferta laboral de la contratación a agregar.\\
+\hline
+{\em empleador} & representa al empleador relacionado a la contratación a agregar.\\
+\hline
+{\em descripcion} & representa la descripción de la contratación a agregar.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a2be29e89d388f5bf58f8d417a7439fd0}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a2be29e89d388f5bf58f8d417a7439fd0}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!BuscarContratacion@{BuscarContratacion}}
+\index{BuscarContratacion@{BuscarContratacion}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{BuscarContratacion()}{BuscarContratacion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Buscar\+Contratacion (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que busca una contratación en específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Representa el id de la contratacion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna una contratación en base a su id.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a19e80f84886550f22ba140d477e1eef9}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a19e80f84886550f22ba140d477e1eef9}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!ContratacionesNeutras@{ContratacionesNeutras}}
+\index{ContratacionesNeutras@{ContratacionesNeutras}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{ContratacionesNeutras()}{ContratacionesNeutras()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Contrataciones\+Neutras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recorre todas las contrataciones para verificar si no se calificaron en un mes, les asigna una calificacion neutral. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a480f418719d3fdeb9400545820233bc7}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a480f418719d3fdeb9400545820233bc7}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializa (convierte) valores a .json. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a374782af7d885a3fe409680115798b25}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a374782af7d885a3fe409680115798b25}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!EliminarContratacion@{EliminarContratacion}}
+\index{EliminarContratacion@{EliminarContratacion}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{EliminarContratacion()}{EliminarContratacion()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Eliminar\+Contratacion (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que elimina una contratación del catálogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id de la contratación.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_ac4c27f01579a2563105029db6d82e7fa}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_ac4c27f01579a2563105029db6d82e7fa}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!FiltrarContratacionesPorEmpleador@{FiltrarContratacionesPorEmpleador}}
+\index{FiltrarContratacionesPorEmpleador@{FiltrarContratacionesPorEmpleador}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{FiltrarContratacionesPorEmpleador()}{FiltrarContratacionesPorEmpleador()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} $>$ Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Filtrar\+Contrataciones\+Por\+Empleador (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista que almacena las contrataciones filtradas por la ID del empleador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id del empleador.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve la lista de las contrataciones activas que tiene un empleador. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a043300b50e9830595cdf81c629fe8a3d}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a043300b50e9830595cdf81c629fe8a3d}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!FiltrarContratacionesPorTrabajador@{FiltrarContratacionesPorTrabajador}}
+\index{FiltrarContratacionesPorTrabajador@{FiltrarContratacionesPorTrabajador}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{FiltrarContratacionesPorTrabajador()}{FiltrarContratacionesPorTrabajador()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}} $>$ Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Filtrar\+Contrataciones\+Por\+Trabajador (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista que almacena las contrataciones (servicios contratados) que tiene el trabajador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id del trabajador.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve una lista que toma todas las contrataciones que tiene el trabajador.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a641fca715d3b69815d1690949696fd4a}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a641fca715d3b69815d1690949696fd4a}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!Imprimir@{Imprimir}}
+\index{Imprimir@{Imprimir}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{Imprimir()}{Imprimir()}}
+{\footnotesize\ttfamily String\+Builder Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Imprimir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método imprimir para que se muestre en el chat la lista de contrataciones guardadas en el .json. Se utilizó un String\+Builder para tomar las contrataciones de donde se indicó anteriormente y construir un string que muestre, en forma de lista, qué contrataciones vigentes existen. 
+
+\begin{DoxyReturn}{Returns}
+Un string que enlista todos los nombres de las contrataciones.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_aaed9f4cf13268baa362fccba7961eebf}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_aaed9f4cf13268baa362fccba7961eebf}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Carga el contenido del .json. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a6475e922391dfb2583b5b78b18dca5c9}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a6475e922391dfb2583b5b78b18dca5c9}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!ShowFile@{ShowFile}}
+\index{ShowFile@{ShowFile}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{ShowFile()}{ShowFile()}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Show\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Muestra el contenido del .json. 
+
+\begin{DoxyReturn}{Returns}
+retorna el json de contrataciones en formato string.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a5938b0024c6897a35ce7504a781daf04}\label{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a5938b0024c6897a35ce7504a781daf04}} 
+\index{Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}!Contratacion@{Contratacion}}
+\index{Contratacion@{Contratacion}!Proyecto\_Chatbot.Catalogos.CatalogoContratacion@{Proyecto\_Chatbot.Catalogos.CatalogoContratacion}}
+\doxysubsubsection{\texorpdfstring{Contratacion}{Contratacion}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}}$>$ Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion.\+Contratacion = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}}$>$()}
+
+
+
+Lista que almacena todas las contrataciones. 
+
+~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Catalogos/\mbox{\hyperlink{_catalogo_contratacion_8cs}{Catalogo\+Contratacion.\+cs}}\end{DoxyCompactItemize}

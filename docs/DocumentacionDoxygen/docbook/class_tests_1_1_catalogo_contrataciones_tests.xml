@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tests_1_1_catalogo_contrataciones_tests" xml:lang="es">
+<title>Referencia de la Clase Tests.CatalogoContratacionesTests</title>
+<indexterm><primary>Tests.CatalogoContratacionesTests</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_contrataciones_tests_1a7623b2041ca60d4ef8cb1bbce74a57db"/>void <emphasis role="strong">AgregarContratacionTest</emphasis> ()</para>
+
+<para>Prueba que se creen contrataciones. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_contrataciones_tests_1aafbfc79606c8b09a3dc18e30b8378aa6"/>void <emphasis role="strong">EliminarContratacionTest</emphasis> ()</para>
+
+<para>Prueba que se eliminen contrataciones. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_tests_1_1_catalogo_contrataciones_tests_1a00fb3212b5a1cec632f9da10c02edb59"/>void <emphasis role="strong">BuscarContratacionTest</emphasis> ()</para>
+
+<para>Prueba que la búsqueda de contrataciones. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+test/LibraryTests/CatalogoContratacionesTests.cs</section>

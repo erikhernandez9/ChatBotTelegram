@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_tests_1_1_contratacion_tests" kind="class" language="C#" prot="public">
+    <compoundname>Tests::ContratacionTests</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tests_1_1_contratacion_tests_1a459117790f46e762cbfd403367d9a552" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.ContratacionTests.ContratacionTest</definition>
+        <argsstring>()</argsstring>
+        <name>ContratacionTest</name>
+        <qualifiedname>Tests.ContratacionTests.ContratacionTest</qualifiedname>
+        <briefdescription>
+<para>Prueba que se creen categorías. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/ContratacionTests.cs" line="15" column="21" bodyfile="test/LibraryTests/ContratacionTests.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_contratacion_tests_1a44e373178dd191abcfcc01f8d1b461cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.ContratacionTests.CalificacionEmpleadorTest</definition>
+        <argsstring>()</argsstring>
+        <name>CalificacionEmpleadorTest</name>
+        <qualifiedname>Tests.ContratacionTests.CalificacionEmpleadorTest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/ContratacionTests.cs" line="20" column="21" bodyfile="test/LibraryTests/ContratacionTests.cs" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_contratacion_tests_1a25b88a31ce437c27319594e75588a8f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.ContratacionTests.CalificacionTrabajadorTest</definition>
+        <argsstring>()</argsstring>
+        <name>CalificacionTrabajadorTest</name>
+        <qualifiedname>Tests.ContratacionTests.CalificacionTrabajadorTest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/ContratacionTests.cs" line="28" column="21" bodyfile="test/LibraryTests/ContratacionTests.cs" bodystart="28" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_contratacion_tests_1abf3197a0508a668d00e1158cc1d565fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.ContratacionTests.DesemplearTest</definition>
+        <argsstring>()</argsstring>
+        <name>DesemplearTest</name>
+        <qualifiedname>Tests.ContratacionTests.DesemplearTest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/ContratacionTests.cs" line="37" column="21" bodyfile="test/LibraryTests/ContratacionTests.cs" bodystart="37" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/LibraryTests/ContratacionTests.cs" line="9" column="11" bodyfile="test/LibraryTests/ContratacionTests.cs" bodystart="10" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_tests_1_1_contratacion_tests_1a44e373178dd191abcfcc01f8d1b461cb" prot="public" virt="non-virtual"><scope>Tests::ContratacionTests</scope><name>CalificacionEmpleadorTest</name></member>
+      <member refid="class_tests_1_1_contratacion_tests_1a25b88a31ce437c27319594e75588a8f8" prot="public" virt="non-virtual"><scope>Tests::ContratacionTests</scope><name>CalificacionTrabajadorTest</name></member>
+      <member refid="class_tests_1_1_contratacion_tests_1a459117790f46e762cbfd403367d9a552" prot="public" virt="non-virtual"><scope>Tests::ContratacionTests</scope><name>ContratacionTest</name></member>
+      <member refid="class_tests_1_1_contratacion_tests_1abf3197a0508a668d00e1158cc1d565fa" prot="public" virt="non-virtual"><scope>Tests::ContratacionTests</scope><name>DesemplearTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

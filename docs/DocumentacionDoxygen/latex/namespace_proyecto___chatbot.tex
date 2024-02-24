@@ -1,0 +1,32 @@
+\hypertarget{namespace_proyecto___chatbot}{}\doxysection{Proyecto\+\_\+\+Chatbot Namespace Reference}
+\label{namespace_proyecto___chatbot}\index{Proyecto\_Chatbot@{Proyecto\_Chatbot}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_proyecto___chatbot_1_1_catalogos}{Catalogos}}
+\item 
+namespace \mbox{\hyperlink{namespace_proyecto___chatbot_1_1_locations}{Locations}}
+\item 
+namespace \mbox{\hyperlink{namespace_proyecto___chatbot_1_1_telegram_bot}{Telegram\+Bot}}
+\item 
+namespace \mbox{\hyperlink{namespace_proyecto___chatbot_1_1_usuarios}{Usuarios}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}}
+\begin{DoxyCompactList}\small\item\em Clase que representa la calificacion del trabajador y empleador. Implementa la interfaz \mbox{\hyperlink{interface_i_json_convertible}{IJson\+Convertible}}, por lo que se utiliza el principio DIP. Se utilizó el principio SRP ya que la clase solo se centra en contener la calificación y lanzar una excepción en caso de que se ingrese una calificación inválida. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_categoria}{Categoria}}
+\begin{DoxyCompactList}\small\item\em Esta clase representa al categoria de cada servicio. Se utilizó el principio SRP, ya que la clase contiene solo a la categoría, y tiene la responsabilidad de corroborar si la misma es válida cuando se crea. Además, es la experta en información, ya que solo ella tiene y conoce la información necesaria para crear una categoría. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion}{Contratacion}}
+\begin{DoxyCompactList}\small\item\em Clase que representa la contratacion de un servicio. Se utilizó el principio SRP, ya que la clase contiene solo a la categoría, y tiene la responsabilidad de corroborar si la misma es válida cuando se crea. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_excepcion_constructor}{Excepcion\+Constructor}}
+\begin{DoxyCompactList}\small\item\em Constructor de excepciones para poder aplicarlas dentro de las clases. HERENCIA\+: Es hija de la clase Exception. Como se usó herencia, el principio aplicado es OCP. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_proyecto___chatbot_1_1_i_user}{IUser}}
+\begin{DoxyCompactList}\small\item\em Interfaz que representa el tipo User. Se utilizó el patrón ISP y DIP, para conseguir robustez y flexibilidad, y posibilitar la reutilización, con estas interfaces. \mbox{\hyperlink{interface_proyecto___chatbot_1_1_i_user}{IUser}} es implementada por \mbox{\hyperlink{class_persona}{Persona}}, facilita la creación de todos los usuarios (admin, trabajador, empleador) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_oferta_laboral}{Oferta\+Laboral}}
+\begin{DoxyCompactList}\small\item\em Representa la oferta laboral que publica un trabajador. Se utilizó el principio SRP, ya que la clase contiene solo a la oferta, y tiene la responsabilidad de corroborar si la misma es válida cuando se crea. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_program}{Program}}
+\begin{DoxyCompactList}\small\item\em Un programa que implementa un bot de Telegram. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_singleton}{Singleton}}
+\begin{DoxyCompactList}\small\item\em SINGLETON\+: Garantiza que una clase solo tenga una instancia. Se utilizó el patrón de diseño \mbox{\hyperlink{class_proyecto___chatbot_1_1_singleton}{Singleton}}, para restringir la creación de objetos pertenecientes a una clase, para asegurar que la clase no puede ser instanciada nuevamente. Lo aplicamos en\+: \end{DoxyCompactList}\end{DoxyCompactItemize}

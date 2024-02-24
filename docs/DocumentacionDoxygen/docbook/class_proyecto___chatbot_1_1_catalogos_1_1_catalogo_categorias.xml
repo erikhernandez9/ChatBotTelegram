@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Catalogos.CatalogoCategorias</title>
+<indexterm><primary>Proyecto_Chatbot.Catalogos.CatalogoCategorias</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_1a127d71fdfa38a2793b5ecfe737e983f8"/>void <emphasis role="strong">AgregarCategoria</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_categoria">Categoria</link> categoria)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_1a51cb6d54aa7c36ab81bb44811e271d09"/>void <emphasis role="strong">EliminarCategoria</emphasis> (string nombre)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_1aa2b114b0ec69e97c416174e06aadba91"/><link linkend="_class_proyecto___chatbot_1_1_categoria">Categoria</link> <emphasis role="strong">SeleccionarCategorias</emphasis> (string nombreCategoria)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Atributos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_1adb55037f8741d51b4c853653019daef6"/>List&lt; <link linkend="_class_proyecto___chatbot_1_1_categoria">Categoria</link> &gt; <emphasis role="strong">Categorias</emphasis> = new List&lt;<link linkend="_class_proyecto___chatbot_1_1_categoria">Categoria</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Catalogos/CatalogoCategorias.cs</section>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_proyecto___chatbot_1_1_usuarios" xml:lang="es">
+<title>Referencia del Namespace Proyecto_Chatbot.Usuarios</title>
+<indexterm><primary>Proyecto_Chatbot.Usuarios</primary></indexterm>
+<simplesect>
+    <title>Clases    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_administrador">Administrador</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador">Empleador</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador">Trabajador</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

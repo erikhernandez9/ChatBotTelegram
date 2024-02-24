@@ -1,0 +1,73 @@
+\hypertarget{interface_i_json_convertible}{}\doxysection{IJson\+Convertible Interface Reference}
+\label{interface_i_json_convertible}\index{IJsonConvertible@{IJsonConvertible}}
+
+
+ 
+
+
+Inheritance diagram for IJson\+Convertible\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.208468cm]{interface_i_json_convertible}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{Convert\+To\+Json}} ()
+\item 
+void \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{Load\+From\+Json}} (string json)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Define el tipo que tienen los objetos que pueder ser serializados en y deserializados desde texto en formato Json. Se utilizó el patrón ISP, ya que esto es una interfaz. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}\label{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}} 
+\index{IJsonConvertible@{IJsonConvertible}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!IJsonConvertible@{IJsonConvertible}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string IJson\+Convertible.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+
+
+Convirte el objeto a texto en formato Json. El objeto puede ser reconstruido a partir del texto en formato Json utilizando \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{Load\+From\+Json}}. 
+
+\begin{DoxyReturn}{Returns}
+El objeto convertido a texto en formato Json.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_a6852aa23935cc60b63465a87c607ab1c}{Proyecto\+\_\+\+Chatbot.\+Calificacion}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_aefe4b8a6ada0e58001416d64ce640de9}{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_a480f418719d3fdeb9400545820233bc7}{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_a1186379f9513999cba082483ad2fe2c8}{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Ofertas}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a0956dd31827cb7cdd5efb4782eb1cdc7}{Proyecto\+\_\+\+Chatbot.\+Contratacion}}, \mbox{\hyperlink{class_lista_administradores_a4448a6ea58f3d262fce92911cd84c850}{Lista\+Administradores}}, \mbox{\hyperlink{class_lista_empleadores_a7be0f474d02864b594f322185b0f2dc8}{Lista\+Empleadores}}, and \mbox{\hyperlink{class_lista_trabajadores_acbb078d9941781d5a34f855abbe416dd}{Lista\+Trabajadores}}.
+
+\mbox{\Hypertarget{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}\label{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}} 
+\index{IJsonConvertible@{IJsonConvertible}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!IJsonConvertible@{IJsonConvertible}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void IJson\+Convertible.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})}
+
+
+
+
+
+Asigna las propiedades del objeto a partir de texto en formato Json. El texto en formato Json puede ser obtenido utilizando \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{Convert\+To\+Json}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & El texto en formato Json a partir del cual asignas las propiedades del objeto.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_ab2521b8a8f2a68141bfe505670ac29ba}{Proyecto\+\_\+\+Chatbot.\+Calificacion}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias_abf5de9e798ed4c0596614feb7d1b7346}{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Categorias}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_aaed9f4cf13268baa362fccba7961eebf}{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Contratacion}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_a8d4c45d12124201db19e9e001c7ff8e5}{Proyecto\+\_\+\+Chatbot.\+Catalogos.\+Catalogo\+Ofertas}}, \mbox{\hyperlink{class_proyecto___chatbot_1_1_contratacion_a0c43d22d139740eec77751d3b2a48698}{Proyecto\+\_\+\+Chatbot.\+Contratacion}}, \mbox{\hyperlink{class_lista_administradores_a3e374d95400c1311a4511a5bd1171c25}{Lista\+Administradores}}, \mbox{\hyperlink{class_lista_empleadores_ad1307484f7529eadbab07f2cee40d1f4}{Lista\+Empleadores}}, and \mbox{\hyperlink{class_lista_trabajadores_a5802f7364846f29a4b6d566089852a27}{Lista\+Trabajadores}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\mbox{\hyperlink{_i_json_convertible_8cs}{IJson\+Convertible.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\hypertarget{class_proyecto___chatbot_1_1_calificacion}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Calificacion Class Reference}
+\label{class_proyecto___chatbot_1_1_calificacion}\index{Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}}
+
+
+Clase que representa la calificacion del trabajador y empleador. Implementa la interfaz \mbox{\hyperlink{interface_i_json_convertible}{IJson\+Convertible}}, por lo que se utiliza el principio DIP. Se utilizó el principio SRP ya que la clase solo se centra en contener la calificación y lanzar una excepción en caso de que se ingrese una calificación inválida.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Calificacion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___chatbot_1_1_calificacion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_ae49f20c5acdc6d3e1092252d37192ea9}{Calificacion}} (string descripcion, double puntaje)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_a6852aa23935cc60b63465a87c607ab1c}{Convert\+To\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Convierte a json los datos de la clase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_ab2521b8a8f2a68141bfe505670ac29ba}{Load\+From\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em Carga los datos json a la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_acde3f9c630e91896f423cb4efdf091d7}{Descripcion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa la descripcion de la calificacion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion_a2cadf01b8b83ecb8aff8bcea9224b46b}{Puntaje}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Representa el puntaje de la calificacion La calificacion va de 0 a 5 puntos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa la calificacion del trabajador y empleador. Implementa la interfaz \mbox{\hyperlink{interface_i_json_convertible}{IJson\+Convertible}}, por lo que se utiliza el principio DIP. Se utilizó el principio SRP ya que la clase solo se centra en contener la calificación y lanzar una excepción en caso de que se ingrese una calificación inválida. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_calificacion_ae49f20c5acdc6d3e1092252d37192ea9}\label{class_proyecto___chatbot_1_1_calificacion_ae49f20c5acdc6d3e1092252d37192ea9}} 
+\index{Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}!Calificacion@{Calificacion}}
+\index{Calificacion@{Calificacion}!Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}}
+\doxysubsubsection{\texorpdfstring{Calificacion()}{Calificacion()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Calificacion.\+Calificacion (\begin{DoxyParamCaption}\item[{string}]{descripcion,  }\item[{double}]{puntaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_proyecto___chatbot_1_1_calificacion}{Calificacion}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descripcion} & Almacena la descripcion que se le asigna a la calificacion.\\
+\hline
+{\em puntaje} & Almacena el puntaje que se le asigna a la calificacion.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_calificacion_a6852aa23935cc60b63465a87c607ab1c}\label{class_proyecto___chatbot_1_1_calificacion_a6852aa23935cc60b63465a87c607ab1c}} 
+\index{Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Calificacion.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convierte a json los datos de la clase. 
+
+\begin{DoxyReturn}{Returns}
+devuelve los datos convertidos.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_calificacion_ab2521b8a8f2a68141bfe505670ac29ba}\label{class_proyecto___chatbot_1_1_calificacion_ab2521b8a8f2a68141bfe505670ac29ba}} 
+\index{Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Calificacion.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Carga los datos json a la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & json a deserializar.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{IJson\+Convertible}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_calificacion_acde3f9c630e91896f423cb4efdf091d7}\label{class_proyecto___chatbot_1_1_calificacion_acde3f9c630e91896f423cb4efdf091d7}} 
+\index{Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}!Descripcion@{Descripcion}}
+\index{Descripcion@{Descripcion}!Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}}
+\doxysubsubsection{\texorpdfstring{Descripcion}{Descripcion}}
+{\footnotesize\ttfamily string Proyecto\+\_\+\+Chatbot.\+Calificacion.\+Descripcion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa la descripcion de la calificacion. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_calificacion_a2cadf01b8b83ecb8aff8bcea9224b46b}\label{class_proyecto___chatbot_1_1_calificacion_a2cadf01b8b83ecb8aff8bcea9224b46b}} 
+\index{Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}!Puntaje@{Puntaje}}
+\index{Puntaje@{Puntaje}!Proyecto\_Chatbot.Calificacion@{Proyecto\_Chatbot.Calificacion}}
+\doxysubsubsection{\texorpdfstring{Puntaje}{Puntaje}}
+{\footnotesize\ttfamily double Proyecto\+\_\+\+Chatbot.\+Calificacion.\+Puntaje\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Representa el puntaje de la calificacion La calificacion va de 0 a 5 puntos. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\mbox{\hyperlink{_calificacion_8cs}{Calificacion.\+cs}}\end{DoxyCompactItemize}

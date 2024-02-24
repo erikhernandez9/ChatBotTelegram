@@ -1,0 +1,192 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+
+
+Handler del patrón Chain of Responsability que crea una contratacion al ingresar el mensaje \char`\"{}\+Crear una contratacion\char`\"{}. Crea una contratación pudiendo ordenar las ofertas para verlas como el usuario desee, por precio, ubicacion, calificación, etc. USER STORY\+: \char`\"{}\+Como empleador, quiero buscar ofertas de trabajo, opcionalmente filtrando por categoría para   que de esa forma, pueda contratar un servicio\char`\"{}  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_1_1_contratacion_data}{Contratacion\+Data}}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_1_1_contratacion_data}{Contratacion\+Data}}. Contiene getters y setters que toman datos de categoria y trabajador, sumando los datos propios de la oferta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7b}{Contratacion\+State}} \{ \newline
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7baa6122a65eaa676f700ae68d393054a37}{Start}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba89c9528ae41217173e3e90ebcd84f67e}{Oferta\+Contratacion}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba8f96fcd60de8612067ae9cea652ff0f0}{Empleador\+Contratacion}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba2e8d2b0a62a3f90e53e1241ff8d842b2}{Nombre\+Categoria\+Contratacion}}
+, \newline
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba2b92a5ef52d8b094ff8553b1d272598b}{Numero\+Contratacion}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7baceca855dc88b50b1d914c76ef3c1a79f}{Descripcion\+Contratacion}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica los diferentes estados que puede tener el comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a6f9c142c55dbefdda327ffe11d3d91d1}{Crear\+Contratacion\+Handler}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler}{Crear\+Contratacion\+Handler}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a9e29772a95ec7d8d635c1c277b711f0c}{Can\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje)
+\begin{DoxyCompactList}\small\item\em Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a1dd5d3f1805aec6dc98fe56e3e95f5e5}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Verifica los estados y responde según el estado, verificandolo con el diccionario. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a818f1b9578c9cc5da7be70324d235cdd}{Internal\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos entre mensajes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7b}{Contratacion\+State}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ac9db44e8506ebdc36b65f22ac113bb8a}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Estado del comando. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_1_1_contratacion_data}{Contratacion\+Data}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ac182b36aace448a6a4989483073c7e92}{Data}} = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_1_1_contratacion_data}{Contratacion\+Data}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em El estado inicial del comando. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handler del patrón Chain of Responsability que crea una contratacion al ingresar el mensaje \char`\"{}\+Crear una contratacion\char`\"{}. Crea una contratación pudiendo ordenar las ofertas para verlas como el usuario desee, por precio, ubicacion, calificación, etc. USER STORY\+: \char`\"{}\+Como empleador, quiero buscar ofertas de trabajo, opcionalmente filtrando por categoría para   que de esa forma, pueda contratar un servicio\char`\"{} 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7b}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7b}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!ContratacionState@{ContratacionState}}
+\index{ContratacionState@{ContratacionState}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{ContratacionState}{ContratacionState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7b}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+Contratacion\+State}}}
+
+
+
+Indica los diferentes estados que puede tener el comando. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!Start@{Start}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7baa6122a65eaa676f700ae68d393054a37}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7baa6122a65eaa676f700ae68d393054a37}} 
+Start&El estado inicial del comando. En este estado el comando pide los datos iniciales de la oferta y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OfertaContratacion@{OfertaContratacion}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!OfertaContratacion@{OfertaContratacion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba89c9528ae41217173e3e90ebcd84f67e}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba89c9528ae41217173e3e90ebcd84f67e}} 
+Oferta\+Contratacion&El estado de la oferta relacionada a la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EmpleadorContratacion@{EmpleadorContratacion}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!EmpleadorContratacion@{EmpleadorContratacion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba8f96fcd60de8612067ae9cea652ff0f0}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba8f96fcd60de8612067ae9cea652ff0f0}} 
+Empleador\+Contratacion&El estado del empleador que realiza la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NombreCategoriaContratacion@{NombreCategoriaContratacion}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!NombreCategoriaContratacion@{NombreCategoriaContratacion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba2e8d2b0a62a3f90e53e1241ff8d842b2}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba2e8d2b0a62a3f90e53e1241ff8d842b2}} 
+Nombre\+Categoria\+Contratacion&El estado del nombre de la categoría relacionada a la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumeroContratacion@{NumeroContratacion}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!NumeroContratacion@{NumeroContratacion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba2b92a5ef52d8b094ff8553b1d272598b}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7ba2b92a5ef52d8b094ff8553b1d272598b}} 
+Numero\+Contratacion&El estado del número que será el id de la contratación, valor numérico para identificarla. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DescripcionContratacion@{DescripcionContratacion}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!DescripcionContratacion@{DescripcionContratacion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7baceca855dc88b50b1d914c76ef3c1a79f}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7baceca855dc88b50b1d914c76ef3c1a79f}} 
+Descripcion\+Contratacion&El estado de la descripción de la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a6f9c142c55dbefdda327ffe11d3d91d1}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a6f9c142c55dbefdda327ffe11d3d91d1}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!CrearContratacionHandler@{CrearContratacionHandler}}
+\index{CrearContratacionHandler@{CrearContratacionHandler}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{CrearContratacionHandler()}{CrearContratacionHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+Crear\+Contratacion\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler}{Crear\+Contratacion\+Handler}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & siguiente handler.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a9e29772a95ec7d8d635c1c277b711f0c}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a9e29772a95ec7d8d635c1c277b711f0c}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!CanHandle@{CanHandle}}
+\index{CanHandle@{CanHandle}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{CanHandle()}{CanHandle()}}
+{\footnotesize\ttfamily override bool Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+Can\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a16ac18cbf696cdbadf99f273cd718c35}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a818f1b9578c9cc5da7be70324d235cdd}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a818f1b9578c9cc5da7be70324d235cdd}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!InternalCancel@{InternalCancel}}
+\index{InternalCancel@{InternalCancel}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{InternalCancel()}{InternalCancel()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+Internal\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos entre mensajes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a27b7917375368a0250c733b01bf4d7ce}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a1dd5d3f1805aec6dc98fe56e3e95f5e5}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_a1dd5d3f1805aec6dc98fe56e3e95f5e5}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Verifica los estados y responde según el estado, verificandolo con el diccionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & mensaje.\\
+\hline
+{\em response} & contestación al mensaje.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ac182b36aace448a6a4989483073c7e92}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ac182b36aace448a6a4989483073c7e92}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!Data@{Data}}
+\index{Data@{Data}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_1_1_contratacion_data}{Contratacion\+Data}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+Data = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_1_1_contratacion_data}{Contratacion\+Data}}()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+El estado inicial del comando. En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ac9db44e8506ebdc36b65f22ac113bb8a}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ac9db44e8506ebdc36b65f22ac113bb8a}} 
+\index{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}!State@{State}}
+\index{State@{State}!Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler@{Proyecto\_Chatbot.TelegramBot.CrearContratacionHandler}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_crear_contratacion_handler_ad003575e36d2987aad024f118b9d9e7b}{Contratacion\+State}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Crear\+Contratacion\+Handler.\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Estado del comando. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_crear_contratacion_handler_8cs}{Crear\+Contratacion\+Handler.\+cs}}\end{DoxyCompactItemize}

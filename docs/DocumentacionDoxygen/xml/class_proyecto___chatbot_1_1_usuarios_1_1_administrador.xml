@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_usuarios_1_1_administrador" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::Usuarios::Administrador</compoundname>
+    <basecompoundref refid="class_user" prot="public" virt="non-virtual">User</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_usuarios_1_1_administrador_1a685883fbff6f7f813bae824c8409ea62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Proyecto_Chatbot.Usuarios.Administrador.Administrador</definition>
+        <argsstring>(string nombre, string email, string telefono, string id)</argsstring>
+        <name>Administrador</name>
+        <qualifiedname>Proyecto_Chatbot.Usuarios.Administrador.Administrador</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>telefono</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/Usuarios/Administrador.cs" line="8" column="16" bodyfile="src/Library/Usuarios/Administrador.cs" bodystart="8" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IUser</label>
+      </node>
+      <node id="1">
+        <label>Proyecto_Chatbot.Usuarios.Administrador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_administrador"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>User</label>
+        <link refid="class_user"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IUser</label>
+      </node>
+      <node id="1">
+        <label>Proyecto_Chatbot.Usuarios.Administrador</label>
+        <link refid="class_proyecto___chatbot_1_1_usuarios_1_1_administrador"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>User</label>
+        <link refid="class_user"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Library/Usuarios/Administrador.cs" line="5" column="11" bodyfile="src/Library/Usuarios/Administrador.cs" bodystart="6" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_proyecto___chatbot_1_1_usuarios_1_1_administrador_1a685883fbff6f7f813bae824c8409ea62" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Administrador</scope><name>Administrador</name></member>
+      <member refid="class_user_1a7ed159e4b886cffcf51dd675b9e4793b" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Administrador</scope><name>Email</name></member>
+      <member refid="class_user_1abc5f5286bda8fca089c7af1c0fab3b57" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Administrador</scope><name>Id</name></member>
+      <member refid="class_user_1a298f9292e1b8be801f1a471b0e1d2899" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Administrador</scope><name>Nombre</name></member>
+      <member refid="class_user_1a57c57308bef71b88b40979e1f2791d39" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Administrador</scope><name>Telefono</name></member>
+      <member refid="class_user_1a7660daf25606ed5e444d4aa64319d993" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Usuarios::Administrador</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

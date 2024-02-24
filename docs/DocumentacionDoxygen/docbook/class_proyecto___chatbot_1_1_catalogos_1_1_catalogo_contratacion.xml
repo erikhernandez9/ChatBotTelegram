@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Catalogos.CatalogoContratacion</title>
+<indexterm><primary>Proyecto_Chatbot.Catalogos.CatalogoContratacion</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_1a7f50be5fc5e4df420208410ec42c62db"/>void <emphasis role="strong">AgregarContratacion</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_contratacion">Contratacion</link> contratacion)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_1a607dd6962dcdf1b61da053e7f332a2b3"/>void <emphasis role="strong">EliminarContratacion</emphasis> (string idTrabajador, string idEmpleador)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_1a791536490c87d4a7b5e5fded86fef1e6"/><link linkend="_class_proyecto___chatbot_1_1_contratacion">Contratacion</link> <emphasis role="strong">BuscarContratacion</emphasis> (int id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Atributos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion_1a5938b0024c6897a35ce7504a781daf04"/>List&lt; <link linkend="_class_proyecto___chatbot_1_1_contratacion">Contratacion</link> &gt; <emphasis role="strong">Contratacion</emphasis> = new List&lt;<link linkend="_class_proyecto___chatbot_1_1_contratacion">Contratacion</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Catalogos/CatalogoContratacion.cs</section>

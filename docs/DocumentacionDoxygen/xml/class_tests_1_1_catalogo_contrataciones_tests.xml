@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_tests_1_1_catalogo_contrataciones_tests" kind="class" language="C#" prot="public">
+    <compoundname>Tests::CatalogoContratacionesTests</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tests_1_1_catalogo_contrataciones_tests_1a7623b2041ca60d4ef8cb1bbce74a57db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoContratacionesTests.AgregarContratacionTest</definition>
+        <argsstring>()</argsstring>
+        <name>AgregarContratacionTest</name>
+        <qualifiedname>Tests.CatalogoContratacionesTests.AgregarContratacionTest</qualifiedname>
+        <briefdescription>
+<para>Prueba que se creen contrataciones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoContratacionesTests.cs" line="14" column="21" bodyfile="test/LibraryTests/CatalogoContratacionesTests.cs" bodystart="14" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_catalogo_contrataciones_tests_1aafbfc79606c8b09a3dc18e30b8378aa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoContratacionesTests.EliminarContratacionTest</definition>
+        <argsstring>()</argsstring>
+        <name>EliminarContratacionTest</name>
+        <qualifiedname>Tests.CatalogoContratacionesTests.EliminarContratacionTest</qualifiedname>
+        <briefdescription>
+<para>Prueba que se eliminen contrataciones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoContratacionesTests.cs" line="27" column="21" bodyfile="test/LibraryTests/CatalogoContratacionesTests.cs" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_catalogo_contrataciones_tests_1a00fb3212b5a1cec632f9da10c02edb59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoContratacionesTests.BuscarContratacionTest</definition>
+        <argsstring>()</argsstring>
+        <name>BuscarContratacionTest</name>
+        <qualifiedname>Tests.CatalogoContratacionesTests.BuscarContratacionTest</qualifiedname>
+        <briefdescription>
+<para>Prueba que la búsqueda de contrataciones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoContratacionesTests.cs" line="41" column="21" bodyfile="test/LibraryTests/CatalogoContratacionesTests.cs" bodystart="41" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/LibraryTests/CatalogoContratacionesTests.cs" line="8" column="11" bodyfile="test/LibraryTests/CatalogoContratacionesTests.cs" bodystart="9" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_tests_1_1_catalogo_contrataciones_tests_1a7623b2041ca60d4ef8cb1bbce74a57db" prot="public" virt="non-virtual"><scope>Tests::CatalogoContratacionesTests</scope><name>AgregarContratacionTest</name></member>
+      <member refid="class_tests_1_1_catalogo_contrataciones_tests_1a00fb3212b5a1cec632f9da10c02edb59" prot="public" virt="non-virtual"><scope>Tests::CatalogoContratacionesTests</scope><name>BuscarContratacionTest</name></member>
+      <member refid="class_tests_1_1_catalogo_contrataciones_tests_1aafbfc79606c8b09a3dc18e30b8378aa6" prot="public" virt="non-virtual"><scope>Tests::CatalogoContratacionesTests</scope><name>EliminarContratacionTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

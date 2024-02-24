@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::Program</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_program_1a87d63fe141405798d76d89d695d7d9db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Proyecto_Chatbot.Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <qualifiedname>Proyecto_Chatbot.Program.Main</qualifiedname>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Program/Program.cs" line="10" column="28" bodyfile="src/Program/Program.cs" bodystart="10" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Program/Program.cs" line="8" column="11" bodyfile="src/Program/Program.cs" bodystart="9" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_proyecto___chatbot_1_1_program_1a87d63fe141405798d76d89d695d7d9db" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,93 @@
+\hypertarget{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IHandler Interface Reference}
+\label{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}\index{Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}}
+
+
+Interfaz para implementar el patrón Chain of Responsibility. En ese patrón se pasa un mensaje a través de una cadena de \char`\"{}handlers\char`\"{} que pueden procesar o no el mensaje. Cada \char`\"{}handler\char`\"{} decide si procesa el mensaje, o si se lo pasa al siguiente. Esta interfaz define un atributo para definir el próximo \char`\"{}handler\char`\"{} y una una operación para recibir el mensaje y pasarlo al siguiente \char`\"{}handler\char`\"{} en caso que el mensaje no sea procesado. La responsabilidad de decidir si el mensaje se procesa o no, y de procesarlo, se realiza en las clases que implementan esta interfaz.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IHandler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}{IHandler}} \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_a5c4fac4aaecd06948b740cb79311b4cd}{Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Procesa el mensaje o la pasa al siguiente \char`\"{}handler\char`\"{} si existe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_ae7262ca68df92570ce1962070f9c405c}{Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Retorna este \char`\"{}handler\char`\"{} al estado inicial y cancela el próximo \char`\"{}handler\char`\"{} si existe. Es utilizado para que los \char`\"{}handlers\char`\"{} que procesan varios mensajes cambiando de estado entre mensajes puedan volver al estado inicial en caso de error por ejemplo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}{IHandler}} \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_a99bc039ddd13b21de0c7eb8043c87d53}{Next}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene el próximo \char`\"{}handler\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaz para implementar el patrón Chain of Responsibility. En ese patrón se pasa un mensaje a través de una cadena de \char`\"{}handlers\char`\"{} que pueden procesar o no el mensaje. Cada \char`\"{}handler\char`\"{} decide si procesa el mensaje, o si se lo pasa al siguiente. Esta interfaz define un atributo para definir el próximo \char`\"{}handler\char`\"{} y una una operación para recibir el mensaje y pasarlo al siguiente \char`\"{}handler\char`\"{} en caso que el mensaje no sea procesado. La responsabilidad de decidir si el mensaje se procesa o no, y de procesarlo, se realiza en las clases que implementan esta interfaz. 
+
+La interfaz se crea en función del principio de inversión de dependencias, para que los clientes de la cadena de responsabilidad, que pueden ser concretos, no dependan de una clase \char`\"{}handler\char`\"{} que potencialmente es abstracta. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_ae7262ca68df92570ce1962070f9c405c}\label{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_ae7262ca68df92570ce1962070f9c405c}} 
+\index{Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}}
+\doxysubsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IHandler.\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna este \char`\"{}handler\char`\"{} al estado inicial y cancela el próximo \char`\"{}handler\char`\"{} si existe. Es utilizado para que los \char`\"{}handlers\char`\"{} que procesan varios mensajes cambiando de estado entre mensajes puedan volver al estado inicial en caso de error por ejemplo. 
+
+
+
+Implemented in \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a1874e7e5eec9593534e844f86a4046ae}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_a5c4fac4aaecd06948b740cb79311b4cd}\label{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_a5c4fac4aaecd06948b740cb79311b4cd}} 
+\index{Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}!Handle@{Handle}}
+\index{Handle@{Handle}!Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}{IHandler}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IHandler.\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})}
+
+
+
+Procesa el mensaje o la pasa al siguiente \char`\"{}handler\char`\"{} si existe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & El mensaje a procesar.\\
+\hline
+{\em response} & La respuesta al mensaje procesado.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El \char`\"{}handler\char`\"{} que procesó el mensaje si el mensaje fue procesado; null en caso contrario.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ae5a1f2c2a92f4b24762848888abbe73a}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_a99bc039ddd13b21de0c7eb8043c87d53}\label{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler_a99bc039ddd13b21de0c7eb8043c87d53}} 
+\index{Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}!Next@{Next}}
+\index{Next@{Next}!Proyecto\_Chatbot.TelegramBot.IHandler@{Proyecto\_Chatbot.TelegramBot.IHandler}}
+\doxysubsubsection{\texorpdfstring{Next}{Next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_handler}{IHandler}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IHandler.\+Next\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Obtiene el próximo \char`\"{}handler\char`\"{}. 
+
+El \char`\"{}handler\char`\"{} que será invocado si este \char`\"{}handler\char`\"{} no procesa el mensaje.
+
+Implemented in \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a2888c796b1e50c4a1724c40f22bcdfae}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_i_handler_8cs}{IHandler.\+cs}}\end{DoxyCompactItemize}

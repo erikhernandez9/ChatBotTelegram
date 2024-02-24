@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_administrador" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Usuarios.Administrador</title>
+<indexterm><primary>Proyecto_Chatbot.Usuarios.Administrador</primary></indexterm>
+<para>Diagrama de herencias de Proyecto_Chatbot.Usuarios.Administrador    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_proyecto___chatbot_1_1_usuarios_1_1_administrador.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_administrador_1a685883fbff6f7f813bae824c8409ea62"/><emphasis role="strong">Administrador</emphasis> (string nombre, string email, string telefono, string id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Otros miembros heredados    </title>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Usuarios/Administrador.cs</section>

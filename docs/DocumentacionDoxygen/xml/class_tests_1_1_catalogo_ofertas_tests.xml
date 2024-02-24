@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_tests_1_1_catalogo_ofertas_tests" kind="class" language="C#" prot="public">
+    <compoundname>Tests::CatalogoOfertasTests</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tests_1_1_catalogo_ofertas_tests_1a147b0b61993673cca5c16005ff4a27a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoOfertasTests.BuscarOfertaTest</definition>
+        <argsstring>()</argsstring>
+        <name>BuscarOfertaTest</name>
+        <qualifiedname>Tests.CatalogoOfertasTests.BuscarOfertaTest</qualifiedname>
+        <briefdescription>
+<para>Prueba la búsqueda de categorías. /// </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoOfertasTests.cs" line="15" column="21" bodyfile="test/LibraryTests/CatalogoOfertasTests.cs" bodystart="15" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_catalogo_ofertas_tests_1ac63ebc9b68eadda90a137da91c397e1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoOfertasTests.AgregarOferta</definition>
+        <argsstring>()</argsstring>
+        <name>AgregarOferta</name>
+        <qualifiedname>Tests.CatalogoOfertasTests.AgregarOferta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoOfertasTests.cs" line="26" column="21" bodyfile="test/LibraryTests/CatalogoOfertasTests.cs" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_catalogo_ofertas_tests_1a240e58cdc4111aaa3f985e25a2c30dbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoOfertasTests.EliminarOferta</definition>
+        <argsstring>()</argsstring>
+        <name>EliminarOferta</name>
+        <qualifiedname>Tests.CatalogoOfertasTests.EliminarOferta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoOfertasTests.cs" line="34" column="21" bodyfile="test/LibraryTests/CatalogoOfertasTests.cs" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tests_1_1_catalogo_ofertas_tests_1a4c05c8389a06551739d3371cd71b112e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Tests.CatalogoOfertasTests.BuscarOfertasPorCategoria</definition>
+        <argsstring>()</argsstring>
+        <name>BuscarOfertasPorCategoria</name>
+        <qualifiedname>Tests.CatalogoOfertasTests.BuscarOfertasPorCategoria</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/LibraryTests/CatalogoOfertasTests.cs" line="43" column="21" bodyfile="test/LibraryTests/CatalogoOfertasTests.cs" bodystart="43" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/LibraryTests/CatalogoOfertasTests.cs" line="9" column="11" bodyfile="test/LibraryTests/CatalogoOfertasTests.cs" bodystart="10" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_tests_1_1_catalogo_ofertas_tests_1ac63ebc9b68eadda90a137da91c397e1d" prot="public" virt="non-virtual"><scope>Tests::CatalogoOfertasTests</scope><name>AgregarOferta</name></member>
+      <member refid="class_tests_1_1_catalogo_ofertas_tests_1a4c05c8389a06551739d3371cd71b112e" prot="public" virt="non-virtual"><scope>Tests::CatalogoOfertasTests</scope><name>BuscarOfertasPorCategoria</name></member>
+      <member refid="class_tests_1_1_catalogo_ofertas_tests_1a147b0b61993673cca5c16005ff4a27a6" prot="public" virt="non-virtual"><scope>Tests::CatalogoOfertasTests</scope><name>BuscarOfertaTest</name></member>
+      <member refid="class_tests_1_1_catalogo_ofertas_tests_1a240e58cdc4111aaa3f985e25a2c30dbd" prot="public" virt="non-virtual"><scope>Tests::CatalogoOfertasTests</scope><name>EliminarOferta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

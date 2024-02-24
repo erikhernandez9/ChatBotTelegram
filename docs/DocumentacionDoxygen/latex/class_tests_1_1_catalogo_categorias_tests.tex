@@ -1,0 +1,93 @@
+\hypertarget{class_tests_1_1_catalogo_categorias_tests}{}\doxysection{Tests.\+Catalogo\+Categorias\+Tests Class Reference}
+\label{class_tests_1_1_catalogo_categorias_tests}\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+
+
+ESTOS TEST PERTENECEN A LA USER STORY\+: \char`\"{}\+Como administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas de servicios para que de esa forma, los trabajadoras puedan clasificarlos.\char`\"{} Se decició utilizar el patrón Creator, estas tareas de creación y eliminación de categorías se le asignaron a la clase \char`\"{}\+Catálogo Categorías\char`\"{}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_categorias_tests_ac535817298b120084dfd18acd4f9df82}{Crear\+Categoria\+Test}} ()
+\begin{DoxyCompactList}\small\item\em User story. Prueba que se creen categorías, para ello, se llama al catálogo de categorías y se utiliza el método de agregar categoría que pide como parametro en nombre y la descripción de la categoría, se fija si no existe y, de ser así, lo agrega a la lista de categorías y la serializa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_categorias_tests_a5d9f4c02bc007de44a9c2df3b56b94a8}{Eliminar\+Categoria\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que se eliminen categorías, para ello creamos una categoria con el fin de eliminarla más adelante. Una vez creada, llamamos al método eliminar categoría del catálogo categorías, que se encarga de seleccionar la categoría enviada por parámetro y luego eliminarla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_categorias_tests_a6c3377365f3b54ecb40a7b047e87d1e7}{Seleccionar\+Categoria\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la búsqueda de categorías, se selecciona de qué área se quiere buscar. Para realizar esta tarea, se envía por parámetro el nombre de la categoría deseada. Para hacer uso de este método, creamos dos categorías de la forma previamente explicada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_categorias_tests_a3d6f49f9cf65f2668d0c15261356d679}{Categoria\+Repetida\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la creación de una categoría ya creada anteriormente. Para esto, creamos una categoría con una nombre y luego creamos otra con el mismo nombre para comprobar si se ejecuta una excepción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_categorias_tests_ac8203803b1eefc093d3f357621eae416}{Guardar\+Traer\+Datos\+Json\+File\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba el guardado de datos de categoria en un archivo .json. Para esto, creamos categorías y las guardamos en un archivo .json luego las traemos y procedemos a comprobar si son correctas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_categorias_tests_a849f17a82b8eca5689b957c5d669cdd4}{Parametros\+Incorrectos\+Categoria\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Este test verifica si aparece la excepcion luego de enviar valores no esperados. Este test lo hicimos aca porque al ser uno solo para Oferta\+Laboral, nos parecia mejor ponerlo aca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ESTOS TEST PERTENECEN A LA USER STORY\+: \char`\"{}\+Como administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas de servicios para que de esa forma, los trabajadoras puedan clasificarlos.\char`\"{} Se decició utilizar el patrón Creator, estas tareas de creación y eliminación de categorías se le asignaron a la clase \char`\"{}\+Catálogo Categorías\char`\"{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tests_1_1_catalogo_categorias_tests_a3d6f49f9cf65f2668d0c15261356d679}\label{class_tests_1_1_catalogo_categorias_tests_a3d6f49f9cf65f2668d0c15261356d679}} 
+\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}!CategoriaRepetidaTest@{CategoriaRepetidaTest}}
+\index{CategoriaRepetidaTest@{CategoriaRepetidaTest}!Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+\doxysubsubsection{\texorpdfstring{CategoriaRepetidaTest()}{CategoriaRepetidaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Categorias\+Tests.\+Categoria\+Repetida\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la creación de una categoría ya creada anteriormente. Para esto, creamos una categoría con una nombre y luego creamos otra con el mismo nombre para comprobar si se ejecuta una excepción. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_categorias_tests_ac535817298b120084dfd18acd4f9df82}\label{class_tests_1_1_catalogo_categorias_tests_ac535817298b120084dfd18acd4f9df82}} 
+\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}!CrearCategoriaTest@{CrearCategoriaTest}}
+\index{CrearCategoriaTest@{CrearCategoriaTest}!Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+\doxysubsubsection{\texorpdfstring{CrearCategoriaTest()}{CrearCategoriaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Categorias\+Tests.\+Crear\+Categoria\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+User story. Prueba que se creen categorías, para ello, se llama al catálogo de categorías y se utiliza el método de agregar categoría que pide como parametro en nombre y la descripción de la categoría, se fija si no existe y, de ser así, lo agrega a la lista de categorías y la serializa. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_categorias_tests_a5d9f4c02bc007de44a9c2df3b56b94a8}\label{class_tests_1_1_catalogo_categorias_tests_a5d9f4c02bc007de44a9c2df3b56b94a8}} 
+\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}!EliminarCategoriaTest@{EliminarCategoriaTest}}
+\index{EliminarCategoriaTest@{EliminarCategoriaTest}!Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+\doxysubsubsection{\texorpdfstring{EliminarCategoriaTest()}{EliminarCategoriaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Categorias\+Tests.\+Eliminar\+Categoria\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que se eliminen categorías, para ello creamos una categoria con el fin de eliminarla más adelante. Una vez creada, llamamos al método eliminar categoría del catálogo categorías, que se encarga de seleccionar la categoría enviada por parámetro y luego eliminarla. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_categorias_tests_ac8203803b1eefc093d3f357621eae416}\label{class_tests_1_1_catalogo_categorias_tests_ac8203803b1eefc093d3f357621eae416}} 
+\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}!GuardarTraerDatosJsonFileTest@{GuardarTraerDatosJsonFileTest}}
+\index{GuardarTraerDatosJsonFileTest@{GuardarTraerDatosJsonFileTest}!Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+\doxysubsubsection{\texorpdfstring{GuardarTraerDatosJsonFileTest()}{GuardarTraerDatosJsonFileTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Categorias\+Tests.\+Guardar\+Traer\+Datos\+Json\+File\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba el guardado de datos de categoria en un archivo .json. Para esto, creamos categorías y las guardamos en un archivo .json luego las traemos y procedemos a comprobar si son correctas. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_categorias_tests_a849f17a82b8eca5689b957c5d669cdd4}\label{class_tests_1_1_catalogo_categorias_tests_a849f17a82b8eca5689b957c5d669cdd4}} 
+\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}!ParametrosIncorrectosCategoriaTest@{ParametrosIncorrectosCategoriaTest}}
+\index{ParametrosIncorrectosCategoriaTest@{ParametrosIncorrectosCategoriaTest}!Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+\doxysubsubsection{\texorpdfstring{ParametrosIncorrectosCategoriaTest()}{ParametrosIncorrectosCategoriaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Categorias\+Tests.\+Parametros\+Incorrectos\+Categoria\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este test verifica si aparece la excepcion luego de enviar valores no esperados. Este test lo hicimos aca porque al ser uno solo para Oferta\+Laboral, nos parecia mejor ponerlo aca. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_categorias_tests_a6c3377365f3b54ecb40a7b047e87d1e7}\label{class_tests_1_1_catalogo_categorias_tests_a6c3377365f3b54ecb40a7b047e87d1e7}} 
+\index{Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}!SeleccionarCategoriaTest@{SeleccionarCategoriaTest}}
+\index{SeleccionarCategoriaTest@{SeleccionarCategoriaTest}!Tests.CatalogoCategoriasTests@{Tests.CatalogoCategoriasTests}}
+\doxysubsubsection{\texorpdfstring{SeleccionarCategoriaTest()}{SeleccionarCategoriaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Categorias\+Tests.\+Seleccionar\+Categoria\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la búsqueda de categorías, se selecciona de qué área se quiere buscar. Para realizar esta tarea, se envía por parámetro el nombre de la categoría deseada. Para hacer uso de este método, creamos dos categorías de la forma previamente explicada. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/test/\+Library\+Tests/\mbox{\hyperlink{_catalogo_categorias_tests_8cs}{Catalogo\+Categorias\+Tests.\+cs}}\end{DoxyCompactItemize}

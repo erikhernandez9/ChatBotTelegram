@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_registrarse" xml:lang="es">
+<title>Referencia de la Clase Registrarse</title>
+<indexterm><primary>Registrarse</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_registrarse_1af65f0deb93b85ab558472ac9bcfb080e"/><emphasis role="strong">Registrarse</emphasis> (<link linkend="_class_user">User</link> user)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_registrarse_1a7b935281fafc873ec1e1ef3197d7cb21"/><emphasis role="strong">Registrarse</emphasis> (string json)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_registrarse_1a528b9d1193f3bd3c533e9c98bcaf6df4"/>string <emphasis role="strong">ConvertToJson</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_registrarse_1a9ac5bc4dc121c467ac72b44ef161f864"/>void <emphasis role="strong">LoadFromJson</emphasis> (string json)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_registrarse_1a003379cd9d18c1cd74fcbfc9076c28e1"/><link linkend="_class_user">User</link> <emphasis role="strong">User</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Registrarse.cs</section>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="namespace_proyecto___chatbot" kind="namespace" language="C#">
+    <compoundname>Proyecto_Chatbot</compoundname>
+    <innerclass refid="class_proyecto___chatbot_1_1_calificacion" prot="public">Proyecto_Chatbot::Calificacion</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_categoria" prot="public">Proyecto_Chatbot::Categoria</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_contratacion" prot="public">Proyecto_Chatbot::Contratacion</innerclass>
+    <innerclass refid="interface_proyecto___chatbot_1_1_i_user" prot="public">Proyecto_Chatbot::IUser</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_oferta_laboral" prot="public">Proyecto_Chatbot::OfertaLaboral</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_program" prot="public">Proyecto_Chatbot::Program</innerclass>
+    <innerclass refid="class_proyecto___chatbot_1_1_singleton" prot="public">Proyecto_Chatbot::Singleton</innerclass>
+    <innernamespace refid="namespace_proyecto___chatbot_1_1_catalogos">Proyecto_Chatbot::Catalogos</innernamespace>
+    <innernamespace refid="namespace_proyecto___chatbot_1_1_usuarios">Proyecto_Chatbot::Usuarios</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/Calificacion.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="class_proyecto___chatbot_1_1_oferta_laboral" kind="class" language="C#" prot="public">
+    <compoundname>Proyecto_Chatbot::OfertaLaboral</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_oferta_laboral_1ad87a84e1f7d8676c651ed8a4d1d6d4de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.OfertaLaboral.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>Proyecto_Chatbot.OfertaLaboral.Id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/OfertaLaboral.cs" line="8" column="23" bodyfile="src/Library/OfertaLaboral.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_oferta_laboral_1afee48753cdceb2a3fc5099b1ad547aec" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref></type>
+        <definition>Categoria Proyecto_Chatbot.OfertaLaboral.Categoria</definition>
+        <argsstring></argsstring>
+        <name>Categoria</name>
+        <qualifiedname>Proyecto_Chatbot.OfertaLaboral.Categoria</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/OfertaLaboral.cs" line="9" column="26" bodyfile="src/Library/OfertaLaboral.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_oferta_laboral_1adfa4a4f8b55252c6c1db6cc35aada244" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" kindref="compound">Trabajador</ref></type>
+        <definition>Trabajador Proyecto_Chatbot.OfertaLaboral.Trabajador</definition>
+        <argsstring></argsstring>
+        <name>Trabajador</name>
+        <qualifiedname>Proyecto_Chatbot.OfertaLaboral.Trabajador</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/OfertaLaboral.cs" line="10" column="27" bodyfile="src/Library/OfertaLaboral.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_oferta_laboral_1a2d4f659fb75fbd78914ca68172cd8a5d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Proyecto_Chatbot.OfertaLaboral.Descripcion</definition>
+        <argsstring></argsstring>
+        <name>Descripcion</name>
+        <qualifiedname>Proyecto_Chatbot.OfertaLaboral.Descripcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/OfertaLaboral.cs" line="11" column="23" bodyfile="src/Library/OfertaLaboral.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_proyecto___chatbot_1_1_oferta_laboral_1a22922c426200fd671831be504c05a0be" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Proyecto_Chatbot.OfertaLaboral.Precio</definition>
+        <argsstring></argsstring>
+        <name>Precio</name>
+        <qualifiedname>Proyecto_Chatbot.OfertaLaboral.Precio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/OfertaLaboral.cs" line="12" column="20" bodyfile="src/Library/OfertaLaboral.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proyecto___chatbot_1_1_oferta_laboral_1a8fc5322a575ad282878d9879eca12bd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Proyecto_Chatbot.OfertaLaboral.OfertaLaboral</definition>
+        <argsstring>(string id, Categoria categoria, Trabajador trabajador, string descripcion, int precio)</argsstring>
+        <name>OfertaLaboral</name>
+        <qualifiedname>Proyecto_Chatbot.OfertaLaboral.OfertaLaboral</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_categoria" kindref="compound">Categoria</ref></type>
+          <declname>categoria</declname>
+        </param>
+        <param>
+          <type><ref refid="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" kindref="compound">Trabajador</ref></type>
+          <declname>trabajador</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>descripcion</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Library/OfertaLaboral.cs" line="13" column="16" bodyfile="src/Library/OfertaLaboral.cs" bodystart="13" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/OfertaLaboral.cs" line="6" column="11" bodyfile="src/Library/OfertaLaboral.cs" bodystart="7" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_proyecto___chatbot_1_1_oferta_laboral_1afee48753cdceb2a3fc5099b1ad547aec" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::OfertaLaboral</scope><name>Categoria</name></member>
+      <member refid="class_proyecto___chatbot_1_1_oferta_laboral_1a2d4f659fb75fbd78914ca68172cd8a5d" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::OfertaLaboral</scope><name>Descripcion</name></member>
+      <member refid="class_proyecto___chatbot_1_1_oferta_laboral_1ad87a84e1f7d8676c651ed8a4d1d6d4de" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::OfertaLaboral</scope><name>Id</name></member>
+      <member refid="class_proyecto___chatbot_1_1_oferta_laboral_1a8fc5322a575ad282878d9879eca12bd3" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::OfertaLaboral</scope><name>OfertaLaboral</name></member>
+      <member refid="class_proyecto___chatbot_1_1_oferta_laboral_1a22922c426200fd671831be504c05a0be" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::OfertaLaboral</scope><name>Precio</name></member>
+      <member refid="class_proyecto___chatbot_1_1_oferta_laboral_1adfa4a4f8b55252c6c1db6cc35aada244" prot="public" virt="non-virtual"><scope>Proyecto_Chatbot::OfertaLaboral</scope><name>Trabajador</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

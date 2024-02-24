@@ -1,0 +1,110 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result}\index{Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}}
+
+
+Una implementación concreta del resutlado de buscar una dirección. Además de las propiedades definidas en \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_result}{IAddress\+Result}} esta clase agrega una propiedad Location para acceder a las coordenadas de la dirección buscada.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ad3436924d3025e01fe55959c2f4521bc}{Address\+Result}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} location)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result}{Address\+Result}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_abb256d3adb94ddea367b5a4aca5fc14c}{Location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get location (ubicacion). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_a068da758e7cf06a1307fde8a039ee612}{Found}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cuando se encuentra una ubicación, la toma y la devuelve. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ae86ce5c0cfb4aa3c277f09102dc36fd7}{Latitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Latitud de la locacion indicada. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ac4a26ea671e959e3ae2502169a80c325}{Longitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Longitud de la locacion indicada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Una implementación concreta del resutlado de buscar una dirección. Además de las propiedades definidas en \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_result}{IAddress\+Result}} esta clase agrega una propiedad Location para acceder a las coordenadas de la dirección buscada. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ad3436924d3025e01fe55959c2f4521bc}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ad3436924d3025e01fe55959c2f4521bc}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}!AddressResult@{AddressResult}}
+\index{AddressResult@{AddressResult}!Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}}
+\doxysubsubsection{\texorpdfstring{AddressResult()}{AddressResult()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result.\+Address\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}}}]{location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result}{Address\+Result}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & location del usuario.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_a068da758e7cf06a1307fde8a039ee612}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_a068da758e7cf06a1307fde8a039ee612}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}!Found@{Found}}
+\index{Found@{Found}!Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}}
+\doxysubsubsection{\texorpdfstring{Found}{Found}}
+{\footnotesize\ttfamily bool Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result.\+Found\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Cuando se encuentra una ubicación, la toma y la devuelve. 
+
+$<$return$>$retorna true en caso que encuentra la ubicación, y false en caso de no encontrarla.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_result_acaf167a2f85070b2fc80ed2b3f8bc2e4}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IAddress\+Result}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ae86ce5c0cfb4aa3c277f09102dc36fd7}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ae86ce5c0cfb4aa3c277f09102dc36fd7}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}!Latitude@{Latitude}}
+\index{Latitude@{Latitude}!Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}}
+\doxysubsubsection{\texorpdfstring{Latitude}{Latitude}}
+{\footnotesize\ttfamily double Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result.\+Latitude\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Latitud de la locacion indicada. 
+
+$<$return$>$retorna la latitud.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_result_a23c5cece990c6cce5929d9002736aabb}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IAddress\+Result}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_abb256d3adb94ddea367b5a4aca5fc14c}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_abb256d3adb94ddea367b5a4aca5fc14c}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}!Location@{Location}}
+\index{Location@{Location}!Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}}
+\doxysubsubsection{\texorpdfstring{Location}{Location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_locations_1_1_client_1_1_location}{Location}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result.\+Location\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get location (ubicacion). 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ac4a26ea671e959e3ae2502169a80c325}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_result_ac4a26ea671e959e3ae2502169a80c325}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}!Longitude@{Longitude}}
+\index{Longitude@{Longitude}!Proyecto\_Chatbot.TelegramBot.AddressResult@{Proyecto\_Chatbot.TelegramBot.AddressResult}}
+\doxysubsubsection{\texorpdfstring{Longitude}{Longitude}}
+{\footnotesize\ttfamily double Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Result.\+Longitude\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Longitud de la locacion indicada. 
+
+$<$return$>$retorna la longitud.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_result_a39763268fef52f8ffd41abc3fc34c3cc}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+IAddress\+Result}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\mbox{\hyperlink{_address_result_8cs}{Address\+Result.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="namespace_tests" kind="namespace" language="C#">
+    <compoundname>Tests</compoundname>
+    <innerclass refid="class_tests_1_1_calcular_ubicacion_tests" prot="public">Tests::CalcularUbicacionTests</innerclass>
+    <innerclass refid="class_tests_1_1_catalogo_categorias_tests" prot="public">Tests::CatalogoCategoriasTests</innerclass>
+    <innerclass refid="class_tests_1_1_catalogo_contrataciones_tests" prot="public">Tests::CatalogoContratacionesTests</innerclass>
+    <innerclass refid="class_tests_1_1_catalogo_ofertas_tests" prot="public">Tests::CatalogoOfertasTests</innerclass>
+    <innerclass refid="class_tests_1_1_contratacion_tests" prot="public">Tests::ContratacionTests</innerclass>
+    <innerclass refid="class_tests_1_1_employer_tests" prot="public">Tests::EmployerTests</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/LibraryTests/CalcularUbicacionTest.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,74 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Catalogo\+Contrataciones\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler}\index{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler@{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler}}
+
+
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}\+Mis contrataciones\char`\"{}.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Catalogo\+Contrataciones\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler_a3292ae1497af30ca37f2ac8937923824}{Catalogo\+Contrataciones\+Handler}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler}{Catalogo\+Contrataciones\+Handler}}. Esta clase procesa el mensaje \char`\"{}\+Catalogo Contrataciones\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler_abed08ae834910cd766cc69df2d6db37c}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Procesa el mensaje \char`\"{}mis contrataciones\char`\"{} y retorna true; retorna false en caso contrario. Muestra la lista de contrataciones vigentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}\+Mis contrataciones\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler_a3292ae1497af30ca37f2ac8937923824}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler_a3292ae1497af30ca37f2ac8937923824}} 
+\index{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler@{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler}!CatalogoContratacionesHandler@{CatalogoContratacionesHandler}}
+\index{CatalogoContratacionesHandler@{CatalogoContratacionesHandler}!Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler@{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler}}
+\doxysubsubsection{\texorpdfstring{CatalogoContratacionesHandler()}{CatalogoContratacionesHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Catalogo\+Contrataciones\+Handler.\+Catalogo\+Contrataciones\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler}{Catalogo\+Contrataciones\+Handler}}. Esta clase procesa el mensaje \char`\"{}\+Catalogo Contrataciones\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & El próximo \char`\"{}handler\char`\"{}.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler_abed08ae834910cd766cc69df2d6db37c}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_catalogo_contrataciones_handler_abed08ae834910cd766cc69df2d6db37c}} 
+\index{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler@{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler@{Proyecto\_Chatbot.TelegramBot.CatalogoContratacionesHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Catalogo\+Contrataciones\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Procesa el mensaje \char`\"{}mis contrataciones\char`\"{} y retorna true; retorna false en caso contrario. Muestra la lista de contrataciones vigentes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & El mensaje a procesar.\\
+\hline
+{\em response} & La respuesta al mensaje procesado.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_catalogo_contrataciones_handler_8cs}{Catalogo\+Contrataciones\+Handler.\+cs}}\end{DoxyCompactItemize}

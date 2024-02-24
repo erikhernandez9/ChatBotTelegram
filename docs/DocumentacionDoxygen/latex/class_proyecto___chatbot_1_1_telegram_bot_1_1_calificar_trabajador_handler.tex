@@ -1,0 +1,182 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler}\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+
+
+Handler del patrón Chain of Responsability, procesa el mensaje \char`\"{}\+Calificar trabajador\char`\"{} para que el empleador califique el servicio brindado por el trabajador. Si estamos logueados como trabajador no tenemos acceso a este comando. te handler, además, nos avisa si realizamos una calificación en el rango incorrecto (de 0 a 5) y también nos avisa si no tenemos permisos ya que esta acción solo la hace el trabajador.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_1_1_calificar_data}{Calificar\+Data}}
+\begin{DoxyCompactList}\small\item\em Representa los datos que va obteniendo el comando Calificar\+Trabajador en los diferentes estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8}{Calificar\+State}} \{ \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8aa6122a65eaa676f700ae68d393054a37}{Start}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8a06b2141ff18e81bcafec448f986581b0}{Contratacion}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8a0f7941b52bdd8f6795a3c38d122d8220}{Puntaje}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8ad8e4acc60c0ad136c56a26678da1deb4}{Descripcion}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica los diferentes estados que puede tener el comando Calificar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a4bc8733e7b5ca848d37bd32c9f9d2d00}{Calificar\+Trabajador\+Handler}} (\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler}{Calificar\+Trabajador\+Handler}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a01ee47f3d5233f1b49815b0da7ba3c9a}{Can\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje)
+\begin{DoxyCompactList}\small\item\em Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_ad28c7ce33ce111750de3f01d1552b97e}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Procesa todos los mensajes y retorna true siempre. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a47da89b11a3e55d6e3ac21452a1e346a}{Internal\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Método para cambiar estados dentro de la clase a la hora de tener que modificarlos entre mensajes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8}{Calificar\+State}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_adface58d3494de9bedebfee85d0ad5ad}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Estado del comando. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_1_1_calificar_data}{Calificar\+Data}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_abcd644e545d4966b08af5bacebf59501}{Data}} = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_1_1_calificar_data}{Calificar\+Data}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Los datos que va obteniendo el comando en los diferentes estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handler del patrón Chain of Responsability, procesa el mensaje \char`\"{}\+Calificar trabajador\char`\"{} para que el empleador califique el servicio brindado por el trabajador. Si estamos logueados como trabajador no tenemos acceso a este comando. te handler, además, nos avisa si realizamos una calificación en el rango incorrecto (de 0 a 5) y también nos avisa si no tenemos permisos ya que esta acción solo la hace el trabajador. 
+
+Este handler pertenece a las USER STORIES. \char`\"{}\+Como empleador, quiero poder calificar a un trabajador; el trabajador me tiene que calificar  a mi también, si no me califica en un mes, la calificación será neutral, para que de esa forma pueda definir  la reputación de mi trabajador.\char`\"{} 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!CalificarState@{CalificarState}}
+\index{CalificarState@{CalificarState}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{CalificarState}{CalificarState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+Calificar\+State}}}
+
+
+
+Indica los diferentes estados que puede tener el comando Calificar. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!Start@{Start}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8aa6122a65eaa676f700ae68d393054a37}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8aa6122a65eaa676f700ae68d393054a37}} 
+Start&El estado inicial del comando. En este estado el comando pide los datos iniciales del empleador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Contratacion@{Contratacion}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!Contratacion@{Contratacion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8a06b2141ff18e81bcafec448f986581b0}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8a06b2141ff18e81bcafec448f986581b0}} 
+Contratacion&El estado inicial que indica a qué contratación refiere la calificación. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Puntaje@{Puntaje}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!Puntaje@{Puntaje}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8a0f7941b52bdd8f6795a3c38d122d8220}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8a0f7941b52bdd8f6795a3c38d122d8220}} 
+Puntaje&El estado donde se indica que puntaje será el de la calificación del trabajador. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Descripcion@{Descripcion}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!Descripcion@{Descripcion}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8ad8e4acc60c0ad136c56a26678da1deb4}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8ad8e4acc60c0ad136c56a26678da1deb4}} 
+Descripcion&El estado donde se indica la descipción general de la calificiación. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a4bc8733e7b5ca848d37bd32c9f9d2d00}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a4bc8733e7b5ca848d37bd32c9f9d2d00}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!CalificarTrabajadorHandler@{CalificarTrabajadorHandler}}
+\index{CalificarTrabajadorHandler@{CalificarTrabajadorHandler}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{CalificarTrabajadorHandler()}{CalificarTrabajadorHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+Calificar\+Trabajador\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler}{Calificar\+Trabajador\+Handler}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & siguiente handler.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a01ee47f3d5233f1b49815b0da7ba3c9a}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a01ee47f3d5233f1b49815b0da7ba3c9a}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!CanHandle@{CanHandle}}
+\index{CanHandle@{CanHandle}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{CanHandle()}{CanHandle()}}
+{\footnotesize\ttfamily override bool Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+Can\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a16ac18cbf696cdbadf99f273cd718c35}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a47da89b11a3e55d6e3ac21452a1e346a}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a47da89b11a3e55d6e3ac21452a1e346a}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!InternalCancel@{InternalCancel}}
+\index{InternalCancel@{InternalCancel}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{InternalCancel()}{InternalCancel()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+Internal\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Método para cambiar estados dentro de la clase a la hora de tener que modificarlos entre mensajes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a27b7917375368a0250c733b01bf4d7ce}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_ad28c7ce33ce111750de3f01d1552b97e}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_ad28c7ce33ce111750de3f01d1552b97e}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Procesa todos los mensajes y retorna true siempre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & El mensaje a procesar.\\
+\hline
+{\em response} & La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_abcd644e545d4966b08af5bacebf59501}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_abcd644e545d4966b08af5bacebf59501}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!Data@{Data}}
+\index{Data@{Data}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_1_1_calificar_data}{Calificar\+Data}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+Data = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_1_1_calificar_data}{Calificar\+Data}}()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Los datos que va obteniendo el comando en los diferentes estados. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_adface58d3494de9bedebfee85d0ad5ad}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_adface58d3494de9bedebfee85d0ad5ad}} 
+\index{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}!State@{State}}
+\index{State@{State}!Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler@{Proyecto\_Chatbot.TelegramBot.CalificarTrabajadorHandler}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_calificar_trabajador_handler_a65de7cce50153411882ca44bb861bdf8}{Calificar\+State}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Calificar\+Trabajador\+Handler.\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Estado del comando. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_calificar_trabajador_handler_8cs}{Calificar\+Trabajador\+Handler.\+cs}}\end{DoxyCompactItemize}

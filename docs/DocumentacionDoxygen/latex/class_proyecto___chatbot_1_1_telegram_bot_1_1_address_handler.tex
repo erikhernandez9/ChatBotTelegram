@@ -1,0 +1,172 @@
+\hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}{}\doxysection{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler Class Reference}
+\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+
+
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}dirección\char`\"{}.  
+
+
+Inheritance diagram for Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_1_1_address_data}{Address\+Data}}
+\begin{DoxyCompactList}\small\item\em Representa los datos que va obteniendo el comando \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}{Address\+Handler}} en los diferentes estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66af}{Address\+State}} \{ \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66afaa6122a65eaa676f700ae68d393054a37}{Start}}
+, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66afa592bb9d988566350c6fc8d189b8ab5b5}{Address\+Prompt}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica los diferentes estados que puede tener el comando \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}{Address\+Handler}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a03d6bc65ccae55665078fdb28bad0d7e}{Address\+Handler}} (\mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_finder}{IAddress\+Finder}} finder, \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}} next)
+\begin{DoxyCompactList}\small\item\em Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}{Address\+Handler}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a1285e9205a81b0257988c87f67a9d359}{Can\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje)
+\begin{DoxyCompactList}\small\item\em Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_aff4c5b69154b44e4a2f22ba191f1bc89}{Internal\+Handle}} (\mbox{\hyperlink{class_mensaje}{Mensaje}} mensaje, out string response)
+\begin{DoxyCompactList}\small\item\em Procesa todos los mensajes y retorna true siempre. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_ace197bb8b40f1e2928426e2e6653c9c1}{Internal\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Retorna este \char`\"{}handler\char`\"{} al estado inicial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66af}{Address\+State}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a25f264f03cd63e8351fc0460e2f6f0a6}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em El estado del comando. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_1_1_address_data}{Address\+Data}} \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a9e208b7ccb76ce7058dbc7e4ec82e199}{Data}} = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_1_1_address_data}{Address\+Data}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Los datos que va obteniendo el comando en los diferentes estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Un \char`\"{}handler\char`\"{} del patrón Chain of Responsibility que implementa el comando \char`\"{}dirección\char`\"{}. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66af}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66af}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!AddressState@{AddressState}}
+\index{AddressState@{AddressState}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{AddressState}{AddressState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66af}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+Address\+State}}}
+
+
+
+Indica los diferentes estados que puede tener el comando \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}{Address\+Handler}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!Start@{Start}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66afaa6122a65eaa676f700ae68d393054a37}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66afaa6122a65eaa676f700ae68d393054a37}} 
+Start&El estado inicial del comando. En este estado el comando pide los datos del trabajador y pasa al siguiente estado. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AddressPrompt@{AddressPrompt}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!AddressPrompt@{AddressPrompt}}}\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66afa592bb9d988566350c6fc8d189b8ab5b5}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66afa592bb9d988566350c6fc8d189b8ab5b5}} 
+Address\+Prompt&El estado donde se guarda la dirección. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a03d6bc65ccae55665078fdb28bad0d7e}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a03d6bc65ccae55665078fdb28bad0d7e}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!AddressHandler@{AddressHandler}}
+\index{AddressHandler@{AddressHandler}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{AddressHandler()}{AddressHandler()}}
+{\footnotesize\ttfamily Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+Address\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_proyecto___chatbot_1_1_telegram_bot_1_1_i_address_finder}{IAddress\+Finder}}}]{finder,  }\item[{\mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler}{Base\+Handler}}}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa una nueva instancia de la clase \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler}{Address\+Handler}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finder} & Un buscador de direcciones.\\
+\hline
+{\em next} & El próximo \char`\"{}handler\char`\"{}.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a1285e9205a81b0257988c87f67a9d359}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a1285e9205a81b0257988c87f67a9d359}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!CanHandle@{CanHandle}}
+\index{CanHandle@{CanHandle}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{CanHandle()}{CanHandle()}}
+{\footnotesize\ttfamily override bool Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+Can\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Determina si este \char`\"{}handler\char`\"{} puede procesar el mensaje. En la clase base se utiliza el array \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a94fa8f87ff27ed67e9a6d965062205ba}{Base\+Handler.\+Keywords}} para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no un mensaje.  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a16ac18cbf696cdbadf99f273cd718c35}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_ace197bb8b40f1e2928426e2e6653c9c1}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_ace197bb8b40f1e2928426e2e6653c9c1}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!InternalCancel@{InternalCancel}}
+\index{InternalCancel@{InternalCancel}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{InternalCancel()}{InternalCancel()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+Internal\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Retorna este \char`\"{}handler\char`\"{} al estado inicial. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_a27b7917375368a0250c733b01bf4d7ce}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_aff4c5b69154b44e4a2f22ba191f1bc89}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_aff4c5b69154b44e4a2f22ba191f1bc89}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!InternalHandle@{InternalHandle}}
+\index{InternalHandle@{InternalHandle}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{InternalHandle()}{InternalHandle()}}
+{\footnotesize\ttfamily override void Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+Internal\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mensaje}{Mensaje}}}]{mensaje,  }\item[{out string}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Procesa todos los mensajes y retorna true siempre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & El mensaje a procesar.\\
+\hline
+{\em response} & La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_base_handler_ac9b0488517063f44afa235bf57959267}{Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Base\+Handler}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a9e208b7ccb76ce7058dbc7e4ec82e199}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a9e208b7ccb76ce7058dbc7e4ec82e199}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!Data@{Data}}
+\index{Data@{Data}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_1_1_address_data}{Address\+Data}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+Data = new \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_1_1_address_data}{Address\+Data}}()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Los datos que va obteniendo el comando en los diferentes estados. 
+
+\mbox{\Hypertarget{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a25f264f03cd63e8351fc0460e2f6f0a6}\label{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a25f264f03cd63e8351fc0460e2f6f0a6}} 
+\index{Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}!State@{State}}
+\index{State@{State}!Proyecto\_Chatbot.TelegramBot.AddressHandler@{Proyecto\_Chatbot.TelegramBot.AddressHandler}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_telegram_bot_1_1_address_handler_a8e962b4a9a423712af3cefc6067c66af}{Address\+State}} Proyecto\+\_\+\+Chatbot.\+Telegram\+Bot.\+Address\+Handler.\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+El estado del comando. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\+Telegram\+Bot/\+Handlers/\mbox{\hyperlink{_adress_handler_8cs}{Adress\+Handler.\+cs}}\end{DoxyCompactItemize}

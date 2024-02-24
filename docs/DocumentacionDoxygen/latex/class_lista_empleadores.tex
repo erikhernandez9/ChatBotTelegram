@@ -1,0 +1,156 @@
+\hypertarget{class_lista_empleadores}{}\doxysection{Lista\+Empleadores Class Reference}
+\label{class_lista_empleadores}\index{ListaEmpleadores@{ListaEmpleadores}}
+
+
+Clase que almacena todas los empleadores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos. Aplicamos el patrón Creator y el patrón Expert de forma que esta clase es la responsable de crear, eliminar y manipular empleadores. Esto es porque utiliza instancias de la clase Empleador, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.  
+
+
+Inheritance diagram for Lista\+Empleadores\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lista_empleadores}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lista_empleadores_afc99d9d149ff600dd8d320f9a49be9df}{Agregar\+Empleador}} (string nombre, string email, string telefono, long id, string ubicacion)
+\begin{DoxyCompactList}\small\item\em Método que permite crear un Empleador, serializarlo y agregarlo a la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_empleadores_a6a6f120f03d1ad47d2627a92d4fbf259}{Eliminar\+Empleador}} (long id)
+\begin{DoxyCompactList}\small\item\em Método que elimina un empleador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} \mbox{\hyperlink{class_lista_empleadores_ab38abd26d264d6f005e9a31269d04c5e}{Seleccionar\+Empleador}} (long id\+Empleador)
+\begin{DoxyCompactList}\small\item\em Método que permite seleccionar un empleador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_lista_empleadores_a7be0f474d02864b594f322185b0f2dc8}{Convert\+To\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Serializa valores a .json. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_empleadores_ad1307484f7529eadbab07f2cee40d1f4}{Load\+From\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Carga el contenido del .json. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_lista_empleadores_a39928b9dec113fdd32122455b58f80b9}{Show\+File}} ()
+\begin{DoxyCompactList}\small\item\em ~\newline
+ Muestra el contenido del .json. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} $>$ \mbox{\hyperlink{class_lista_empleadores_a1aed39912692da6bb16964a5ccad48ae}{Empleadores}} = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}}$>$()
+\begin{DoxyCompactList}\small\item\em Lista que almacena todos los empleadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que almacena todas los empleadores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos. Aplicamos el patrón Creator y el patrón Expert de forma que esta clase es la responsable de crear, eliminar y manipular empleadores. Esto es porque utiliza instancias de la clase Empleador, por lo tanto, podemos decir que la contiene o la agrega, además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lista_empleadores_afc99d9d149ff600dd8d320f9a49be9df}\label{class_lista_empleadores_afc99d9d149ff600dd8d320f9a49be9df}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!AgregarEmpleador@{AgregarEmpleador}}
+\index{AgregarEmpleador@{AgregarEmpleador}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{AgregarEmpleador()}{AgregarEmpleador()}}
+{\footnotesize\ttfamily void Lista\+Empleadores.\+Agregar\+Empleador (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{string}]{email,  }\item[{string}]{telefono,  }\item[{long}]{id,  }\item[{string}]{ubicacion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que permite crear un Empleador, serializarlo y agregarlo a la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Representa el nombre del empleador a agregar.\\
+\hline
+{\em email} & Representa el email del empleador a agregar.\\
+\hline
+{\em telefono} & Representa el telefono del empleador a agregar.\\
+\hline
+{\em id} & Representa el id del empleador a agregar.\\
+\hline
+{\em ubicacion} & Representa la ubicacion del empleador a agregar.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lista_empleadores_a7be0f474d02864b594f322185b0f2dc8}\label{class_lista_empleadores_a7be0f474d02864b594f322185b0f2dc8}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!ConvertToJson@{ConvertToJson}}
+\index{ConvertToJson@{ConvertToJson}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{ConvertToJson()}{ConvertToJson()}}
+{\footnotesize\ttfamily string Lista\+Empleadores.\+Convert\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializa valores a .json. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_ae22edbd834715f155b5e6e4a383c74a4}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_lista_empleadores_a6a6f120f03d1ad47d2627a92d4fbf259}\label{class_lista_empleadores_a6a6f120f03d1ad47d2627a92d4fbf259}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!EliminarEmpleador@{EliminarEmpleador}}
+\index{EliminarEmpleador@{EliminarEmpleador}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{EliminarEmpleador()}{EliminarEmpleador()}}
+{\footnotesize\ttfamily void Lista\+Empleadores.\+Eliminar\+Empleador (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que elimina un empleador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Representa el id que identifica al empleador para eliminarla.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lista_empleadores_ad1307484f7529eadbab07f2cee40d1f4}\label{class_lista_empleadores_ad1307484f7529eadbab07f2cee40d1f4}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!LoadFromJson@{LoadFromJson}}
+\index{LoadFromJson@{LoadFromJson}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{LoadFromJson()}{LoadFromJson()}}
+{\footnotesize\ttfamily void Lista\+Empleadores.\+Load\+From\+Json (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Carga el contenido del .json. 
+
+
+
+Implements \mbox{\hyperlink{interface_i_json_convertible_aef1ba3dc992c6f1295b0993e49b3809c}{IJson\+Convertible}}.
+
+\mbox{\Hypertarget{class_lista_empleadores_ab38abd26d264d6f005e9a31269d04c5e}\label{class_lista_empleadores_ab38abd26d264d6f005e9a31269d04c5e}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!SeleccionarEmpleador@{SeleccionarEmpleador}}
+\index{SeleccionarEmpleador@{SeleccionarEmpleador}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{SeleccionarEmpleador()}{SeleccionarEmpleador()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}} Lista\+Empleadores.\+Seleccionar\+Empleador (\begin{DoxyParamCaption}\item[{long}]{id\+Empleador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que permite seleccionar un empleador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Empleador} & Id del empleador que se quiere seleccionar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve un objeto empleador en base a si id.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lista_empleadores_a39928b9dec113fdd32122455b58f80b9}\label{class_lista_empleadores_a39928b9dec113fdd32122455b58f80b9}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!ShowFile@{ShowFile}}
+\index{ShowFile@{ShowFile}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{ShowFile()}{ShowFile()}}
+{\footnotesize\ttfamily string Lista\+Empleadores.\+Show\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+~\newline
+ Muestra el contenido del .json. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_lista_empleadores_a1aed39912692da6bb16964a5ccad48ae}\label{class_lista_empleadores_a1aed39912692da6bb16964a5ccad48ae}} 
+\index{ListaEmpleadores@{ListaEmpleadores}!Empleadores@{Empleadores}}
+\index{Empleadores@{Empleadores}!ListaEmpleadores@{ListaEmpleadores}}
+\doxysubsubsection{\texorpdfstring{Empleadores}{Empleadores}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}}$>$ Lista\+Empleadores.\+Empleadores = new List$<$\mbox{\hyperlink{class_proyecto___chatbot_1_1_usuarios_1_1_empleador}{Empleador}}$>$()}
+
+
+
+Lista que almacena todos los empleadores. 
+
+~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\mbox{\hyperlink{_lista_empleadores_8cs}{Lista\+Empleadores.\+cs}}\end{DoxyCompactItemize}

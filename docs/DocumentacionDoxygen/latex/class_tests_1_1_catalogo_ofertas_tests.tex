@@ -1,0 +1,129 @@
+\hypertarget{class_tests_1_1_catalogo_ofertas_tests}{}\doxysection{Tests.\+Catalogo\+Ofertas\+Tests Class Reference}
+\label{class_tests_1_1_catalogo_ofertas_tests}\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+
+
+ESTOS TEST PERTENECEN A LA USER STORY\+: \char`\"{}\+Como administrador, quiero poder dar de baja ofertas de servicios, avisando al oferente para que de esa forma, pueda evitar ofertas inadecudas.\char`\"{}. También a\+: \char`\"{}\+Como empleador, quiero ver el resultado de las búsquedas de ofertas de trabajo ordenado en forma descendente por reputación, es decir, las de mejor reputación primero para que de esa forma, pueda contratar un servicio.\char`\"{}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_a147b0b61993673cca5c16005ff4a27a6}{Buscar\+Oferta\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la búsqueda de ofertas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_a2eeb2a4faf1f6b1eeb7c5ba638f25236}{Agregar\+Oferta\+Test}} ()
+\begin{DoxyCompactList}\small\item\em USER STORY. Prueba que se puedan crear ofertas. Prueba el agregar una nueva oferta. Para esto crea todos los objetos necesarios como el Trabajador y la Categoría, y luego comprobamos si se creo de forma correcta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_aae83e9a8c8ef0cb7c213b094b95a3f62}{Eliminar\+Oferta\+Test}} ()
+\begin{DoxyCompactList}\small\item\em USER STORY. Prueba que se puedan eliminar ofertas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_afa2ac75c0cf701517c2eb2cfcd158a38}{Buscar\+Ofertas\+Por\+Categoria\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba el método Buscar\+Ofertas\+Por\+Categoria. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su categoría. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_acee34c07d24ef129ae802cf970ba2c78}{Buscar\+Ofertas\+Por\+Precio\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba el método Buscar\+Ofertas\+Por\+Precio. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su precio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_a6bd370db1987035836197f47c12b6f21}{Buscar\+Ofertas\+Por\+Ubicacion\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba el método Buscar\+Ofertas\+Por\+Ubiacion. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su ubicación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_a58ba1c3780019af86a3dea7de60600f8}{Buscar\+Ofertas\+Por\+Calificacion\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba el método Buscar\+Ofertas\+Por\+Califiación. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, luego califica a varios trabajadores y sus ofertas y por ultimo comprueba si se pueden buscar de forma correcta las ofertas en base a su calificación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_a875a20a3dbccd990743ed00d65720887}{Guardar\+Traer\+Datos\+Json\+File\+Oferta\+Tes}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la serialización y la descerialización de las ofertas en .json. Para eso crea varias ofertas que luego serializa, para consecuentemente traerlas y testear si se encuentran de forma correcta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tests_1_1_catalogo_ofertas_tests_a65079c96890190fc651dc0a69d8b53c5}{Parametros\+Incorrectos\+Oferta\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Este test verifica si aparece la excepcion luego de enviar valores no esperados. Este test lo hicimos aca porque al ser uno solo para Oferta\+Laboral, nos parecia mejor ponerlo aca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ESTOS TEST PERTENECEN A LA USER STORY\+: \char`\"{}\+Como administrador, quiero poder dar de baja ofertas de servicios, avisando al oferente para que de esa forma, pueda evitar ofertas inadecudas.\char`\"{}. También a\+: \char`\"{}\+Como empleador, quiero ver el resultado de las búsquedas de ofertas de trabajo ordenado en forma descendente por reputación, es decir, las de mejor reputación primero para que de esa forma, pueda contratar un servicio.\char`\"{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_a2eeb2a4faf1f6b1eeb7c5ba638f25236}\label{class_tests_1_1_catalogo_ofertas_tests_a2eeb2a4faf1f6b1eeb7c5ba638f25236}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!AgregarOfertaTest@{AgregarOfertaTest}}
+\index{AgregarOfertaTest@{AgregarOfertaTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{AgregarOfertaTest()}{AgregarOfertaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Agregar\+Oferta\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+USER STORY. Prueba que se puedan crear ofertas. Prueba el agregar una nueva oferta. Para esto crea todos los objetos necesarios como el Trabajador y la Categoría, y luego comprobamos si se creo de forma correcta. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_a58ba1c3780019af86a3dea7de60600f8}\label{class_tests_1_1_catalogo_ofertas_tests_a58ba1c3780019af86a3dea7de60600f8}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!BuscarOfertasPorCalificacionTest@{BuscarOfertasPorCalificacionTest}}
+\index{BuscarOfertasPorCalificacionTest@{BuscarOfertasPorCalificacionTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{BuscarOfertasPorCalificacionTest()}{BuscarOfertasPorCalificacionTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Buscar\+Ofertas\+Por\+Calificacion\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba el método Buscar\+Ofertas\+Por\+Califiación. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, luego califica a varios trabajadores y sus ofertas y por ultimo comprueba si se pueden buscar de forma correcta las ofertas en base a su calificación. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_afa2ac75c0cf701517c2eb2cfcd158a38}\label{class_tests_1_1_catalogo_ofertas_tests_afa2ac75c0cf701517c2eb2cfcd158a38}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!BuscarOfertasPorCategoriaTest@{BuscarOfertasPorCategoriaTest}}
+\index{BuscarOfertasPorCategoriaTest@{BuscarOfertasPorCategoriaTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{BuscarOfertasPorCategoriaTest()}{BuscarOfertasPorCategoriaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Buscar\+Ofertas\+Por\+Categoria\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba el método Buscar\+Ofertas\+Por\+Categoria. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su categoría. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_acee34c07d24ef129ae802cf970ba2c78}\label{class_tests_1_1_catalogo_ofertas_tests_acee34c07d24ef129ae802cf970ba2c78}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!BuscarOfertasPorPrecioTest@{BuscarOfertasPorPrecioTest}}
+\index{BuscarOfertasPorPrecioTest@{BuscarOfertasPorPrecioTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{BuscarOfertasPorPrecioTest()}{BuscarOfertasPorPrecioTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Buscar\+Ofertas\+Por\+Precio\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba el método Buscar\+Ofertas\+Por\+Precio. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su precio. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_a6bd370db1987035836197f47c12b6f21}\label{class_tests_1_1_catalogo_ofertas_tests_a6bd370db1987035836197f47c12b6f21}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!BuscarOfertasPorUbicacionTest@{BuscarOfertasPorUbicacionTest}}
+\index{BuscarOfertasPorUbicacionTest@{BuscarOfertasPorUbicacionTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{BuscarOfertasPorUbicacionTest()}{BuscarOfertasPorUbicacionTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Buscar\+Ofertas\+Por\+Ubicacion\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba el método Buscar\+Ofertas\+Por\+Ubiacion. Esto se hace mediante la creacion de multiples categorias y trabajadores para crear varias ofertas, y luego comprobar si se pueden buscar de forma correcta las ofertas en base a su ubicación. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_a147b0b61993673cca5c16005ff4a27a6}\label{class_tests_1_1_catalogo_ofertas_tests_a147b0b61993673cca5c16005ff4a27a6}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!BuscarOfertaTest@{BuscarOfertaTest}}
+\index{BuscarOfertaTest@{BuscarOfertaTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{BuscarOfertaTest()}{BuscarOfertaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Buscar\+Oferta\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la búsqueda de ofertas. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_aae83e9a8c8ef0cb7c213b094b95a3f62}\label{class_tests_1_1_catalogo_ofertas_tests_aae83e9a8c8ef0cb7c213b094b95a3f62}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!EliminarOfertaTest@{EliminarOfertaTest}}
+\index{EliminarOfertaTest@{EliminarOfertaTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{EliminarOfertaTest()}{EliminarOfertaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Eliminar\+Oferta\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+USER STORY. Prueba que se puedan eliminar ofertas. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_a875a20a3dbccd990743ed00d65720887}\label{class_tests_1_1_catalogo_ofertas_tests_a875a20a3dbccd990743ed00d65720887}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!GuardarTraerDatosJsonFileOfertaTes@{GuardarTraerDatosJsonFileOfertaTes}}
+\index{GuardarTraerDatosJsonFileOfertaTes@{GuardarTraerDatosJsonFileOfertaTes}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{GuardarTraerDatosJsonFileOfertaTes()}{GuardarTraerDatosJsonFileOfertaTes()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Guardar\+Traer\+Datos\+Json\+File\+Oferta\+Tes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la serialización y la descerialización de las ofertas en .json. Para eso crea varias ofertas que luego serializa, para consecuentemente traerlas y testear si se encuentran de forma correcta. 
+
+\mbox{\Hypertarget{class_tests_1_1_catalogo_ofertas_tests_a65079c96890190fc651dc0a69d8b53c5}\label{class_tests_1_1_catalogo_ofertas_tests_a65079c96890190fc651dc0a69d8b53c5}} 
+\index{Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}!ParametrosIncorrectosOfertaTest@{ParametrosIncorrectosOfertaTest}}
+\index{ParametrosIncorrectosOfertaTest@{ParametrosIncorrectosOfertaTest}!Tests.CatalogoOfertasTests@{Tests.CatalogoOfertasTests}}
+\doxysubsubsection{\texorpdfstring{ParametrosIncorrectosOfertaTest()}{ParametrosIncorrectosOfertaTest()}}
+{\footnotesize\ttfamily void Tests.\+Catalogo\+Ofertas\+Tests.\+Parametros\+Incorrectos\+Oferta\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este test verifica si aparece la excepcion luego de enviar valores no esperados. Este test lo hicimos aca porque al ser uno solo para Oferta\+Laboral, nos parecia mejor ponerlo aca. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/test/\+Library\+Tests/\mbox{\hyperlink{_catalogo_ofertas_tests_8cs}{Catalogo\+Ofertas\+Tests.\+cs}}\end{DoxyCompactItemize}

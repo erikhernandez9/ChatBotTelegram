@@ -1,0 +1,94 @@
+\hypertarget{class_usuario}{}\doxysection{Usuario Class Reference}
+\label{class_usuario}\index{Usuario@{Usuario}}
+
+
+Clase que representa a los usuarios de la aplicacion (Empleadores y Trabajadores). Es una clase hija de \mbox{\hyperlink{class_persona}{Persona}}, y a la vez clase padre de los usuarios (trabajador, empleador). El principio OCP es utilizado ya que esta clase se implementa mediante herencia en las clases de Trabajador y Empleador, y está implementando la clase \mbox{\hyperlink{class_persona}{Persona}}.  
+
+
+Inheritance diagram for Usuario\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_usuario}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_usuario_a848f1226dfac50b1e87749f664988f5f}{Usuario}} (string nombre, string email, string telefono, long id, string ubicacion)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_usuario}{Usuario}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_usuario_a0dae381663742a6ad5c7e7de084287e6}{Reputacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Almacena la reputacion del usuario. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_usuario_a7ac74c5bb2a2520229ea4cc93b164dc5}{Ubicacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Guarda la direccion de la persona. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_usuario_a121dd59f792ea40fa09a54ae83464ad7}{Telefono}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Almacena el telefono del usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa a los usuarios de la aplicacion (Empleadores y Trabajadores). Es una clase hija de \mbox{\hyperlink{class_persona}{Persona}}, y a la vez clase padre de los usuarios (trabajador, empleador). El principio OCP es utilizado ya que esta clase se implementa mediante herencia en las clases de Trabajador y Empleador, y está implementando la clase \mbox{\hyperlink{class_persona}{Persona}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_usuario_a848f1226dfac50b1e87749f664988f5f}\label{class_usuario_a848f1226dfac50b1e87749f664988f5f}} 
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\index{Usuario@{Usuario}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Usuario()}{Usuario()}}
+{\footnotesize\ttfamily Usuario.\+Usuario (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{string}]{email,  }\item[{string}]{telefono,  }\item[{long}]{id,  }\item[{string}]{ubicacion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_usuario}{Usuario}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Es el nombre que se le asigna al \mbox{\hyperlink{class_usuario}{Usuario}}.\\
+\hline
+{\em email} & Es el mail que se le asigna al \mbox{\hyperlink{class_usuario}{Usuario}}.\\
+\hline
+{\em telefono} & Es el telefono que se le asigna al \mbox{\hyperlink{class_usuario}{Usuario}}.\\
+\hline
+{\em id} & Es la cedula que se le asigna al \mbox{\hyperlink{class_usuario}{Usuario}}.\\
+\hline
+{\em ubicacion} & Almacena la direccion que se le asigna al \mbox{\hyperlink{class_usuario}{Usuario}}.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_usuario_a0dae381663742a6ad5c7e7de084287e6}\label{class_usuario_a0dae381663742a6ad5c7e7de084287e6}} 
+\index{Usuario@{Usuario}!Reputacion@{Reputacion}}
+\index{Reputacion@{Reputacion}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Reputacion}{Reputacion}}
+{\footnotesize\ttfamily double Usuario.\+Reputacion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+Almacena la reputacion del usuario. 
+
+\mbox{\Hypertarget{class_usuario_a121dd59f792ea40fa09a54ae83464ad7}\label{class_usuario_a121dd59f792ea40fa09a54ae83464ad7}} 
+\index{Usuario@{Usuario}!Telefono@{Telefono}}
+\index{Telefono@{Telefono}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Telefono}{Telefono}}
+{\footnotesize\ttfamily string Usuario.\+Telefono\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Almacena el telefono del usuario. 
+
+\mbox{\Hypertarget{class_usuario_a7ac74c5bb2a2520229ea4cc93b164dc5}\label{class_usuario_a7ac74c5bb2a2520229ea4cc93b164dc5}} 
+\index{Usuario@{Usuario}!Ubicacion@{Ubicacion}}
+\index{Ubicacion@{Ubicacion}!Usuario@{Usuario}}
+\doxysubsubsection{\texorpdfstring{Ubicacion}{Ubicacion}}
+{\footnotesize\ttfamily string Usuario.\+Ubicacion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Guarda la direccion de la persona. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/flo/\+Desktop/pii\+\_\+2022\+\_\+2\+\_\+equipo\+\_\+4/src/\+Library/\mbox{\hyperlink{_usuario_8cs}{Usuario.\+cs}}\end{DoxyCompactItemize}

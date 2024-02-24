@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="es">
+  <compounddef id="dir_a4931e25b0aa99cf02d0eec9041c56f7" kind="dir">
+    <compoundname>src/Library/Catalogos</compoundname>
+    <innerfile refid="_catalogo_categorias_8cs">CatalogoCategorias.cs</innerfile>
+    <innerfile refid="_catalogo_contratacion_8cs">CatalogoContratacion.cs</innerfile>
+    <innerfile refid="_catalogo_ofertas_8cs">CatalogoOfertas.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Library/Catalogos/"/>
+  </compounddef>
+</doxygen>

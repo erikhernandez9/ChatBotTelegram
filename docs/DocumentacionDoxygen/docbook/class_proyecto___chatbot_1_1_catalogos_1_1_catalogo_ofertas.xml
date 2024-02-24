@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Catalogos.CatalogoOfertas</title>
+<indexterm><primary>Proyecto_Chatbot.Catalogos.CatalogoOfertas</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a11a2557d5ffc722af709727690c42a3f"/>void <emphasis role="strong">AgregarOferta</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> oferta)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a50930ca6a4d7e8af4c9c7dd2afd5811b"/>void <emphasis role="strong">EliminarOferta</emphasis> (string id)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a4f1307d081c1553fce950207340c6ad3"/>List&lt; <link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> &gt; <emphasis role="strong">BuscarOfertasPorCategoria</emphasis> (<link linkend="_class_proyecto___chatbot_1_1_categoria">Categoria</link> categoria, string preferencia, <link linkend="_class_proyecto___chatbot_1_1_usuarios_1_1_empleador">Empleador</link> empleador)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1ae0908081afa66b7782fce8f19a9f25cb"/><link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> <emphasis role="strong">BuscarOferta</emphasis> (string id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Atributos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas_1a253878001f34c75474127965fcb3f499"/>List&lt; <link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> &gt; <emphasis role="strong">Ofertas</emphasis> = new List&lt;<link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Catalogos/CatalogoOfertas.cs</section>

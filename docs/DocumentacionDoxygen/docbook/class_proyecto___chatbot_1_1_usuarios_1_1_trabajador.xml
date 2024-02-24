@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Usuarios.Trabajador</title>
+<indexterm><primary>Proyecto_Chatbot.Usuarios.Trabajador</primary></indexterm>
+<para>Diagrama de herencias de Proyecto_Chatbot.Usuarios.Trabajador    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Métodos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a638db49477c9556aae007304953a78a3"/><emphasis role="strong">Trabajador</emphasis> (string nombre, string email, double latitud, string telefono, double longitud, string id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Atributos públicos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a919ea418ceaf6acd89cbe11d3424813b"/>List&lt; <link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link> &gt; <emphasis role="strong">Ofertas</emphasis> = new List&lt;<link linkend="_class_proyecto___chatbot_1_1_oferta_laboral">OfertaLaboral</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Propiedades    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1aea041bee46c71a873f6ff248233f8bf0"/>double <emphasis role="strong">Reputacion</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1a77aaeb273ef3a5963887c0253309c4e0"/>double <emphasis role="strong">Latitud</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_usuarios_1_1_trabajador_1af7c815a25f13ca2f06dbdc5d26750d64"/>double <emphasis role="strong">Longitud</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Library/Usuarios/Trabajador.cs</section>

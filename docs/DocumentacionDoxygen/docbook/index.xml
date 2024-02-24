@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="es">
+    <info>
+    <title>ProyectoProgramacionII</title>
+    </info>
+<chapter>
+    <title>Documentación de namespaces</title>
+<xi:include href="namespace_proyecto___chatbot.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_proyecto___chatbot_1_1_catalogos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_proyecto___chatbot_1_1_usuarios.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Documentación de las clases</title>
+    <xi:include href="class_proyecto___chatbot_1_1_usuarios_1_1_administrador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_auto_generated_program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_calcular_ubicacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tests_1_1_calcular_ubicacion_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_calificacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_categorias.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tests_1_1_catalogo_categorias_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_contratacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tests_1_1_catalogo_contrataciones_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_catalogos_1_1_catalogo_ofertas.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tests_1_1_catalogo_ofertas_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_categoria.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_contratacion.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tests_1_1_contratacion_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_usuarios_1_1_empleador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tests_1_1_employer_tests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interface_proyecto___chatbot_1_1_i_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_oferta_laboral.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_registrarse.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_singleton.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_proyecto___chatbot_1_1_usuarios_1_1_trabajador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

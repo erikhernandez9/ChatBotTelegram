@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_proyecto___chatbot_1_1_program" xml:lang="es">
+<title>Referencia de la Clase Proyecto_Chatbot.Program</title>
+<indexterm><primary>Proyecto_Chatbot.Program</primary></indexterm>
+<simplesect>
+    <title>Métodos públicos estáticos    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_proyecto___chatbot_1_1_program_1a87d63fe141405798d76d89d695d7d9db"/>static void <emphasis role="strong">Main</emphasis> (string[] args)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+La documentación para esta clase fue generada a partir del siguiente fichero:</para>
+src/Program/Program.cs</section>

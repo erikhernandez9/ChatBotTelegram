@@ -1,0 +1,2780 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Library</name>
+    </assembly>
+    <members>
+        <member name="T:Proyecto_Chatbot.CalcularReputacion">
+            <summary>
+            Clase que calcula la reputacion del usuario.
+            No creamos una nueva interfaz para cumplir con el patron DIP
+            porque nos parecio que el algoritmo de esta clase es muy simple
+            y no va a cambiar en cuanto al calculo.
+            
+            EXPERT: el usuario no puede ser el experto en informacion y calcular su propia reputación,
+            por lo que se crea una clase con los métodos para calcular la reputación de los empleadores
+            y de los trabajadores.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.CalcularReputacion.Calcular(Proyecto_Chatbot.Usuarios.Empleador)">
+            <summary>
+            Calcula la reputacion del empleador. 
+            DEFENSA:
+            Como ya tenemos una
+            </summary>
+            <param name="empleador">Seria el usuario que se calcula la reputacion.</param>
+            <returns>Devuelve un double con la reputación del empleador.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.CalcularReputacion.Calcular(Proyecto_Chatbot.Usuarios.Trabajador)">
+            <summary>
+            Calcula la reputación del trabajador.
+            </summary>
+            <param name="trabajador">Seria el usuario al que se calcula la reputacion.</param>
+            <returns>Devuelve un double con la reputación del trabajador.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.Calificacion">
+            <summary>
+            Clase que representa la calificacion del trabajador y empleador.
+            Implementa la interfaz IJsonConvertible, por lo que se utiliza el principio DIP.
+            Se utilizó el principio SRP ya que la clase solo se centra en contener la
+            calificación y lanzar una excepción en caso de que se ingrese una calificación inválida.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Calificacion.Descripcion">
+            <summary>
+            Representa la descripcion de la calificacion.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Calificacion.Puntaje">
+            <summary>
+            Representa el puntaje de la calificacion
+            La calificacion va de 0 a 5 puntos.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Calificacion.#ctor(System.String,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Calificacion"/> class.
+            </summary>
+            <param name="descripcion">Almacena la descripcion que se le asigna a la calificacion.</param>
+            <param name="puntaje">Almacena el puntaje que se le asigna a la calificacion.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Calificacion.ConvertToJson">
+            <summary>
+            Convierte a json los datos de la clase.
+            </summary>
+            <returns>devuelve los datos convertidos.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Calificacion.LoadFromJson(System.String)">
+            <summary>
+            Carga los datos json a la clase.
+            </summary>
+            <param name="json">json a deserializar.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Catalogos.CatalogoCategorias">
+            <summary>
+            Clase que almacena todas las categorias del programa, permitiendo agregarlas, eliminarlas y seleccionarlas.
+            Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular categorías.
+            Esto es porque utiliza instancias de la clase Categoria, por lo tanto, podemos decir que la contiene o la agrega,
+            además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.
+            Además, esta clase implementa la interfaz IJsonConvertible, por lo que se esta usando el principio DIP, para implementar
+            el uso del Json. Las categorías del catálogo se almacenan en un archivo .json para guardarlas.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.Catalogos.CatalogoCategorias.Categorias">
+            <summary>
+            Lista que almacena todas las categorias.
+            </summary>        
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.AgregarCategoria(System.String,System.String)">
+            <summary>
+            Metodo que permite crear una categoria, serializarla y agregarla al catalogo.
+            </summary>
+            <param name="nombre">Representa el nombre de la categoria a agregar.</param>
+            <param name="descripcion">Representa la descripcion de la categoria a agregar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.EliminarCategoria(System.String)">
+            <summary>
+            Metodo que elimina una categoria.
+            </summary>
+            <param name="nombre">Representa el nombre que identifica a la categoria para eliminarla.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.SeleccionarCategorias(System.String)">
+            <summary>
+            Metodo que permite seleccionar una categoria.
+            </summary>
+            <param name="nombreCategoria">Nombre de la categoria que se quiere seleccionar.</param>
+            <returns>Retorna un objeto Categoría en base al string de su nombre.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.ConvertToJson">
+            <summary>
+            Serializa (convierte) valores de string a .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.LoadFromJson(System.String)">
+            <summary>       
+            Carga el contenido del .json.
+            </summary>
+            <param name="json">El json a serializar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.ShowFile">
+            <summary>       
+            Muestra el contenido del .json.
+            </summary>
+            <returns>Devuelve el .json de catgorias en formato string.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoCategorias.Imprimir">
+            <summary>
+            Método imprimir para que se muestre en el chat la lista de categorías marcada en el .json.
+            Se utilizó un StringBuilder para tomar las categorías de donde se indicó anteriormente y 
+            construir un string que muestre, en forma de lista, qué categorias hay actualmente.
+            </summary>
+            <returns>Un string que enlista todos los nombres de las categorías.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.Catalogos.CatalogoContratacion">
+            <summary>
+            Clase que almacena todas las contrataciones, permitiendo agregar, eliminar y buscar contrataciones.
+            Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular contrataciones. 
+            Esto es porque utiliza instancias de la clase Contratacion, por lo tanto, podemos decir que la contiene o la agrega,
+            además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.Catalogos.CatalogoContratacion.Contratacion">
+            <summary>
+            Lista que almacena todas las contrataciones.
+            </summary>        
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.AgregarContratacion(Proyecto_Chatbot.OfertaLaboral,Proyecto_Chatbot.Usuarios.Empleador,System.String)">
+            <summary>
+            Método que crea una contratación y la agrega al católogo.
+            </summary>
+            <param name="ofertaLaboral">representa la oferta laboral de la contratación a agregar.</param>
+            <param name="empleador">representa al empleador relacionado a la contratación a agregar.</param>
+            <param name="descripcion">representa la descripción de la contratación a agregar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.EliminarContratacion(System.Int64)">
+            <summary>
+            Método que elimina una contratación del catálogo.
+            </summary>
+            <param name="id">id de la contratación.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.FiltrarContratacionesPorEmpleador(System.Int64)">
+            <summary>
+            Lista que almacena las contrataciones filtradas por la ID del empleador.
+            </summary>
+            <param name="id">id del empleador.</param>
+            <returns> devuelve la lista de las contrataciones activas que tiene un empleador. </returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.FiltrarContratacionesPorTrabajador(System.Int64)">
+            <summary>
+            Lista que almacena las contrataciones (servicios contratados) que tiene el trabajador.
+            </summary>
+            <param name="id">id del trabajador.</param>
+            <returns>devuelve una lista que toma todas las contrataciones que tiene el trabajador.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.BuscarContratacion(System.Int64)">
+            <summary>
+            Método que busca una contratación en específico.
+            </summary>
+            <param name="id">Representa el id de la contratacion.</param>
+            <returns>Retorna una contratación en base a su id.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.ContratacionesNeutras">
+            <summary>
+            Recorre todas las contrataciones para verificar si 
+            no se calificaron en un mes, les asigna una calificacion
+            neutral.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.ConvertToJson">
+            <summary>
+            Serializa (convierte) valores a .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.LoadFromJson(System.String)">
+            <summary>       
+            Carga el contenido del .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.ShowFile">
+            <summary>       
+            Muestra el contenido del .json.
+            </summary>
+            <returns>retorna el json de contrataciones en formato string.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoContratacion.Imprimir">
+            <summary>
+            Método imprimir para que se muestre en el chat la lista de contrataciones guardadas en el .json.
+            Se utilizó un StringBuilder para tomar las contrataciones de donde se indicó anteriormente y 
+            construir un string que muestre, en forma de lista, qué contrataciones vigentes existen.
+            </summary>
+            <returns>Un string que enlista todos los nombres de las contrataciones.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.Catalogos.CatalogoOfertas">
+            <summary>
+            Clase que representa el catalogo de ofertas, en esta se almacenan todas las ofertas,
+            permitiendo agregarlas, eliminarlas y buscarlas segun algunos filtros.
+            Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular ofertas. 
+            Esto es porque utiliza instancias de la clase OfertaLaboral, por lo tanto, podemos decir que la contiene o la agrega,
+            además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.Catalogos.CatalogoOfertas.Ofertas">
+            <summary>
+            Almacena todas las ofertas laborales creadas en el programa.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.AgregarOferta(Proyecto_Chatbot.Categoria,Proyecto_Chatbot.Usuarios.Trabajador,System.String,System.Int32)">
+            <summary>
+            Metodo que crea la oferta laboral y la agrega al catalogo.
+            </summary>
+            <param name="categoria">Es la categoria asociada a la oferta a agregar.</param>
+            <param name="trabajador">Es el trabajador asociado a la oferta a agregar.</param>
+            <param name="descripcion">Es la descripcion de la oferta a agregar.</param>
+            <param name="precio">Es el precio de la oferta a agregar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.EliminarOferta(System.Int32)">
+            <summary>
+            Metodo que elimina la oferta de la lista.
+            </summary>
+            <param name="id">id de la oferta a eliminar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOfertasPorCalificacion(System.String)">
+            <summary>
+            Busca la oferta segun la reputacion que tengan los trabajadores.
+            </summary>
+            <returns>Devuelve la lista ordenada segun la reputacion.</returns>
+            <param name="nombreCategoria">el nombre de la categoría de las ofertas.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.ImprimirFiltradoCalificacion(System.String)">
+            <summary>
+            Un string builder que construye un string de una lista con todas las ofertas laborales en una categoría,
+            filtradas por la calificación más alta, para que el bot lo muestre en pantalla de forma "amigable". Se indica la id del servicio, 
+            el trabajador y la descripción de la oferta.
+            Esto forma parte de las USER STORIES.
+            "Como empleador, quiero ver el resultado de las búsquedas de ofertas de trabajo ordenado en forma descendente 
+             por reputación, es decir, las de mejor reputación primero para que de esa forma, pueda contratar un servicio".
+            </summary>
+            <param name="nombreCategoria">el nombre de la categoría donde se buscan las ofertas para agregarlas.</param>
+            <returns>devuelve un string con apariencia de listado conteniendo todas las ofertas laborales en una categoría.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOfertasPorUbicacion(System.String,Proyecto_Chatbot.Usuarios.Empleador)">
+            <summary>
+            Busca la oferta segun la distancia que tengan los trabajadores y el empleador.
+            El más cercano es el que aparece primero. Este es un método de filtrado que se pide en las USER STORIES.
+            </summary>
+            <param name="nombreCategoria">La categoria que quiere buscar.</param>
+            <param name="empleador">Es el empleador que busca a los trabajadores.</param>
+            <returns>Devuelve la lista ordenada segun la distancia.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.ImprimirFiltradoUbicacion(System.String,System.String)">
+            <summary>
+            Método para obtener un string de la lista de Ofertas por ubicación.
+            </summary>
+            <param name="nombreCategoria">La categoria que quiere buscar.</param>
+            <param name="idEmpleador">Es el empleador que busca a los trabajadores.</param>
+            <returns>Devuelve la lista ordenada segun la distancia en forma de string.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOfertasPorPrecio(System.String)">
+            <summary>
+            Ordena las ofertas segun el precio que tengan. Esto es un método de filtrado solicitado en las USER STORIES.
+            </summary>
+            <param name="nombreCategoria">La categoria filtro.</param>
+            <returns>Devuelve la lista ordenada segun el precio de las ofertas de menor a mayor.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.ImprimirFiltradoPrecio(System.String)">
+            <summary>
+            Un string builder que toma la lista de ofertas dentro de una categoría determinada,
+            filtrándolas por precio, y construye un string con las mismas, indicando la id del servicio, el trabajador y la descripción
+            de la oferta.
+            </summary>
+            <param name="nombreCategoria">El nombre de la categoría solicitada.</param>
+            <returns>Un string en forma de listado con todas las ofertas de una cierta categoría ordenadas por precio (ascendente).</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOferta(System.Int32)">
+            <summary>
+            Metodo que busca una oferta en especifico.
+            </summary>
+            <param name="id">Representa el id de la oferta a buscar.</param>
+            <returns>El objeto OfertaLaboral que pertenece al id correspondiente.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.BuscarOfertaPorCategoria(System.String)">
+            <summary>
+            Método para filtrar las ofertas por categoría. Esto es un método que se pide en las USER STORIES.
+            "Como empleador, quiero buscar ofertas de trabajo, opcionalmente filtrando por categoría para que de esa forma, 
+            pueda contratar un servicio".
+            </summary>
+            <param name="nombreCategoria">Nombre de la categoría sobre la que el usuario decide ver las categorías.</param>
+            <returns>Una lista con todas las ofertas ubicadas en esa categoría determinada.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.ImprimirFiltradoCategorias(System.String)">
+            <summary>
+            Se utilizó un StringBuilder para tomar las ofertas de donde se indicó anteriormente y 
+            construir un string que muestre, en forma de lista, qué ofertas laborales activas existen.
+            Un string builder que toma todas las ofertas ubicadas en cierta categoría y construye un string en forma de listado
+            para mostrarlo al usuario.
+            Esto es parte de la misma User Story que BuscarOfertaPorCategoria.
+            </summary>
+            <param name="nombreCategoria">nombre de la categoría a buscar.</param>
+            <returns>un string en forma de listado con todas las ofertas en cierta categoría.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.Imprimir">
+            <summary>
+            Un string builder para formar un string que sea el "renglón" de la lista del catálogo de ofertas;
+            pone cada oferta indicando el trabajador asignado, la descripción y una ID.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.ConvertToJson">
+            <summary>
+            Serializa valores a .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.LoadFromJson(System.String)">
+            <summary>
+            Carga el contenido del .json.
+            </summary>
+            <param name="json">el json a deserializar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.ShowFile">
+            <summary>
+            Muestra el contenido del .json.
+            </summary>
+            <return>retorna el json en formato string.</return>
+        </member>
+        <member name="M:Proyecto_Chatbot.Catalogos.CatalogoOfertas.EliminarOferta(System.String)">
+            <summary>
+            Elimina una oferta.
+            </summary>
+            <param name="nombreOferta">Nombre de la oferta a eliminar.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Categoria">
+            <summary>
+            Esta clase representa al categoria de cada servicio.
+            Se utilizó el principio SRP, ya que la clase contiene solo a la categoría,
+            y tiene la responsabilidad de corroborar si la misma es válida cuando se crea.
+            Además, es la experta en información, ya que solo ella tiene y conoce la información
+            necesaria para crear una categoría.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Categoria.Nombre">
+            <summary>
+            Representa el nombre del servicio.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Categoria.Descripcion">
+            <summary>
+            Representa la descripcion de la categoria.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Categoria.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Categoria"/> class.
+            </summary>
+            <param name="nombre">Almacena el nombre que se le asigna a la categoria.</param>
+            <param name="descripcion">Almacena la descripcion que se le asigna a la categoria.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Contratacion">
+            <summary>
+            Clase que representa la contratacion de un servicio.
+            Se utilizó el principio SRP, ya que la clase contiene solo a la categoría,
+            y tiene la responsabilidad de corroborar si la misma es válida cuando se crea.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.Id">
+            <summary>
+            Identificador de la contratacion.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.OfertaLaboral">
+            <summary>
+            Representa la oferta laboral del contrato.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.Empleador">
+            <summary>
+            Representa el empleador que realiza la contratacion.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.CostoServicio">
+            <summary>
+            Representa el costo del trabajo a realizar.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.Descripcion">
+            <summary>
+            Representa la descripcion del contrato.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.Fecha_inicio">
+            <summary>
+            Representa la fecha en la que se crea el contrato.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.Fecha_final">
+            <summary>
+            Representa la fecha en la que se cierra el contrato.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.Estado">
+            <summary>
+            Representa el estado de la contratacion
+            True = Activo, False = inactivo.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.CalificacionEmpleador">
+            <summary>
+            Almacena la calificacion del empleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Contratacion.CalificacionTrabajador">
+            <summary>
+            Almacena la califiacion del trabajador por el trabajo realizado.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.#ctor(System.Int32,Proyecto_Chatbot.OfertaLaboral,Proyecto_Chatbot.Usuarios.Empleador,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Contratacion"/> class.
+            </summary>
+            <param name="id">id que se le asigna a la oferta laboral.</param>
+            <param name="ofertaLaboral">Almacena la oferta laboral que se le asigna a la contratacion.</param>
+            <param name="empleador">Almacena el empleador que contrata el servicio que se le asigna a la contratacion.</param>
+            <param name="descripcion">Almacena la descripcion del contrato que se le asigna a la contratacion.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.CalificarEmpleador(System.String,System.Double)">
+            <summary>
+            Métodos para calificar empleadores y trabajadores. Método desemplear.
+            </summary>
+            <param name="descripcion">Descripción de la califiación.</param>
+            <param name="puntaje">puntaje de la calificación.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.CalificarTrabajador(System.String,System.Double)">
+            <summary>
+            Metodo para calificar al trabajador.
+            </summary>
+            <param name="descripcion">almacena la descripcion de la calificacion.</param>
+            <param name="puntaje">es el puntaje de la calificacion.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.CalificarNeutral">
+            <summary>
+            Método para agregar una calificación neutral al empleador si el trabajador demora más de un mes 
+            en calificarlo. Este método forma parte de las USER STORIES.
+            "Como empleador, quiero poder calificar a un trabajador; el trabajador me tiene que calificar a mi también, 
+            si no me califica en un mes, la calificación será neutral, para que de esa forma, pueda definir la reputaión del trabajador".
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.Desemplear">
+            <summary>
+            Metodo para desemplear a un trabajador, este pone la fecha cuando se cierra el contrato.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.ConvertToJson">
+            <summary>
+            Convierte a json los datos de la clase.
+            </summary>
+            <returns>devuelve los datos convertidos.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Contratacion.LoadFromJson(System.String)">
+            <summary>
+            Carga los datos json a la clase.
+            </summary>
+            <param name="json">json a deserializar.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.ExcepcionConstructor">
+            <summary>
+            Constructor de excepciones para poder aplicarlas dentro de las clases.
+            HERENCIA: Es hija de la clase Exception. Como se usó herencia, el principio
+            aplicado es OCP.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ExcepcionConstructor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.ExcepcionConstructor"/> class.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ExcepcionConstructor.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.ExcepcionConstructor"/> class.
+            </summary>
+            <param name="message">mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ExcepcionConstructor.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.ExcepcionConstructor"/> class.
+            </summary>
+            <param name="message">mensaje.</param>
+            <param name="innerException">excepcion interna.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ExcepcionConstructor.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.ExcepcionConstructor"/> class.
+            </summary>
+            <param name="info">info de serialización.</param>
+            <param name="context">contexto.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.IJsonConvertible">
+            <summary>
+            Define el tipo que tienen los objetos que pueder ser serializados en y deserializados desde texto 
+            en formato Json.
+            Se utilizó el patrón ISP, ya que esto es una interfaz.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.IJsonConvertible.ConvertToJson">
+            <summary>
+            Convirte el objeto a texto en formato Json. El objeto puede ser reconstruido a partir del texto en formato
+            Json utilizando <see cref="M:Proyecto_Chatbot.IJsonConvertible.LoadFromJson(System.String)"/>.
+            </summary>
+            <returns>El objeto convertido a texto en formato Json.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.IJsonConvertible.LoadFromJson(System.String)">
+            <summary>
+            Asigna las propiedades del objeto a partir de texto en formato Json. El texto en formato Json puede ser
+            obtenido utilizando <see cref="M:Proyecto_Chatbot.IJsonConvertible.ConvertToJson"/>.
+            </summary>
+            <param name="json">El texto en formato Json a partir del cual asignas las propiedades del objeto.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.IUser">
+            <summary>
+            Interfaz que representa el tipo User.
+            Se utilizó el patrón ISP y DIP, para conseguir robustez y flexibilidad, y posibilitar la
+            reutilización, con estas interfaces. IUser es implementada por Persona, facilita la creación
+            de todos los usuarios (admin, trabajador, empleador)
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.IUser.Nombre">
+            <summary>
+            Representa el nombre del usuario
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.IUser.Email">
+            <summary>
+            Representa el mail del usuario
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.ListaAdministradores">
+            <summary>
+            Clase que almacena todos los administradores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos.
+            Aplicamos el patrón Creator y el principio Expert de forma que esta clase es la responsable de crear, eliminar y manipular administradores. 
+            Esto es porque utiliza instancias de la clase Administrador, por lo tanto, podemos decir que la contiene o la agrega,
+            además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.ListaAdministradores.Administradores">
+            <summary>
+            Lista para almacenar los administradores.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaAdministradores.AgregarAdministrador(System.String,System.String,System.Int64)">
+            <summary>
+            Método para agregar administrador a la lista de administradores y guardarlos.
+            </summary>
+            <param name="nombre">nombre del administrador.</param>
+            <param name="email">email del administrador.</param>
+            <param name="id">id del administrador.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaAdministradores.EliminarAdministrador(System.Int64)">
+            <summary>
+            Método para eliminar administradores de la lista.
+            </summary>
+            <param name="id">id del administrador a eliminar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaAdministradores.SeleccionarAdministrador(System.Int64)">
+            <summary>
+            Mpetodo para seleccionar un administrador.
+            </summary>
+            <param name="idAdministrador">id del administrador a seleccionar.</param>
+            <returns>Retorna el objeto administrador en base a su id.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaAdministradores.ConvertToJson">
+            <summary>
+            Serializa (convierte) valores a .json.
+            </summary>
+            <returns>Devuelve el json en forma de string.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaAdministradores.LoadFromJson(System.String)">
+            <summary>       
+            Carga el contenido del .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaAdministradores.ShowFile">
+            <summary>       
+            Muestra el contenido del .json.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.ListaEmpleadores">
+            <summary>
+            Clase que almacena todas los empleadores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos.
+            Aplicamos el patrón Creator y el patrón Expert de forma que esta clase es la responsable de crear, eliminar y manipular empleadores. 
+            Esto es porque utiliza instancias de la clase Empleador, por lo tanto, podemos decir que la contiene o la agrega,
+            además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.ListaEmpleadores.Empleadores">
+            <summary>
+            Lista que almacena todos los empleadores.
+            </summary> 
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaEmpleadores.AgregarEmpleador(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            Método que permite crear un Empleador, serializarlo y agregarlo a la lista.
+            </summary>
+            <param name="nombre">Representa el nombre del empleador a agregar.</param>
+            <param name="email">Representa el email del empleador a agregar.</param>
+            <param name="telefono">Representa el telefono del empleador a agregar.</param>
+            <param name="id">Representa el id del empleador a agregar.</param>
+            <param name="ubicacion">Representa la ubicacion del empleador a agregar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaEmpleadores.EliminarEmpleador(System.Int64)">
+            <summary>
+            Método que elimina un empleador.
+            </summary>
+            <param name="id">Representa el id que identifica al empleador para eliminarla.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaEmpleadores.SeleccionarEmpleador(System.Int64)">
+            <summary>
+            Método que permite seleccionar un empleador.
+            </summary>
+            <param name="idEmpleador">Id del empleador que se quiere seleccionar.</param>
+            <returns>Devuelve un objeto empleador en base a si id.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaEmpleadores.ConvertToJson">
+            <summary>
+            Serializa valores a .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaEmpleadores.LoadFromJson(System.String)">
+            <summary>       
+            Carga el contenido del .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaEmpleadores.ShowFile">
+            <summary>       
+            Muestra el contenido del .json.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.ListaTrabajadores">
+            <summary>
+            Clase que almacena todos los trabajadores del programa, permitiendo agregarlos, eliminarlos y seleccionarlos.
+            Aplicamos el patrón Creator y el patrón Expert de forma que esta clase es la responsable de crear, eliminar y manipular trabajadores. 
+            Esto es porque utiliza instancias de la clase Trabajador, por lo tanto, podemos decir que la contiene o la agrega,
+            además de ser la clase experta, es decir, tiene la información necesaria para realizar la creación del objeto.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.ListaTrabajadores.Trabajadores">
+            <summary>
+            Lista que almacena todos los trabajadores.
+            </summary>        
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.AgregarTrabajador(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            Método que permite crear un Trabajador, serializarlo y agregarlo a la lista.
+            </summary>
+            <param name="nombre">Representa el nombre del trabajador a agregar.</param>
+            <param name="email">Representa el email del trabajador a agregar.</param>
+            <param name="telefono">Representa el telefono del trabajador a agregar.</param>
+            <param name="id">Representa el id del trabajador a agregar.</param>
+            <param name="ubicacion">Representa la ubicacion del trabajador a agregar.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.NotificarTrabajador(Proyecto_Chatbot.Usuarios.Trabajador,System.String)">
+            <summary>
+            Método que notifica un trabajador cuando se elimina una oferta.
+            </summary>
+            <param name="trabajador">Representa el trabajador que identifica al trabajador para eliminarla.</param>
+            <param name="mensaje">Representa el trabajador que identifica al trabajador para eliminarla.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.EliminarTrabajador(System.Int64)">
+            <summary>
+            Método que elimina un trabajador.
+            </summary>
+            <param name="id">Representa el id que identifica al trabajador para eliminarla.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.SeleccionarTrabajador(System.Int64)">
+            <summary>
+            Método que permite seleccionar un trabajador.
+            </summary>
+            <param name="idTrabajador">Id del trabajador que se quiere seleccionar.</param>
+            <returns>Retorna el trabajador seleccionado.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.ConvertToJson">
+            <summary>
+            Serializa (convierte) valores a .json.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.ShowFile">
+            <summary>       
+            Muestra el contenido del .json.
+            </summary>
+            <returns>devuelve el json como string.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.ListaTrabajadores.LoadFromJson(System.String)">
+            <summary>       
+            Carga el contenido del .json.
+            </summary>
+            <param name="json">el json a deserializar.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Mensaje">
+            <summary>
+            Esta clase representa al mensaje que envía el usuario.
+            Creada para disminuir el acoplamiento y aumentar la coesión. (Patrones Low coupling y high cohesion)
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Mensaje.Id">
+            <summary>
+            Representa el id del usuario que envía el mensaje.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Mensaje.Text">
+            <summary>
+            Representa el mensaje que envía el usuario.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Mensaje.#ctor(System.Int64,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Mensaje"/> class.
+            </summary>
+            <param name="id">Almacena el id del usuario.</param>
+            <param name="text">Almacena el mensaje enviado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Notificaciones">
+            <summary>
+            Clase que se encarga de crear la notificación a enviar a un trabajador cuando se da de baja una oferta que ha creado.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Notificaciones.NotificacionTrabajador(Proyecto_Chatbot.OfertaLaboral)">
+            <summary>
+            Método que crea el string de notificación para el trabajador.
+            </summary>
+            <param name="oferta">Representa la oferta eliminada.</param>
+            <returns>Retorna un string de la notificación del trabajador.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.OfertaLaboral">
+            <summary>
+            Representa la oferta laboral que publica un trabajador.
+            Se utilizó el principio SRP, ya que la clase contiene solo a la oferta,
+            y tiene la responsabilidad de corroborar si la misma es válida cuando se crea.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.OfertaLaboral.Id">
+            <summary>
+            Representa el identificador de la oferta laboral.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.OfertaLaboral.Categoria">
+            <summary>
+            Almacena la categoria de la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.OfertaLaboral.Trabajador">
+            <summary>
+            Almacena el trabajador ofertante.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.OfertaLaboral.Descripcion">
+            <summary>
+            Almacena la descripcion de la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.OfertaLaboral.Precio">
+            <summary>
+            Representa el precio del trabajo que haria el trabajador.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.OfertaLaboral.#ctor(System.Int32,Proyecto_Chatbot.Categoria,Proyecto_Chatbot.Usuarios.Trabajador,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.OfertaLaboral"/> class.
+            </summary>
+            <param name="id">Almacena la id de usuario para identificarlo.</param>
+            <param name="categoria">Almacena La categoria que se le asigna a la oferta.</param>
+            <param name="trabajador">Almacena el trabajador que crea la oferta.</param>
+            <param name="descripcion">Almacena la descripcion que se le asigna a la oferta.</param>
+            <param name="precio">Almacena el precio que se le asigna a la oferta.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Persona">
+            <summary>
+            Representa a todos los usuarios que utilizan la aplicacion (incluyendo al administrador).
+            Es la clase padre de Usuario, por lo que se usó HERENCIA. El principio OCP es utilizado
+            ya que esta clase se implementa mediante herencia en Usuario.
+            Además se utilizaron los patrones y principios de DIP e ISP, ya que esta clase implementa
+            la interfaz de IUser, esto para darle robustez al código.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Persona.#ctor(System.String,System.String,System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Persona"/> class.
+            </summary>
+            <param name="nombre">Almacena el nombre que se le asigna al usuario.</param>
+            <param name="email">Almacena el mail que se le asigna al usuario.</param>
+            <param name="id">Almacena la cedula que se le asigna al usuario.</param>
+        </member>
+        <member name="P:Proyecto_Chatbot.Persona.Nombre">
+            <summary>
+            Representa el nombre de la persona.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Persona.Email">
+            <summary>
+            Representa el mail de la persona.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Persona.Id">
+            <summary>
+            Representa la cedula de la persona.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.Singleton`1">
+            <summary>
+            SINGLETON:
+            Garantiza que una clase solo tenga una instancia.
+            Se utilizó el patrón de diseño Singleton, para restringir la creación de objetos pertenecientes a
+            una clase, para asegurar que la clase no puede ser instanciada nuevamente.
+            Lo aplicamos en:
+                - Catálogo Categorías.
+                - Catálogo Contrataciones.
+                - Catálogo Ofertas.
+                - Lista Empleadores.
+                - Lista Trabajadores.
+            Porque consideramos que solo debe haber una instancia de los catálogos y las listas. Por ejemplo, no
+            pueden existir dos catálogos de categorías, solo hay uno. Entonces, CatálogoCategorías es un Singleton.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Proyecto_Chatbot.Singleton`1.Instance">
+            <summary>
+            Instancia de clase singleton.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AddressResult">
+            <summary>
+            Una implementación concreta del resutlado de buscar una dirección. Además de las propiedades definidas en
+            IAddressResult esta clase agrega una propiedad Location para acceder a las coordenadas de la dirección buscada.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressResult.Location">
+            <summary>
+            Get location (ubicacion).
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressResult.#ctor(Proyecto_Chatbot.Locations.Client.Location)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.TelegramBot.AddressResult"/> class.
+            </summary>
+            <param name="location">location del usuario.</param>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressResult.Found">
+            <summary>
+            Cuando se encuentra una ubicación, la toma y la devuelve.
+            </summary>
+            <return>retorna true en caso que encuentra la ubicación, y false en caso de no encontrarla.</return>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressResult.Latitude">
+            <summary>
+            Latitud de la locacion indicada.
+            </summary>
+            <return>retorna la latitud.</return>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressResult.Longitude">
+            <summary>
+            Longitud de la locacion indicada.
+            </summary>
+            <return>retorna la longitud.</return>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AddressFinder">
+            <summary>
+            Un buscador de direcciones concreto que usa una API de localización.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressFinder.#ctor(Proyecto_Chatbot.Locations.Client.LocationApiClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.TelegramBot.AddressFinder"/> class.
+            </summary>
+            <param name="client">El cliente de la API de localización.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressFinder.GetLocation(System.String)">
+            <summary>
+            Determina si existe una dirección.
+            </summary>
+            <param name="address">La dirección a buscar.</param>
+            <returns>Una instancia de AddressResult con el resultado de la búsqueda, que incluye si la dirección se
+            encontró o no, y si se encontró, la latitud y la longitud de la dirección.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.DistanceCalculator">
+            <summary>
+            Un calculador de distancias concreto que utiliza una API de localización para calcular la distancia entre dos
+            direcciones.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceCalculator.#ctor(Proyecto_Chatbot.Locations.Client.LocationApiClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.TelegramBot.DistanceCalculator"/> class.
+            </summary>
+            <param name="client">El cliente de la API de localización.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceCalculator.CalculateDistance(System.String,System.String)">
+            <summary>
+            Método para calcular la distancia entre dos ubicaciones.
+            </summary>
+            <return>Retorna IDistanceResult.</return>
+            <param name="fromAddress">primera ubicacion.</param>
+            <param name="toAddress">segunda ubicacion.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.DistanceResult">
+            <summary>
+            Una implementación concreta del resutlado de calcular distancias. Además de las propiedades definidas en
+            IDistanceResult esta clase agrega propiedades para acceder a las coordenadas de las direcciones buscadas.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceResult.#ctor(Proyecto_Chatbot.Locations.Client.Location,Proyecto_Chatbot.Locations.Client.Location,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.TelegramBot.DistanceResult"/> class.
+            Inicializa una nueva instancia de DistanceResult a partir de dos coordenadas, la distancia y el tiempo
+            entre ellas.
+            </summary>
+            <param name="from">Las coordenadas de origen.</param>
+            <param name="to">Las coordenadas de destino.</param>
+            <param name="distance">La distancia entre las coordenadas.</param>
+            <param name="time">El tiempo que se demora en llegar del origen al destino.</param>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceResult.FromExists">
+            <summary>
+            Si la ubicación inicial existe devuelve que la encontró.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceResult.ToExists">
+            <summary>
+            Si la ubicación final existe devuelve que la encontró.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceResult.Distance">
+            <summary>
+            Get distancia.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceResult.Time">
+            <summary>
+            Get time.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceResult.From">
+            <summary>
+            Get locacion inicial.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceResult.To">
+            <summary>
+            Devuelve el location.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AddressHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "dirección".
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressHandler.State">
+            <summary>
+            El estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressHandler.#ctor(Proyecto_Chatbot.TelegramBot.IAddressFinder,Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.AddressHandler"/>.
+            </summary>
+            <param name="finder">Un buscador de direcciones.</param>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa todos los mensajes y retorna true siempre.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AddressHandler.InternalCancel">
+            <summary>
+            Retorna este "handler" al estado inicial.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AddressHandler.AddressState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando AddressHandler.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AddressHandler.AddressState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AddressHandler.AddressState.AddressPrompt">
+            <summary>
+            El estado donde se guarda la dirección.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AddressHandler.AddressData">
+            <summary>
+            Representa los datos que va obteniendo el comando AddressHandler en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressHandler.AddressData.Address">
+            <summary>
+            La dirección que se ingresó en el estado AddressState.AddressPrompt.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AddressHandler.AddressData.Result">
+            <summary>
+            El resultado de la búsqueda de la dirección ingresada.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "Agregar empleador" 
+            y agrega un empleador con todos sus datos. Este handler es un USER STORY. Permite que un usuario se registre
+            en la plataforma, ingresando el mensaje "Quiero registrarme como empleador." Se solicitan todos los datos personales
+            necesarios durante el registro y se guardan en una lista de empleadores.
+            
+            "Como empleador, quiero registrarme en la plataforma, indicando mis datos personales e información de contacto para
+             que de esa forma, pueda proveer información de contacto a quienes quieran contratar mis servicios."
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase. <see cref="T:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado del empleador, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.InternalCancel">
+            <summary>
+            Método para cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState.NombreEmpleador">
+            <summary>
+            El estado del nombre del empleador. En este estado el comando pide los datos del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState.EmailEmpleador">
+            <summary>
+            El estado del email del empleador. En este estado el comando pide los datos del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState.TelefonoEmpleador">
+            <summary>
+            El estado del telefono del empleador. En este estado el comando pide los datos del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState.IdEmpleador">
+            <summary>
+            El estado del id del empleador. En este estado el comando pide los datos del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorState.UbicacionEmpleador">
+            <summary>
+            El estado de la ubicación del empleador. En este estado el comando pide los datos del empleador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorData">
+            <summary>
+            Representa los datos que va obteniendo el comando AgregarEmpleador en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorData.NombreEmpleador">
+            <summary>
+            Representa el nombre del empleador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorData.EmailEmpleador">
+            <summary>
+            Representa el email del empleador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorData.TelefonoEmpleador">
+            <summary>
+            Representa el teléfono del empleador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorData.UbicacionEmpleador">
+            <summary>
+            Representa la ubicación del empleador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarEmpleadorHandler.EmpleadorData.IdEmpleador">
+            <summary>
+            Representa el id del empleador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "Agregar trabajador" 
+            y agrega un empleador con todos sus datos. Este handler es un USER STORY. Permite que un usuario se registre
+            en la plataforma como trabajador, ingresando el mensaje "Quiero registrarme como trabajador." Se solicitan todos los datos personales
+            necesarios durante el registro y se guardan en una lista de trabajadores.
+            
+            "Como trabajador, quiero registrarme en la plataforma, indicando mis datos personales e información de contacto para
+             que de esa forma, pueda proveer información de contacto a quienes quieran contratar mis servicios."
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.State">
+            <summary>
+            El estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado del trabajador, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.InternalCancel">
+            <summary>
+            Método para cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState.NombreTrabajador">
+            <summary>
+            El estado del nombre del trabajador. En este estado el comando pide los datos del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState.EmailTrabajador">
+            <summary>
+            El estado del email del trabajador. En este estado el comando pide los datos del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState.TelefonoTrabajador">
+            <summary>
+            El estado del telefono del trabajador. En este estado el comando pide los datos del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState.IdTrabajador">
+            <summary>
+            El estado del id del trabajador. En este estado el comando pide los datos del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorState.UbicacionTrabajador">
+            <summary>
+            El estado de la ubicación del trabajador. En este estado el comando pide los datos del trabajador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorData">
+            <summary>
+            Representa los datos que va obteniendo el comando AgregarTrabajador en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorData.NombreTrabajador">
+            <summary>
+            Representa el nombre del trabajador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorData.EmailTrabajador">
+            <summary>
+            Representa el email del trabajador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorData.TelefonoTrabajador">
+            <summary>
+            Representa el teléfono del trabajador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorData.UbicacionTrabajador">
+            <summary>
+            Representa la ubicación del trabajador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.AgregarTrabajadorHandler.TrabajadorData.IdTrabajador">
+            <summary>
+            Representa el id del trabajador obtenido en AgregarEmpleador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.BaseHandler">
+            <summary>
+            Clase base para implementar el patrón Chain of Responsibility. En ese patrón se pasa un mensaje a través de una
+            cadena de "handlers" que pueden procesar o no el mensaje. Cada "handler" decide si procesa el mensaje, o si se lo
+            pasa al siguiente. Esta clase base implmementa la responsabilidad de recibir el mensaje y pasarlo al siguiente
+            "handler" en caso que el mensaje no sea procesado. La responsabilidad de decidir si el mensaje se procesa o no, y
+            de procesarlo, se delega a las clases sucesoras de esta clase base.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.BaseHandler.Next">
+            <summary>
+            Obtiene el próximo "handler".
+            </summary>
+            <value>El "handler" que será invocado si este "handler" no procesa el mensaje.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.BaseHandler.Keywords">
+            <summary>
+            Obtiene o asigna el conjunto de palabras clave que este "handler" puede procesar.
+            </summary>
+            <value>Un array de palabras clave.</value>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.#ctor(Proyecto_Chatbot.TelegramBot.IHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.BaseHandler"/>.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.#ctor(System.String[],Proyecto_Chatbot.TelegramBot.IHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.BaseHandler"/> con una lista de comandos.
+            </summary>
+            <param name="keywords">La lista de comandos.</param>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Este método debe ser sobreescrito por las clases sucesores. La clase sucesora procesa el mensaje y retorna
+            la respuesta al mensaje.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.InternalCancel">
+            <summary>
+            Este método puede ser sobreescrito en las clases sucesores que procesan varios mensajes cambiando de estado
+            entre mensajes deben sobreescribir este método para volver al estado inicial. En la clase base no hace nada.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <summary>
+            Determina si este "handler" puede procesar el mensaje. En la clase base se utiliza el array
+            <see cref="P:Proyecto_Chatbot.TelegramBot.BaseHandler.Keywords"/> para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. Las
+            clases sucesores pueden sobreescribir este método para proveer otro mecanismo para determina si procesan o no
+            un mensaje.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <returns>true si el mensaje puede ser pocesado; false en caso contrario.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.Handle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje o la pasa al siguiente "handler" si existe.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+            <returns>El "handler" que procesó el mensaje si el mensaje fue procesado; null en caso contrario.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.BaseHandler.Cancel">
+            <summary>
+            Retorna este "handler" al estado inicial. En los "handler" sin estado no hace nada. Los "handlers" que
+            procesan varios mensajes cambiando de estado entre mensajes deben sobreescribir este método para volver al
+            estado inicial.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.BaseHandler.DictVerificacionPasos">
+            <summary>
+            Es un diccionario para verificar el estado de los usuarios que se loguean al bot;
+            la key es de tipo long y es la ID del usuario. El value es un string que guarda el estado
+            del usuario que utilice el bot.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler">
+            <summary>
+            Handler del patrón Chain of Responsability, procesa el mensaje "Calificar empleador". Sirve para que
+            el trabajador califique a un empleador (al empleador perteneciente a la contratación indicada).
+            Este handler, además, nos avisa si realizamos una calificación en el rango incorrecto (de 0 a 5)
+            y también nos avisa si no tenemos permisos ya que esta acción solo la hace el trabajador.
+            <remarks>
+            Este handler pertenece a las USER STORIES.
+            "Como trabajador, quiero poder calificar a un empleador; el empleador me tiene que calificar a mi también, 
+            si no me califica en un mes, la calificación será neutral, para que de esa forma pueda definir la reputación de mi empleador."
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa todos los mensajes y retorna true siempre.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.InternalCancel">
+            <summary>
+            Método para cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando Calificar.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarState.Contratacion">
+            <summary>
+            El estado inicial que indica a qué contratación refiere la calificación.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarState.Puntaje">
+            <summary>
+            El estado donde se indica que puntaje será el de la calificación del trabajador.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarState.Descripcion">
+            <summary>
+            El estado donde se indica la descipción general de la calificiación.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarData">
+            <summary>
+            Representa los datos que va obteniendo el comando CalificarTrabajador en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarData.Puntaje">
+            <summary>
+            Representa y guarda el puntaje proporcionado por el empleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarData.Contratacion">
+            <summary>
+            Representa a qué contratación refiere la calificación.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarEmpleadorHandler.CalificarData.Descripcion">
+            <summary>
+            Representa la descripción de la calificación proporcionada por el empleador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler">
+            <summary>
+            Handler del patrón Chain of Responsability, procesa el mensaje "Calificar trabajador" para que
+            el empleador califique el servicio brindado por el trabajador.
+            Si estamos logueados como trabajador no tenemos acceso a este comando.
+            te handler, además, nos avisa si realizamos una calificación en el rango incorrecto (de 0 a 5)
+            y también nos avisa si no tenemos permisos ya que esta acción solo la hace el trabajador.
+            <remarks>
+            Este handler pertenece a las USER STORIES.
+            "Como empleador, quiero poder calificar a un trabajador; el trabajador me tiene que calificar 
+            a mi también, si no me califica en un mes, la calificación será neutral, para que de esa forma pueda definir 
+            la reputación de mi trabajador."
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa todos los mensajes y retorna true siempre.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.InternalCancel">
+            <summary>
+            Método para cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando Calificar.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarState.Contratacion">
+            <summary>
+            El estado inicial que indica a qué contratación refiere la calificación.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarState.Puntaje">
+            <summary>
+            El estado donde se indica que puntaje será el de la calificación del trabajador.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarState.Descripcion">
+            <summary>
+            El estado donde se indica la descipción general de la calificiación.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarData">
+            <summary>
+            Representa los datos que va obteniendo el comando CalificarTrabajador en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarData.Puntaje">
+            <summary>
+            Representa y guarda el puntaje proporcionado por el empleador.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarData.Contratacion">
+            <summary>
+            Representa a qué contratación refiere la calificación.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CalificarTrabajadorHandler.CalificarData.Descripcion">
+            <summary>
+            Representa la descripción de la calificación proporcionada por el empleador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CatalogoContratacionesHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "Mis contrataciones".
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CatalogoContratacionesHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.CatalogoContratacionesHandler"/>. Esta clase procesa el mensaje "Catalogo Contrataciones".
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CatalogoContratacionesHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje "mis contrataciones" y retorna true; retorna false en caso contrario.
+            Muestra la lista de contrataciones vigentes.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler">
+            <summary>
+            Handler del patrón Chain of Responsability, procesa el mensaje "Crear categoría" y
+            crea una categoría, preguntando por su nombre y descripción. Quien puede realizar esta
+            operación es el administrador, si estamos logueados como empleador o trabajador no tendremos
+            acceso a este comando.
+            <remarks>
+            Este handler pertenece a las USER STORIES.
+            "Cómo administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas 
+            de servicios para que de esa forma, los trabajadoras puedan clasificarlos."
+            Esto porque el administrador crea las categorías para que se puedan ingresar las ofertas de servicios.
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaState.NombreCategoria">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaState.DescripcionCategoria">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos de la descripción de la categoría
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaData">
+            <summary>
+            Constructor de la clase CategoriaData.
+            Representa los datos que va obteniendo el comando CrearCategoria en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaData.NombreCategoria">
+            <summary>
+            Representa y guarda el nombre de la categoría.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearCategoriaHandler.CategoriaData.DescripcionCategoria">
+            <summary>
+            Representa y guarda la descripción de la categoría.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler">
+            <summary>
+            Handler del patrón Chain of Responsability que crea una contratacion al ingresar el mensaje
+            "Crear una contratacion". Crea una contratación pudiendo ordenar las ofertas para verlas como 
+             el usuario desee, por precio, ubicacion, calificación, etc.
+            USER STORY:
+            "Como empleador, quiero buscar ofertas de trabajo, opcionalmente filtrando por categoría para 
+             que de esa forma, pueda contratar un servicio"
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.Data">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado. 
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales de la oferta y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState.OfertaContratacion">
+            <summary>
+            El estado de la oferta relacionada a la contratación. En este estado el comando pide los datos del nombre de la categoría
+            y pasa al siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState.EmpleadorContratacion">
+            <summary>
+            El estado del empleador que realiza la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState.NombreCategoriaContratacion">
+            <summary>
+            El estado del nombre de la categoría relacionada a la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState.NumeroContratacion">
+            <summary>
+            El estado del número que será el id de la contratación, valor numérico para identificarla.
+            En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionState.DescripcionContratacion">
+            <summary>
+            El estado de la descripción de la contratación. En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionData">
+            <summary>
+            Constructor de la clase ContratacionData. Contiene getters y setters
+            que toman datos de categoria y trabajador, sumando los datos propios de la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionData.OfertaContratacion">
+            <summary>
+            Representa la oferta laboral relacionada a la contratación.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionData.NombreCategoriaContratacion">
+            <summary>
+            Representa la categoría relacionada a la oferta de la contratación.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionData.EmpleadorContratacion">
+            <summary>
+            Representa el empleador que coloca la contratación.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionData.NumeroContratacion">
+            <summary>
+            Representa el número identificador de la contratación.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearContratacionHandler.ContratacionData.DescripcionContratacion">
+            <summary>
+            Representa la descripción de la contratacin.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler">
+            <summary>
+            Handler del patrón Chain of Responsability, procesa el mensaje "Crear oferta laboral" y
+            crea una oferta, preguntando por la categoría, el precio y una descripción.
+            <remarks>
+            Este handler pertenece a las USER STORIES.
+            "Como trabajador, quiero poder hacer ofertas de servicios; mi oferta indicará en qué categoría
+            quiero publicar, tendrá una descripción del servicio ofertado, y un precio para que de esa forma,
+            mis ofertas sean ofrecidas a quienes quieren contratar servicios."
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales de la oferta y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState.NombreCategoria">
+            <summary>
+            El estado del nombre de la categoría. Este estado es auxiliar para poder buscar la  existencia de la categoría.
+            En este estado el comando pide los datos del nombre de la categoría y pasa al siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState.CategoriaOferta">
+            <summary>
+            El estado del nombre de la categoría. En este estado el comando pide los datos del nombre de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState.TrabajadorOferta">
+            <summary>
+            El estado del trabajador que pone la oferta. En este estado el comando pide el objeto del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState.PrecioOferta">
+            <summary>
+            El estado del precio de la oferta. En este estado el comando pide el precio de la oferta y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaState.DescripcionOferta">
+            <summary>
+            El estado de la descripción de la oferta. En este estado el comando pide la descripción de la oferta y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaData">
+            <summary>
+            Constructor de la clase OfertaData. Contiene getters y setters
+            que toman datos de categoria y trabajador, sumando los datos propios de la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaData.NombreCategoria">
+            <summary>
+            Representa y guarda el nombre de la categoría a la que pertenece la oferta.
+            Variable auxiliar.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaData.CategoriaOferta">
+            <summary>
+            Representa y guarda el nombre de la categoría a la que pertenece la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaData.TrabajadorOferta">
+            <summary>
+            Representa y guarda el objeto Trabajador relacionado al trabajador que creó la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaData.PrecioOferta">
+            <summary>
+            Representa y guarda el precio de la oferta.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.CrearOfertaLaboralHandler.OfertaData.DescripcionOferta">
+            <summary>
+            Representa y guarda la descripción de la oferta.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.DistanceHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "distancia".
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceHandler.State">
+            <summary>
+            El estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceHandler.#ctor(Proyecto_Chatbot.TelegramBot.IDistanceCalculator,Proyecto_Chatbot.TelegramBot.DistanceHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.DistanceHandler"/>.
+            </summary>
+            <param name="calculator">Un calculador de distancias.</param>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <summary>
+            Determina si este "handler" puede procesar el mensaje. En el primer mensaje cuando
+            <see cref="P:Proyecto_Chatbot.TelegramBot.DistanceHandler.State"/> es <see cref="F:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceState.Start"/> usa
+            <see cref="P:Proyecto_Chatbot.TelegramBot.BaseHandler.Keywords"/> para buscar el texto en el mensaje ignorando mayúsculas y minúsculas. En
+            caso contrario eso implica que los sucesivos mensajes son parámetros del comando y se procesan siempre.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <returns>true si el mensaje puede ser pocesado; false en caso contrario.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa todos los mensajes y retorna true siempre.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado indicando que el mensaje no pudo se procesado.</param>
+            <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.DistanceHandler.InternalCancel">
+            <summary>
+            Retorna este "handler" al estado inicial.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando DistanceHandler.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide la dirección de origen y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceState.FromAddressPrompt">
+            <summary>
+            Luego de pedir la dirección de origen. En este estado el comando pide la dirección de
+            destino y pasa al siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceState.ToAddressPrompt">
+            <summary>
+            Luego de pedir la dirección de destino. En este estado el comando calcula la distancia
+            y vuelve al estado Start.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceData">
+            <summary>
+            Representa los datos que va obteniendo el comando DistanceHandler en los diferentes estados.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceData.FromAddress">
+            <summary>
+            La dirección que se ingresó en el estado DistanceState.FromAddressPrompt.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceData.ToAddress">
+            <summary>
+            La dirección que se ingresó en el estado DistanceState.ToAddressPrompt.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.DistanceHandler.DistanceData.Result">
+            <summary>
+            El resultado del cálculo de la distancia entre las direcciones ingresadas.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler">
+            <summary>
+            Handler de la cadena de responsabilidades que implementa el comando "Eliminar categoría".
+            Este handler forma parte de las USER STORIES, ya que es una acción que solo puede realizar
+            el administrador. Pensamos que, como en la primera historia de usuario indica que el admin
+            puede crear categorías, el mismo también puede eliminarlas.
+            "Cómo administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas
+            de servicios para que de esa forma, los trabajadoras puedan clasificarlos".
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.CategoriaState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.CategoriaState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales de la categoría y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.CategoriaState.NombreCategoria">
+            <summary>
+            El estado del nombre de la categoría.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.CategoriaData">
+            <summary>
+            Constructor de la clase CategoriaData. Contiene getters y setters.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarCategoriaHandler.CategoriaData.NombreCategoria">
+            <summary>
+            Representa el nombre de la categoría a eliminar.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler">
+            <summary>
+            Handler de la cadena de responsabilidades que implementa el comando "Eliminar empleador".
+            Este handler forma parte de las USER STORIES, ya que es una acción que solo puede realizar
+            el administrador. Pensamos que, como en la primera historia de usuario indica que el admin
+            puede crear categorías, y así como establecimos que puede eliminarlas, también puede eliminar
+            empleadores bajo algún criterio.
+            "Cómo administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas
+            de servicios para que de esa forma, los trabajadoras puedan clasificarlos."
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.EmpleadorState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.EmpleadorState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales del empleador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.EmpleadorState.IdEmpleador">
+            <summary>
+            El estado del nombre del id del empleador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.EmpleadorData">
+            <summary>
+            Constructor de la clase EmpleadorData. Contiene getters y setters.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarEmpleadorHandler.EmpleadorData.IdEmpleador">
+            <summary>
+            Representa el id del empleador a eliminar.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler">
+            <summary>
+            Handler del patrón de cadena de responsabilidades que implementa el comando "Eliminar oferta".
+            Este handler forma parte de las USER STORIES, ya que es una acción que solo puede realizar
+            el administrador. Se eliminan ofertas en caso de que sean inadecuadas.
+            "Como administrador, quiero poder dar de baja ofertas de servicios, avisando al oferente para
+            que de esa forma, pueda evitar ofertas inadecudas".
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.OfertaState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.OfertaState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales de la oferta y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.OfertaState.IdOferta">
+            <summary>
+            El estado del id de la oferta.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.OfertaData">
+            <summary>
+            Constructor de la clase OfertaData. Contiene getters y setters.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarOfertaHandler.OfertaData.IdOferta">
+            <summary>
+            Representa el id de la oferta a eliminar.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler">
+            <summary>
+            Handler de la cadena de responsabilidades que implementa el comando "Eliminar trabajador".
+            Este handler forma parte de las USER STORIES, ya que es una acción que solo puede realizar
+            el administrador. Pensamos que, como en la primera historia de usuario indica que el admin
+            puede crear categorías, y así como establecimos que puede eliminarlas, también puede eliminar
+            trabajadores bajo algún criterio.
+            "Cómo administrador, quiero poder indicar categorías sobre las cuales se realizarán las ofertas
+            de servicios para que de esa forma, los trabajadoras puedan clasificarlos".
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.State">
+            <summary>
+            Estado del comando.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.Data">
+            <summary>
+            Los datos que va obteniendo el comando en los diferentes estados.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler"/>.
+            </summary>
+            <param name="next">siguiente handler.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.CanHandle(Proyecto_Chatbot.Mensaje)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Verifica los estados y responde según el estado, verificandolo con el diccionario.
+            </summary>
+            <param name="mensaje">mensaje.</param>
+            <param name="response">contestación al mensaje.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.InternalCancel">
+            <summary>
+            Método que permite cambiar estados dentro de la clase a la hora de tener que modificarlos
+            entre mensajes.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.TrabajadorState">
+            <summary>
+            Indica los diferentes estados que puede tener el comando.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.TrabajadorState.Start">
+            <summary>
+            El estado inicial del comando. En este estado el comando pide los datos iniciales del trabajador y pasa al
+            siguiente estado.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.TrabajadorState.IdTrabajador">
+            <summary>
+            El estado del id del trabajador.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.TrabajadorData">
+            <summary>
+            Constructor de la clase TrabajadorData. Contiene getters y setters.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.EliminarTrabajadorHandler.TrabajadorData.IdTrabajador">
+            <summary>
+            Representa el id del trabajador a eliminar.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.GoodByeHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "chau".
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.GoodByeHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.GoodByeHandler"/>. Esta clase procesa el mensaje "chau"
+            y el mensaje "adiós" -un ejemplo de cómo un "handler" puede procesar comandos con sinónimos.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.GoodByeHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje "chau" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.HelloHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "hola".
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.HelloHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.HelloHandler"/>. Esta clase procesa el mensaje "hola".
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.HelloHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje "hola" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.HelpHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "ayuda".
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.HelpHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.HelpHandler"/>. Esta clase procesa el mensaje "ayuda".
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.HelpHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje "ayuda" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.IHandler">
+            <summary>
+            Interfaz para implementar el patrón Chain of Responsibility. En ese patrón se pasa un mensaje a través de una
+            cadena de "handlers" que pueden procesar o no el mensaje. Cada "handler" decide si procesa el mensaje, o si se lo
+            pasa al siguiente. Esta interfaz define un atributo para definir el próximo "handler" y una una operación para
+            recibir el mensaje y pasarlo al siguiente "handler" en caso que el mensaje no sea procesado. La responsabilidad de
+            decidir si el mensaje se procesa o no, y de procesarlo, se realiza en las clases que implementan esta interfaz.
+            <remarks>
+            La interfaz se crea en función del principio de inversión de dependencias, para que los clientes de la cadena de
+            responsabilidad, que pueden ser concretos, no dependan de una clase "handler" que potencialmente es abstracta.
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IHandler.Next">
+            <summary>
+            Obtiene el próximo "handler".
+            </summary>
+            <value>El "handler" que será invocado si este "handler" no procesa el mensaje.</value>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.IHandler.Handle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje o la pasa al siguiente "handler" si existe.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+            <returns>El "handler" que procesó el mensaje si el mensaje fue procesado; null en caso contrario.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.IHandler.Cancel">
+            <summary>
+            Retorna este "handler" al estado inicial y cancela el próximo "handler" si existe. Es utilizado para que los
+            "handlers" que procesan varios mensajes cambiando de estado entre mensajes puedan volver al estado inicial en
+            caso de error por ejemplo.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.ListarCategoriasHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "listar categorias". Lista todas las categorías.
+            Es un handler de prueba para observar.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.ListarCategoriasHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.ListarCategoriasHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje "catalogo" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.PhotoHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "foto".
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.PhotoHandler.#ctor(Telegram.Bot.TelegramBotClient,Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Proyecto_Chatbot.TelegramBot.PhotoHandler"/>. Esta clase procesa el mensaje "foto".
+            </summary>
+            <param name="next">El próximo "handler".</param>
+            <param name="bot">El bot para enviar la foto.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.PhotoHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Procesa el mensaje "foto" y retorna true; retorna false en caso contrario.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.PhotoHandler.SendProfileImage(Proyecto_Chatbot.Mensaje)">
+            <summary>
+            Envía una imagen como respuesta al mensaje recibido. Como ejemplo enviamos siempre la misma foto.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.StartHandler">
+            <summary>
+            Un "handler" del patrón Chain of Responsibility que implementa el comando "/start". Este handler
+            pertenece a las USER STORIES, ya que implementa una forma de registrarse dentro del servicio
+            de contratciones. Las user stories son:
+            "Como trabajador, quiero registrarme en la plataforma, indicando mis datos personales e información
+            de contacto para que de esa forma, pueda proveer información de contacto a quienes quieran contratar mis servicios."
+            "Como empleador, quiero registrarme en la plataforma, indicando mis datos personales e información de contacto para
+            que de esa forma, pueda proveer información de contacto a los trabajadores que quiero contratar."
+            Este handler crea una opción de registro tanto para trabajador como para empleador, donde el usuario, si aún no
+            está registrado, puede seleccionar el modo en el que quiere usar la plataforma, trabajador o empleador.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.StartHandler.#ctor(Proyecto_Chatbot.TelegramBot.BaseHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.TelegramBot.StartHandler"/> class.
+            Esta clase procesa el mensaje "/start" al inicio del bot.
+            </summary>
+            <param name="next">El próximo "handler".</param>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.StartHandler.InternalHandle(Proyecto_Chatbot.Mensaje,System.String@)">
+            <summary>
+            Detecta si el usuario está registrado o no, en caso de estarlo, manda lista de comandos,
+            en caso de no estarlo, hace que se registre.
+            </summary>
+            <param name="mensaje">El mensaje a procesar.</param>
+            <param name="response">La respuesta al mensaje procesado.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.IAddressFinder">
+            <summary>
+            Una interfaz define una abstracción para un buscador de direcciones genérico.
+            </summary>
+            <remarks>
+            Esta interfaz fue creada siguiendo el principio de inversión de dependencias para evitar que los comandos
+            concretos dependan de buscadores de direcciones concretos; en su lugar los comandos concretos dependen de esta
+            abstracción.
+            Entre otras cosas est permite cambiar el buscador de direcciones en tiempo de ejecución, para utilizar uno en
+            los casos de prueba que retorna resultados conocidos para direcciones conocidas, y otro en la versión final para
+            buscar usando una API de localizaciones.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.IAddressFinder.GetLocation(System.String)">
+            <summary>
+            Determina si existe una dirección.
+            </summary>
+            <param name="address">La dirección a buscar.</param>
+            <returns>Un objeto de una clase que implemente la interfaz IAddressResult con el resultado de la búsqueda, que
+            incluye si la dirección se encontró o no, y si se encontró, la latitud y la longitud de la dirección.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.IAddressResult">
+            <summary>
+            Interfaz para calcular una dirección.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IAddressResult.Found">
+            <summary>
+            Indica si se encontró o no la dirección. En ese caso son válidos los demás valores. En caso contrario los
+            demás valores son indeterminados.
+            </summary>
+            <value>true si se encontró la dirección; false en caso contrario.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IAddressResult.Latitude">
+            <summary>
+            La latitud de la dirección.
+            </summary>
+            <value>El valor de la latitud en formato decimal.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IAddressResult.Longitude">
+            <summary>
+            La longitud de la dirección.
+            </summary>
+            <value>El valor de la longitud en formato decimal.</value>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.IDistanceCalculator">
+            <summary>
+            Una interfaz que define una abstracción para un calculador de distancias genérico.
+            </summary>
+            <remarks>
+            Esta interfaz fue creada siguiendo el principio de inversión de dependencias para evitar que los comandos
+            concretos dependan de calculadores de distancias concretos; en su lugar los comandos concretos dependen de esta
+            abstracción.
+            Entre otras cosas est permite cambiar el calculador de distancias en tiempo de ejecución, para utilizar uno en
+            los casos de prueba que retorna resultados conocidos para direcciones conocidas, y otro en la versión final para
+            buscar usando una API de localizaciones.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.TelegramBot.IDistanceCalculator.CalculateDistance(System.String,System.String)">
+            <summary>
+            Calcula una distancia entre dos ubicaciones.
+            </summary>
+            <param name="fromAddress">La dirección de inicio.</param>
+            <param name="toAddress">La dirección final .</param>
+            <returns>Retorna un IDistanceResult en base de las 2 direcciones dadas.</returns>
+        </member>
+        <member name="T:Proyecto_Chatbot.TelegramBot.IDistanceResult">
+            <summary>
+            Una interfaz que define una abstracción para el resultado de calcular distancias.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IDistanceResult.FromExists">
+            <summary>
+            Obtiene un valor que indica si la dirección de origen para el cálculo de distancias existe; sólo se puede
+            calcular la distancia entre direcciones que existen.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IDistanceResult.ToExists">
+            <summary>
+            Obtiene un valor que indica si la dirección de destino para el cálculo de distancias existe; sólo se puede
+            calcular la distancia entre direcciones que existen.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IDistanceResult.Distance">
+            <summary>
+            La distancia calculada.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.TelegramBot.IDistanceResult.Time">
+            <summary>
+            El tiempo en llegar del origen al destino.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Chatbot.Locations.Client.Distance">
+            <summary>
+            Representa la distancia entre las coordenas o las direcciones de origen y destino retornada en los métodos
+            <see cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistanceAsync(Proyecto_Chatbot.Locations.Client.Location,Proyecto_Chatbot.Locations.Client.Location)"/> o
+            <see cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistanceAsync(System.String,System.String)"/>.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Distance.Found">
+            <summary>
+            Obtiene o establece un valor que indica si se encontraron o no las coordenas o las direcciones de origen y
+            destino.
+            </summary>
+            <value>true si se encontró la dirección; false en caso contrario.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Distance.TravelDistance">
+            <summary>
+            Obtiene o establece la distancia entre las coordenadas o las direcciones de origen y destino.
+            </summary>
+            <value>La distancia en metros.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Distance.TravelDuration">
+            <summary>
+            Obtiene o establece el tiempo que se demora en llegar de las coordenadas o de las direcciones de origen a las de destino.
+            </summary>
+            <value>El tiempo que se demora en minutos.</value>
+        </member>
+        <member name="T:Proyecto_Chatbot.Locations.Client.Location">
+            <summary>
+            Representa las coordenadas y otros datos de la ubicación de una dirección retornada en el método
+            <see cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetLocationAsync(System.String,System.String,System.String,System.String)"/>.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.Found">
+            <summary>
+            Obtiene o establece un valor que indica si se encontró o no la dirección. En ese caso son válidos los demás
+            valores. En caso contrario los demás valores son indeterminados.
+            </summary>
+            <value>true si se encontró la dirección; false en caso contrario.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.AddresLine">
+            <summary>
+            Obtiene o establece la dirección: calle y número, ruta y kilómetro, etc.
+            </summary>
+            <value>Por ejemplo, Avenida 8 de Octubre 2738.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.CountryRegion">
+            <summary>
+            Obtiene o establece el país.
+            </summary>
+            <value>Por ejemplo, Uruguay.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.FormattedAddress">
+            <summary>
+            Obtiene o establece la dirección completa, incluyendo ciudad, código postal, etc.
+            </summary>
+            <value>Por ejemplo, Avenida 8 de Octubre 2738, Montevideo, 11200, Uruguay.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.Locality">
+            <summary>
+            Obtiene o establece la localidad o ciudad.
+            </summary>
+            <value>Por ejemplo, Montevideo.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.PostalCode">
+            <summary>
+            Obtiene o establece el código postal.
+            </summary>
+            <value>Por ejemplo, 11200.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.Latitude">
+            <summary>
+            Obtiene o establece la latitud de la dirección.
+            </summary>
+            <value>El valor de la latitud en formato decimal.</value>
+        </member>
+        <member name="P:Proyecto_Chatbot.Locations.Client.Location.Longitude">
+            <summary>
+            Obtiene o establece la longitud de la dirección.
+            </summary>
+            <value>El valor de la longitud en formato decimal.</value>
+        </member>
+        <member name="T:Proyecto_Chatbot.Locations.Client.LocationApiClient">
+            <summary>
+            Un cliente de la API de localización.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetLocationAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Obtiene las coordenadas de una dirección.
+            </summary>
+            <param name="address">La dirección.</param>
+            <param name="city">La ciudad. Es opcional. El valor predeterminado es Montevideo.</param>
+            <param name="department">El departamento, estado, provincia, etc. Es opcional. El valor predeterminado es `ontevideo.</param>
+            <param name="country">El país. Es opcional. El valor predeterminado es Uruguay.</param>
+            <returns>Las coordenadas de la dirección.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetLocation(System.String,System.String,System.String,System.String)">
+            <inheritdoc cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetLocationAsync(System.String,System.String,System.String,System.String)" />
+            <remarks>
+            Versión sincrónica.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistanceAsync(Proyecto_Chatbot.Locations.Client.Location,Proyecto_Chatbot.Locations.Client.Location)">
+            <summary>
+            Obtiene la distancia entre dos coordenadas.
+            </summary>
+            <param name="from">La coordenada de origen.</param>
+            <param name="to">La coordenada de destino.</param>
+            <returns>La distancia entre las dos coordenadas.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistance(Proyecto_Chatbot.Locations.Client.Location,Proyecto_Chatbot.Locations.Client.Location)">
+            <inheritdoc cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistanceAsync(Proyecto_Chatbot.Locations.Client.Location,Proyecto_Chatbot.Locations.Client.Location)" />
+            <remarks>
+            Versión sincrónica.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistanceAsync(System.String,System.String)">
+            <summary>
+            Obtiene la distancia entre dos direcciones.
+            </summary>
+            <param name="from">La dirección de origen.</param>
+            <param name="to">La dirección de destino.</param>
+            <returns>La distancia entre las dos direcciones.</returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistance(System.String,System.String)">
+            <inheritdoc cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.GetDistanceAsync(System.String,System.String)" />.
+            <remarks>
+            Versión sincrónica.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.DownloadMapAsync(System.Double,System.Double,System.String,System.Int32)">
+            <summary>
+            Descarga una mapa de una coordenada.
+            </summary>
+            <param name="latitude">La latitud de la coordenada.</param>
+            <param name="longitude">La longitud de la coordenada.</param>
+            <param name="path">La ruta del archivo donde guardar el mapa. El formato es PNG.</param>
+            <param name="zoomLevel">El nivel de zoom del mapa entre 1 y 20. Es opcional. El valor predeterminado es
+            15.</param>
+            <returns>
+            Una tarea que representa la operación asincrónica.
+            </returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.DownloadMap(System.Double,System.Double,System.String,System.Int32)">
+            <inheritdoc cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.DownloadMapAsync(System.Double,System.Double,System.String,System.Int32)" />.
+            <remarks>
+            Versión sincrónica.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.DownloadRouteAsync(System.Double,System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Un mapa con una ruta entre dos coordenadas.
+            </summary>
+            <param name="fromLatitude">La latitud de la coordenada de origen.</param>
+            <param name="fromLongitude">La longitu de la coordenada de origen.</param>
+            <param name="toLatitude">La latitud de la coordenada de destino.</param>
+            <param name="toLongitude">La longitud de la coordenada de destino.</param>
+            <param name="path">La ruta del archivo donde guardar el mapa. Es formato es PNG.</param>
+            <returns>
+            Una tarea que representa la operación asincrónica.
+            </returns>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.DownloadRoute(System.Double,System.Double,System.Double,System.Double,System.String)">
+            <inheritdoc cref="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.DownloadRouteAsync(System.Double,System.Double,System.Double,System.Double,System.String)" />
+            <remarks>
+            Versión sincrónica.
+            </remarks>
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.Dispose">
+            <inheritdoc cref="T:System.IDisposable" />
+        </member>
+        <member name="M:Proyecto_Chatbot.Locations.Client.LocationApiClient.Dispose(System.Boolean)">
+            <inheritdoc cref="T:System.IDisposable" />
+        </member>
+        <member name="T:Proyecto_Chatbot.Usuario">
+            <summary>
+            Clase que representa a los usuarios de la aplicacion (Empleadores y Trabajadores).
+            Es una clase hija de Persona, y a la vez clase padre de los usuarios (trabajador, empleador).
+            El principio OCP es utilizado ya que esta clase se implementa mediante herencia en las clases
+            de Trabajador y Empleador, y está implementando la clase Persona.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Usuario.Reputacion">
+            <summary>
+            Almacena la reputacion del usuario.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Usuario.Ubicacion">
+            <summary>
+            Guarda la direccion de la persona.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Usuario.Telefono">
+            <summary>
+            Almacena el telefono del usuario.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Usuario.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Usuario"/> class.
+            </summary>
+            <param name="nombre">Es el nombre que se le asigna al Usuario.</param>
+            <param name="email">Es el mail que se le asigna al Usuario.</param>
+            <param name="telefono">Es el telefono que se le asigna al Usuario.</param>
+            <param name="id">Es la cedula que se le asigna al Usuario.</param>
+            <param name="ubicacion">Almacena la direccion que se le asigna al Usuario.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Usuarios.Administrador">
+            <summary>
+            Representa el administrador de la aplicacion.
+            Se utilizó HERENCIA para la creación de la clase, ya que Administrador
+            es una clase hija de Persona. Por lo tanto podemos decir que utilizamos el
+            principio OCP.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.Usuarios.Administrador.#ctor(System.String,System.String,System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Usuarios.Administrador"/> class.
+            </summary>
+            <param name="nombre">Es el nombre que se le asigna al administrador.</param>
+            <param name="email">Es el mail que se le asigna al administrador.</param>
+            <param name="id">Es el id que se le asigna al administrador.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Usuarios.Empleador">
+            <summary>
+            Esta clase representa al empleador.
+            Utilizamos HERENCIA. Empleador es una clase hija de Usuario, hereda sus métodos.
+            Como esta clase hereda de otra, podemos afirmar que se aplicó el principio OCP.
+            Prepara nuestro código para que los posibles cambios en el comportamiento de una
+            clase se puedan implementar mediante herencia y composición.
+            </summary>
+        </member>
+        <member name="P:Proyecto_Chatbot.Usuarios.Empleador.Reputacion">
+            <summary>
+            Este get llamada al metodo para calcular la reputacion del usuario.
+            </summary>
+            <value>retorna la reputación.</value>
+        </member>
+        <member name="M:Proyecto_Chatbot.Usuarios.Empleador.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Usuarios.Empleador"/> class.
+            </summary>
+            <param name="nombre">Es el nombre que se le asigna al Empleador.</param>
+            <param name="email">Es el mail que se le asigna al Empleador.</param>
+            <param name="telefono">Es el telefono que se le asigna al Empleador.</param>
+            <param name="id">Es el id que se le asigna al Empleador.</param>
+            <param name="ubicacion">Es la ubicación que se le asigna al Empleador.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.Usuarios.Trabajador">
+            <summary>
+            Clase que representa un trabajador
+            Utilizamos HERENCIA. Trabajador es una clase hija de Usuario, hereda sus métodos.
+            Como esta clase hereda de otra, podemos afirmar que se aplicó el principio OCP.
+            Prepara nuestro código para que los posibles cambios en el comportamiento de una
+            clase se puedan implementar mediante herencia y composición.
+            </summary>
+        </member>
+        <member name="F:Proyecto_Chatbot.Usuarios.Trabajador.Notificaciones">
+            <summary>
+            Lista que almacena las notificaciones del trabajador.
+            </summary>      
+        </member>
+        <member name="P:Proyecto_Chatbot.Usuarios.Trabajador.Reputacion">
+            <summary>
+            Este get llamada al metodo para calcular la reputacion del usuario.
+            </summary>
+            <value>retorna la reputacion.</value>
+        </member>
+        <member name="M:Proyecto_Chatbot.Usuarios.Trabajador.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Proyecto_Chatbot.Usuarios.Trabajador"/> class.
+            </summary>
+            <param name="nombre">Es el nombre que se le asigna al trabajador.</param>
+            <param name="email">Es el mail que se le asigna al trabajador.</param>
+            <param name="telefono">Es el telefono que se le asigna al trabajador.</param>
+            <param name="id">Es el id que se le asigna al trabajador.</param>
+            <param name="ubicacion">Almacena la latitud que se le asigna al trabajador.</param>
+        </member>
+        <member name="T:Proyecto_Chatbot.VerificarString">
+            <summary>
+            Clase que calcula la reputacion del usuario.
+            No creamos una nueva interfaz para cumplir con los patrones
+            y principios DIP ni ISP porque nos pareció que el algoritmo
+            de esta clase es muy simple y no va a cambiar en cuanto al cálculo.
+            Se utilizó el patrón EXPERT. Se creó una clase individual para
+            la verificación ya que el usuario no es el experto en información,
+            por lo que no puede verificar si un string tiene números.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Chatbot.VerificarString.TieneSoloNumeros(System.String)">
+            <summary>
+            Verifica si el string solo tiene numeros.
+            </summary>
+            <param name="palabra">palabra cualquiera.</param>
+            <returns>devuelve true si tiene numeros y no letras.</returns>
+        </member>
+    </members>
+</doc>
